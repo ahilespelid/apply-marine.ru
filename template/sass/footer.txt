@@ -1,0 +1,42 @@
+.create-block
+		margin-top: 50px
+
+		.creator
+			border: 2px solid $button-bg
+			border-radius: 50px
+			height: 40px
+			display: inline-block
+
+			@include media-breakpoint-up(md)
+				width: 370px
+
+				span
+					margin-right: 15px
+
+				.creator-link
+					margin-left: 15px
+
+			@include media-breakpoint-down(sm)
+				width: 280px
+				font-size: 0.8rem
+				padding-top: 2px
+
+				span
+					margin-right: 10px
+
+				.creator-link
+					margin-left: 10px
+
+
+
+			a
+				text-decoration: none
+
+			a.logo
+				display: inline-block
+				height: 40px
+				margin-top: -10px
+				margin-bottom: -10px
+
+				img
+					position: relative
