@@ -1,0 +1,520 @@
+    1  clear
+    2  apt update
+    3  apt upgrade
+    4  cd /
+    5  apt install nginx
+    6  apt install php7.4-cli php7.4-fpm php7.4-curl php7.4-gd php7.4-mysql php7.4-mbstring zip unzip
+    7  php -v
+    8  clear
+    9  cd /etc/php
+   10  cd 7.4
+   11  clear
+   12  ls
+   13  cd fpm
+   14  clear
+   15  nano php.ini
+   16  cd /etc/nginx/sites-enabled
+   17  ../sites-available
+   18  clear
+   19  cd ../sites-available
+   20  clear
+   21  ls
+   22  cp default ../test.apply-marine.ru
+   23  nano test.apply-marine.ru
+   24  ls
+   25  cd ../
+   26  ls
+   27  mv text.apply-marine.ru /etc/nginx/sites-available
+   28  mv test.apply-marine.ru /etc/nginx/sites-available
+   29  clear
+   30  ls
+   31  cd sites-avaialble
+   32  cd sites-available
+   33  clear
+   34  l
+   35  ls
+   36  nano test.apply-marine.ru
+   37  nginx -t
+   38  service nginx restart
+   39  ln /etc/nginx/sites-available/test.apply-marine.ru /etc/nginx/sites-enabled/test.apply-marine.ru
+   40  nginx -t
+   41  service nginx restart
+   42  cd /var/www
+   43  ls
+   44  cd html
+   45  ls
+   46  cleat
+   47  cd /var
+   48  ls
+   49  cd www
+   50  clear
+   51  ls
+   52  mkdir apply_marine
+   53  cd apply_marine
+   54  nano index.php
+   55  cat /proc/cpuinfo | grep processor | wc -l
+   56  nano /etc/nginx/nginx.conf
+   57  chown -R www-data:www-data /var/www
+   58  /etc/init.d/nginx restart
+   59  /etc/init.d/php7.2-fpm restart
+   60  /etc/init.d/php7.4-fpm restart
+   61  apt install mariadb
+   62  sudo apt install mariadb-server
+   63  mysql
+   64  apt update
+   65  mysql -u root -p
+   66  wget
+   67  cd /tmp
+   68  clear
+   69  l
+   70  sclear
+   71  l
+   72  sl
+   73  ls
+   74  clear
+   75  l
+   76  sc
+   77  clear
+   78  ls
+   79  wget https://files.phpmyadmin.net/phpMyAdmin/5.1.3/phpMyAdmin-5.1.3-all-languages.zip
+   80  ls
+   81  clear
+   82  cd /var/www
+   83  clear
+   84  ls
+   85  cd default
+   86  mkdir default
+   87  cd default
+   88  clear
+   89  nano index.html
+   90  cd /etc/nginx/sites-available
+   91  clear
+   92  ls
+   93  nano default
+   94  service nginx restart
+   95  mkdir /var/www/default/phpmyadmin
+   96  ls
+   97  cd /tmp
+   98  clear
+   99  ls
+  100  phpMyAdmin-5.1.3-all-languages.zip
+  101  unzip phpMyAdmin-5.1.3-all-languages.zip
+  102  ls
+  103  clear
+  104  mv phpMyAdmin-5.1.3-all-languages/* /var/www/default/phpmyadmin
+  105  ls /var/www/default/phpmyadmin
+  106  clear
+  107  cd /var/www/default/phpmyadmin
+  108  clear
+  109  ls
+  110  cp config.sample.inc.php config.inc.php
+  111  clear
+  112  ls
+  113  nano config.inc.php
+  114  chown -R www-data:www-data /var/www/default/phpmyadmin
+  115  cd /etc/nginx/sites-available
+  116  clear
+  117  ls
+  118  nano default
+  119  service nginx restart
+  120  service vsftpd
+  121  apt install vsftpd db5.3-util
+  122  mkdir /etc/vsftpd
+  123  touch /etc/vsftpd/vsftpdusers
+  124  chmod 0600 /etc/vsftpd/vsftpdusers
+  125  nano /etc/vsftpd/vsftpdusers
+  126  db5.3_load -T -t hash -f /etc/vsftpd/vsftpdusers /etc/vsftpd/users.db
+  127  chmod 0600 /etc/vsftpd/users.db
+  128  cd /etc/
+  129  ls
+  130  cp vsftpd.conf vsftpd.conf.original
+  131  ls
+  132  nano /etc/vsftpd.conf
+  133  nano /etc/pam.d/vsftpd.virtual
+  134  auth       required     pam_userdb.so db=/etc/vsftpd/users
+  135  account    required     pam_userdb.so db=/etc/vsftpd/users
+  136  /etc/init.d/vsftpd restart
+  137  nano /etc/vsftpd/vsftpdusers
+  138  db5.3_load -T -t hash -f /etc/vsftpd/vsftpdusers /etc/vsftpd/users.db
+  139  chmod 0600 /etc/vsftpd/users.db
+  140  service vsftpd restart
+  141  nano /etc/vsftpd.conf
+  142  service vsftpd restart
+  143  mysql
+  144  cd /nginx
+  145  cd nginx
+  146  cd sites-available
+  147  clear
+  148  nano default
+  149  nano /etc/nginx/nginx.conf
+  150  cd /var/www/test.apply-marine.ru
+  151  clear
+  152  cd /var/www/apply_marine
+  153  clear
+  154  l
+  155  clear
+  156  ls
+  157  mysql -uroot apply_marine < /ekatertz_apmarin.sql
+  158  mysql -uroot apply_marine < ekatertz_apmarin.sql
+  159  unzip apply-marine\ \(1\).zip 
+  160  ls
+  161  rm apply-marine\ \(1\).zip 
+  162  clear
+  163  ls
+  164  rm ekatertz_apmarin.sql 
+  165  clear
+  166  ls
+  167  cd /etc/nginx/sites-available
+  168  clear
+  169  nano test.apply-marine.ru
+  170  service nginx restart
+  171  nano test.apply-marine.ru
+  172  chown -R www-data:www-data /var/www
+  173  nano test.apply-marine.ru
+  174  service nginx restart
+  175  service php7.4-fpm restart
+  176  service php7.4-fpm start
+  177  ls /var/run/
+  178  ls /var/run/php/
+  179  nano test.apply-marine.ru
+  180  service php7.4-fpm start
+  181  service nginx restart
+  182  nano test.apply-marine.ru
+  183  nano default
+  184  service php7.4-fpm restart
+  185  service nginx restart
+  186  nano test.apply-marine.ru
+  187  chown -R www-data:www-data /var/www
+  188  nano test.apply-marine.ru
+  189  ls /var/run
+  190  ls /var/run/php
+  191  cd /var/www
+  192  clear
+  193  ls
+  194  cd apply_marine
+  195  ls
+  196  clear
+  197  rm
+  198  rm -rf *
+  199  clear
+  200  ls
+  201  wget https://wordpress.org/latest.tar.gz
+  202  ls
+  203  unzip latest.tar.gz
+  204  apt install targz
+  205  tar
+  206  tar xzvf latest.tar.gz 
+  207  ls
+  208  cd wordpress
+  209  ls
+  210  mv * /var/www/apply_marine
+  211  ls
+  212  cd ../
+  213  ls
+  214  clear
+  215  rm -rf wordpress/
+  216  ls
+  217  rm latest.tar.gz 
+  218  u9HIFwC3cmLUDu5pOVPPADQifT0R2jBNI6kQq7Y4
+  219  rm -rf *
+  220  ls
+  221  nano v.php
+  222  rm /var/log/nginx/error.log
+  223  touch /var/log/nginx/error.log'
+  224  chown -R www-data:www-data /var/www
+  225  tail -f /var/log/nginx/error.log
+  226  cd /etc/php
+  227  clear
+  228  ls
+  229  cd 7.
+  230  cd 7.4
+  231  clear
+  232  ls
+  233  cd fpm
+  234  clear
+  235  ls
+  236  nano php.ini
+  237  service php7.4-fpm restart
+  238  tail -f /var/log/nginx/error.log
+  239  nano /var/log/nginx/error.log'
+  240  nano /var/log/nginx/error.log
+  241  ls /var/log/nginx
+  242  tail -f /var/log/nginx/error.log
+  243  ls /tmp
+  244  cd /tml
+  245  cd /tmp
+  246  clear
+  247  rm -rf *
+  248  clear
+  249  ls
+  250  cd /var/www
+  251  clear
+  252  ls
+  253  cd apply_marine
+  254  clear
+  255  ls
+  256  unzip apply-marine\ \(1\).zip 
+  257  ls
+  258  clear
+  259  chown -R www-data:www-data /var/www
+  260  tail -f /var/log/nginx/error.log
+  261  clear
+  262  cd /app
+  263  mkdir /app
+  264  clear
+  265  ls
+  266  rm apply-marine\ \(1\).zip 
+  267  clear
+  268  cd /app
+  269  clear
+  270  ls
+  271  clear
+  272  cd /etc/nginx/sites-available
+  273  cleae
+  274  clera
+  275  clear
+  276  ls
+  277  nano lk.apply-marine.ru
+  278  ln /etc/nginx/sites-available/lk.apply-marine.ru /etc/nginx/sites-enabled/lk.apply-marine.ru
+  279  nginx -t
+  280  service nginx restart
+  281  cd /app
+  282  ls
+  283  git clone git@github.com:dimaserg88/apply-marine-vue.git
+  284  ssh-keygen -t rsa
+  285  cat ~/.ssh/id_rsa.pub
+  286  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC+zpFbhRvL6r7hqD/FgVVatomNbeP7amBEcgLd7nn0mO8oB4T02qfBFL81Yg9DRgq0Id2kIIuUA0ItJ4PQRhaK4iKT4S3TRH7c4aOtjk1ipsXoHn/dHMe7elZQXY7S4QVRGNO7PvqSw6dCGWqVJ+wKJGsU2aP2JUlYGQg5gZ/pFTkdI/P+bvd7JphZy7HnMB6ZOJKOnPeUsfZQctuEVObaJLVMr3WjFlhLNar6h9IrgXWWFp8wNnMzmU0JZJQ3Gfx4LlkVOk0XrGHqSK64lA9pWGOB9Ilu+4jCkBKLyMFzYcqcLu5pr5fbKi+G4keks2d+lQzicnpRWBu9sLRaMZ+ytjBleUOgbSMuJUBG3YEulonS1WratLnfGnCTsiCPfj8kQzaoQ8IYshP7ONMOCyY62rUeSEzz2oj2RsvJpi2mu9SS5I7qE7iDYYQzvVAmabeCduYfUaQU51rkRt2h4EvkNX16/6K07XanFakInkenpSC928AHnOO+6zYVBnxZprc= root@mzsmtphzdp
+  287  git clone git@github.com:dimaserg88/apply-marine-vue.git
+  288  ls
+  289  cd apply-marine-vue
+  290  clear
+  291  ls
+  292  npm i
+  293  curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+  294  sudo apt-get install -y nodejs
+  295  ls
+  296  clear
+  297  npm -v
+  298  node -v
+  299  clear
+  300  npm i
+  301  npm install -g npm@8.7.0
+  302  npm run build
+  303  ls
+  304  sudo apt install certbot python3-certbot-nginx
+  305  sudo certbot --nginx -d lk.apply-marine.ru
+  306  ufw status
+  307  ufw enable
+  308  ufw status
+  309  ufw allow 80
+  310  ufw status
+  311  ufw allow 443
+  312  sudo certbot --nginx -d test.apply-marine.ru
+  313  sudo systemctl status certbot.timer
+  314  ufw allow 20
+  315  ufw allow 21
+  316  ufw disable
+  317  ufw enable
+  318  ufw status
+  319  ufw allo ssh
+  320  ufw allow ssh
+  321  ufw status
+  322  sudo ufw allow 20200:20400/tcp
+  323  ufw status
+  324  ufw disable
+  325  ufw enable
+  326  sudo ufw disallow 20200:20400/tcp
+  327  sudo ufw disallow 20200:20400
+  328  sudo ufw disable allow 20200:20400
+  329  sudo ufw disable allow 20200:20400/tcp
+  330  ufw status
+  331  гац ыефегы тгьиукув
+  332  ufw status numbered
+  333  ufw remove 6
+  334  ufw delete 6
+  335  ufw status numbered
+  336  ufw delete 11
+  337  sudo ufw allow 20200:20400
+  338  sudo ufw allow 20200:20400/udp
+  339  ufw remove 22
+  340  ufw status numbered
+  341  ufw remove 5
+  342  ufw delete 5
+  343  ufw status numbered
+  344  sudo ufw allow from any to any proto tcp port 20200:20400
+  345  ufw status numbered
+  346  ufw disable
+  347  ufw enable
+  348  ufw delete 13 14
+  349  ufw status numbered
+  350  ufw delete 13
+  351  ufw status numbered
+  352  ufw delete 6
+  353  ufw status numbered
+  354  ufw delete 6
+  355  ufw status numbered
+  356  ufw disable
+  357  sudo ufw allow 20200:20400/tcp
+  358  ufw enable
+  359  ufw status
+  360  ufw status numbered
+  361  ufw delete 12
+  362  ufw status numbered
+  363  ufw delete 6
+  364  nano /etc/vsftpd.conf
+  365  service vsftpd restart
+  366  nano /etc/vsftpd.conf
+  367  service vsftpd restart
+  368  git pull
+  369  npm run build
+  370  npm i
+  371  npm run build
+  372  ls
+  373  ls -a
+  374  clear
+  375  nano .env
+  376  npm run build
+  377  cd /app
+  378  clear
+  379  ls
+  380  cd apply-marine-vue
+  381  ls
+  382  clear
+  383  git pull
+  384  npm run build
+  385  git pull
+  386  npm i
+  387  ls
+  388  nano .env
+  389  rm -r *
+  390  ls
+  391  nano .env
+  392  ls
+  393  ls a
+  394  ls -a
+  395  rm -rf *
+  396  ls
+  397  ls -a
+  398  cd ../
+  399  rm -r apply-marine-vue/
+  400  ls
+  401  VUE_APP_I18N_LOCALE=ru
+  402  VUE_APP_I18N_FALLBACK_LOCALE=en
+  403  VUE_APP_I18N_SUPPORTED_LOCALE=ru,en,ro
+  404  git clone git@github.com:dimaserg88/apply-marine-vue.git
+  405  cd apply-marine-vue/
+  406  ls
+  407  ls -a
+  408  nano .env
+  409  npm i
+  410  npm run build
+  411  top
+  412  php -v
+  413  history 
+  414  top
+  415  beget-agent restart
+  416  cd /var/www/
+  417  cd apply_marine/
+  418  find -type d -exec chmod 0755 {} \;
+  419  find -type f -exec chmod 0644 {} \;
+  420  php -v
+  421  sudo apt-get install php7.4-xml
+  422  php -v
+  423  service php7.4-fpm restart 
+  424  sudo apt-get install php-zip
+  425  service nginx restart 
+  426  cd /var/www/apply_marine/
+  427  ls -la
+  428  grep -rl fa7dd60bc008b3b6a1b5e05e03cbfda5
+  429  finrd -R fa7dd60bc008b3b6a1b5e05e03cbfda5
+  430  find -R fa7dd60bc008b3b6a1b5e05e03cbfda5
+  431  find fa7dd60bc008b3b6a1b5e05e03cbfda5
+  432  find
+  433  find .
+  434  find . fa7dd60bc008b3b6a1b5e05e03cbfda5
+  435  find . -name "@fa7dd60bc008b3b6a1b5e05e03cbfda5"
+  436  find -mane fa7dd60bc008b3b6a1b5e05e03cbfda5
+  437  find -name fa7dd60bc008b3b6a1b5e05e03cbfda5
+  438  grep -rl '/"publishedon/"'
+  439  grep -rl 'publishedon'
+  440  wget https://github.com/vrana/adminer/releases/download/v4.8.1/adminer-4.8.1.php
+  441  ls -la
+  442  locate php.ini
+  443  apt install mlocate
+  444  locate php.ini
+  445  nano /etc/php/7.4/fpm/php.ini
+  446  service php7.4-fpm restart 
+  447  nanbo /etc/php/7.4/fpm/php.ini
+  448  nano /etc/php/7.4/fpm/php.ini
+  449  service nginx restart 
+  450  history 100
+  451  history 50
+  452  service nginx restart 
+  453  ls -la
+  454  apt-get install curl
+  455  ping https://modstore.pro/extras/
+  456  ping https://ya.ru
+  457  ping modstore.pro
+  458  CD /var/www/
+  459  cd www
+  460  lss -lah
+  461  ls -lah
+  462  grep -RIn '$database_server '
+  463  grep -RIn '$database_server' \ more
+  464  grep -RIn '$database_server' | more
+  465  whereis git
+  466  git -v
+  467  git --version
+  468  git config --list
+  469  cd /var/www/
+  470  ls -lah
+  471  cd apply_marine/
+  472  ls -lah
+  473  git remote add origin git@github.com:ahilespelid/apply-marine.ru.git
+  474  echo "# apply-marine.ru" >> README.md
+  475  git init
+  476  git status
+  477  git config --global user.name "Ahiles"
+  478  git config --global user.email "ahilespelid@yandex.ru"
+  479  git status
+  480  git log
+  481  git remote add origin git@github.com:ahilespelid/apply-marine.ru.git
+  482  cat ~/.ssh/id_rsa.pub 
+  483  git config --list
+  484  git status
+  485  git config --global --add safe.directory '*'
+  486  git status
+  487  git add .
+  488  git commit -m "first commit" -a
+  489  git status
+  490  git log
+  491  git remote add origin git@github.com:ahilespelid/apply-marine.ru.git
+  492  git push
+  493  cat ~/.ssh/id_rsa.pub 
+  494  ssh -T -ai ~/.ssh/id_rsa git@github.com
+  495  ssh-keygen
+  496  cat ~/.ssh/id_rsa.pub 
+  497  git push
+  498  git push --set-upstream origin master
+  499  ssh-keygen
+  500  cat ~/.ssh/id_rsa.pub 
+  501  ssh -T -ai ~/.ssh/id_rsa git@github.com
+  502  git push --set-upstream origin master
+  503  git branch
+  504  git branch -M main
+  505  git branch
+  506  git push --set-upstream origin main
+  507  git config --global pack.windowMemory
+  508  git repack -a -d -f --window=0
+  509  git branch -M master
+  510  git config --global pack.windowMemory "32m"
+  511  git branch
+  512  git repack -a -d -f --window=0
+  513  df -
+  514  df - .
+  515  df -h .
+  516  ds -h .
+  517  du -sh .
+  518  git log
+  519  history
+  520  history > history_server.txt
