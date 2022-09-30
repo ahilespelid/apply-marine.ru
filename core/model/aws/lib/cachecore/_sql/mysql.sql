@@ -1,7 +1,3 @@
-CREATE TABLE `cache` (
-  `id` char(40) NOT NULL default '',
-  `expires` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
-  `data` longtext,
-  PRIMARY KEY  (`id`),
-  UNIQUE KEY `id` (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8
+version https://git-lfs.github.com/spec/v1
+oid sha256:80643e95fdfd569db81684e1290fca48270cf11eb8cdea26679960622e70bcea
+size 249
