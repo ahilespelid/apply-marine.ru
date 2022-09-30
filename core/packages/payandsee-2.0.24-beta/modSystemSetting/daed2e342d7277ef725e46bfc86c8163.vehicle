@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'payandsee',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'f7ea3738d63339c4344797e43497d573',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'daed2e342d7277ef725e46bfc86c8163',
+  'native_key' => 'payandsee_front_js',
+  'object' => '{"key":"payandsee_front_js","value":"[[+assetsUrl]]js\\/web\\/default.js","xtype":"textfield","namespace":"payandsee","area":"payandsee_main","editedon":null}',
+);

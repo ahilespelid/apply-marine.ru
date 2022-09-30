@@ -1,0 +1,28 @@
+<?php
+
+/** @var $modx modX */
+if (!$modx = $object->xpdo AND !$object->xpdo instanceof modX) {
+    return true;
+}
+
+/** @var $options */
+switch (@$options[xPDOTransport::PACKAGE_ACTION]) {
+    case xPDOTransport::ACTION_INSTALL:
+        break;
+
+    case xPDOTransport::ACTION_UPGRADE:
+        /** @var modAction $action */
+        if ($action = $modx->getObject('modAction', ['namespace' => 'payandsee'])) {
+            $action->remove();
+            /** @var modMenu $menu */
+            if ($menu = $modx->getObject('modMenu', ['text' => 'payandsee'])) {
+                $menu->remove();
+            }
+        }
+        break;
+
+    case xPDOTransport::ACTION_UNINSTALL:
+        break;
+}
+
+return true;

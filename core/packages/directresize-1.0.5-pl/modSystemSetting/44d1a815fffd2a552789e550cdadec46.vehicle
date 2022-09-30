@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'directresize',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'e35a0719dc70cb97bf7c57906104b637',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '44d1a815fffd2a552789e550cdadec46',
+  'native_key' => 'directresize.q_png',
+  'object' => '{"key":"directresize.q_png","value":"0","xtype":"textfield","namespace":"directresize","area":"directresize","editedon":null}',
+);

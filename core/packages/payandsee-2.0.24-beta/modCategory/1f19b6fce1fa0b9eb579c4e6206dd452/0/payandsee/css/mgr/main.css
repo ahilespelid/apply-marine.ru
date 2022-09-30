@@ -1,0 +1,275 @@
+.x-grid3-col-actions {
+	padding: 6px 0 6px 6px;
+}
+
+ul.payandsee-row-actions {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+ul.payandsee-row-actions li {
+	float: left;
+}
+
+ul.payandsee-row-actions .btn {
+	padding: 3px;
+	margin-right: 2px;
+	min-width: 26px;
+	font-size: inherit;
+}
+
+.payandsee-grid-row-disabled {
+	font-style: italic;
+	opacity: .6;
+	color: #555;
+}
+
+.payandsee-formpanel {
+	padding-top: 25px;
+}
+
+.payandsee-formpanel .panel-desc {
+	margin-top: 2px;
+	padding: 9px 20px 9px 10px!important;
+}
+
+/*.payandsee-grid .x-panel-tbar-noheader {
+	_margin-top: -10px!important;
+}*/
+
+a.x-menu-item .x-menu-item-text, a.x-menu-item .x-menu-item-text .icon {
+	cursor: pointer;
+}
+
+a.x-menu-item .x-menu-item-text .icon {
+	line-height: 16px;
+	top: auto;
+}
+
+.x-menu-list .icon {
+	min-width: 1em;
+	text-align: center;
+}
+
+.x-menu-list-item:hover .icon {
+	color: inherit !important;
+}
+
+/*
+ul.payandsee-row-actions .actions-menu {width: 40px;}
+ul.payandsee-row-actions .actions-menu:after {content: " \f107";}
+*/
+
+/* icon in button */
+.ext-strict .x-menu-item-icon.fa {
+	left: 6px;
+}
+/* actions menu */
+.btn.actions-menu {width: 40px;}
+.btn.actions-menu:after {content: " \f107";}
+/* actions menu */
+.payandsee-cogs img {
+	_display: none;
+}
+.payandsee-cogs {
+	padding: 3px 20px 3px 6px!important;
+}
+.payandsee-cogs i.fa {
+	padding-right: 3px;
+	width: 15px;
+}
+/* description field */
+p.desc {
+	margin: 20px 0px -30px 40px;
+	max-width: 350px;
+	color: #000;
+}
+
+/* expander */
+table.payandsee-expander td {
+	padding-left: 15px;
+}
+table.payandsee-expander {
+	margin: 30px 0px 0px 0px;
+	color: #000;
+}
+table.payandsee-expander td b {
+	text-align: left;
+	margin-right: 20px;
+}
+
+/* color */
+.red {
+	color: red !important;
+}
+.green {
+	color: green !important;
+}
+.blue {
+	color: blue !important;
+}
+.yellow {
+	color: goldenrod !important;
+}
+.gray {
+	color: dimgray !important;
+}
+
+/* window */
+.x-window-body.payandsee-window {
+	padding: 0px 10px 10px 10px;
+}
+.x-window-body.payandsee-window.payandsee-window-tabs {
+	padding: 0px 0px 0px 0px;
+}
+.x-window-body.payandsee-window .x-panel-body.x-form .x-tab-panel-bwrap {
+	padding-top: 0px;
+}
+
+
+/* grid color */
+span.payandsee-grid-color {
+	 width: 50px;
+	 height: 24px;
+	 border-radius: 3px;
+	 display: block;
+	 margin: -5px 0px -5px 0px;
+}
+
+/* colorpalette */
+ .payandsee-colorpalette.x-color-palette em {
+	 border: none!important;
+	 border-color: #FFF;
+ }
+.payandsee-colorpalette.x-color-palette em span {
+	border-radius: 3px;
+	height: 12px;
+	width: 13px;
+}
+.payandsee-colorpalette-main {
+	width: 100%!important;
+	height: 100%;
+	_padding: 10px 0;
+}
+.payandsee-colorpalette .x-color-palette a:hover, .x-color-palette a.x-color-palette-sel {
+	border: 1px solid;
+	border-radius: 3px;
+}
+.payandsee-colorpalette.x-color-palette a.x-color-palette-sel, .payandsee-colorpalette.x-color-palette a:hover {
+	background-color: #FFF!important;
+	border-color: #E4E4E4!important;
+	border-radius: 3px;
+}
+
+
+/* search field */
+.x-field-search-clear,
+.x-field-search-go {border-left: 1px solid #e4e4e4 !important;}
+.x-field-search-clear:hover,
+.x-field-search-go:hover {border-left-color: transparent !important;}
+.x-field-search-clear:before {content: '\f00d' !important;}
+.x-field-search-go {right: 31px !important; border-radius: 0 !important;}
+.x-field-search-go:before {content: '\f002' !important;}
+
+/* class field */
+.x-field-payandsee-class-clear,
+.x-field-payandsee-class-go {border-left: 1px solid #e4e4e4 !important;}
+.x-field-payandsee-class-clear:hover,
+.x-field-payandsee-class-go:hover {border-left-color: transparent !important;}
+.x-field-payandsee-class-clear:before {content: '\f00d' !important;}
+.x-field-payandsee-class-go {right: 31px !important; border-radius: 0 !important;}
+.x-field-payandsee-class-go:before {content: '\f0c1' !important;}
+
+/* status field */
+.x-field-payandsee-status-clear,
+.x-field-payandsee-status-go {border-left: 1px solid #e4e4e4 !important;}
+.x-field-payandsee-status-clear:hover,
+.x-field-payandsee-status-go:hover {border-left-color: transparent !important;}
+.x-field-payandsee-status-clear:before {content: '\f00d' !important;}
+.x-field-payandsee-status-go {right: 31px !important; border-radius: 0 !important;}
+.x-field-payandsee-status-go:before {content: '\f21e' !important;}
+
+/* resource field */
+.x-field-payandsee-resource-clear,
+.x-field-payandsee-resource-go {border-left: 1px solid #e4e4e4 !important;}
+.x-field-payandsee-resource-clear:hover,
+.x-field-payandsee-resource-go:hover {border-left-color: transparent !important;}
+.x-field-payandsee-resource-clear:before {content: '\f00d' !important;}
+.x-field-payandsee-resource-go {right: 31px !important; border-radius: 0 !important;}
+.x-field-payandsee-resource-go:before {content: '\f15b' !important;}
+
+/* user field */
+.x-field-payandsee-user-clear,
+.x-field-payandsee-user-go {border-left: 1px solid #e4e4e4 !important;}
+.x-field-payandsee-user-clear:hover,
+.x-field-payandsee-user-go:hover {border-left-color: transparent !important;}
+.x-field-payandsee-user-clear:before {content: '\f00d' !important;}
+.x-field-payandsee-user-go {right: 31px !important; border-radius: 0 !important;}
+.x-field-payandsee-user-go:before {content: '\f007' !important;}
+
+/* client field */
+.x-field-payandsee-client-clear,
+.x-field-payandsee-client-go {border-left: 1px solid #e4e4e4 !important;}
+.x-field-payandsee-client-clear:hover,
+.x-field-payandsee-client-go:hover {border-left-color: transparent !important;}
+.x-field-payandsee-client-clear:before {content: '\f00d' !important;}
+.x-field-payandsee-client-go {right: 31px !important; border-radius: 0 !important;}
+.x-field-payandsee-client-go:before {content: '\f007' !important;color:green;}
+
+/* dateunit field */
+.x-field-payandsee-dateunit-clear,
+.x-field-payandsee-dateunit-go {border-left: 1px solid #e4e4e4 !important;}
+.x-field-payandsee-dateunit-clear:hover,
+.x-field-payandsee-dateunit-go:hover {border-left-color: transparent !important;}
+.x-field-payandsee-dateunit-clear:before {content: '\f00d' !important;}
+.x-field-payandsee-dateunit-go {right: 31px !important; border-radius: 0 !important;}
+.x-field-payandsee-dateunit-go:before {content: '\f133' !important;}
+
+/* content field */
+.x-field-payandsee-content-clear,
+.x-field-payandsee-content-go {border-left: 1px solid #e4e4e4 !important;}
+.x-field-payandsee-content-clear:hover,
+.x-field-payandsee-content-go:hover {border-left-color: transparent !important;}
+.x-field-payandsee-content-clear:before {content: '\f00d' !important;}
+.x-field-payandsee-content-go {right: 31px !important; border-radius: 0 !important;}
+.x-field-payandsee-content-go:before {content: '\f15b' !important;}
+
+/* context field */
+.x-field-payandsee-context-clear,
+.x-field-payandsee-context-go {border-left: 1px solid #e4e4e4 !important;}
+.x-field-payandsee-context-clear:hover,
+.x-field-payandsee-context-go:hover {border-left-color: transparent !important;}
+.x-field-payandsee-context-clear:before {content: '\f00d' !important;}
+.x-field-payandsee-context-go {right: 31px !important; border-radius: 0 !important;}
+.x-field-payandsee-context-go:before {context: '\f0ac' !important;}
+
+/* data field */
+.x-form-date-clear,
+.x-form-date-trigger {border-left: 1px solid #e4e4e4 !important;}
+.x-form-date-clear:hover,
+.x-form-date-trigger:hover {border-left-color: transparent !important;}
+.x-form-date-clear:before {content: '\f00d' !important;}
+.x-form-date-trigger {right: 31px !important; border-radius: 0 !important;}
+.x-form-date-trigger:before {content: '\f073' !important;}
+
+
+/* date-combo */
+.payandsee-grid-subscription .x-grid3-row {
+	height: 44px;
+}
+.date-combo.x-grid-editor .x-datetime-wrap {
+	padding: 0;
+	margin: 0!important;
+}
+.date-combo .x-datetime-wrap .x-form-date-trigger {
+	right: 0!important;
+}
+.date-combo.x-grid-editor .x-datetime-wrap .ux-datetime-date {
+	padding: 0px!important;
+}
+.date-combo.x-grid-editor .x-datetime-wrap .ux-datetime-date > .x-form-field-wrap,
+.date-combo.x-grid-editor .x-datetime-wrap .ux-datetime-time > .x-form-field-wrap {
+	padding: 0px 0px 0px 5px!important;
+	margin: 0px 0px 0px 0px!important;
+}

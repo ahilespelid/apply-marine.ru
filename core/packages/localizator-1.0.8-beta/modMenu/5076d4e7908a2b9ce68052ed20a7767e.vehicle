@@ -1,0 +1,17 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'unique_key' => 'text',
+  'related_objects' => true,
+  'namespace' => 'localizator',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '5e6c8a107bc9ef46e5cd1920e2d4f154',
+  'package' => 'modx',
+  'class' => 'modMenu',
+  'signature' => '5076d4e7908a2b9ce68052ed20a7767e',
+  'native_key' => 'localizator',
+  'object' => '{"text":"localizator","parent":"components","action":"home","description":"localizator_menu_desc","icon":"","menuindex":0,"params":"","handler":"","permissions":"","namespace":"localizator"}',
+);

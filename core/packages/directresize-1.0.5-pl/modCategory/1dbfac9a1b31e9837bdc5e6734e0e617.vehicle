@@ -1,0 +1,38 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => true,
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+  ),
+  'namespace' => 'directresize',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"directresize-1.0.5-pl\\/modCategory\\/1dbfac9a1b31e9837bdc5e6734e0e617\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"directresize"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"directresize-1.0.5-pl\\/modCategory\\/1dbfac9a1b31e9837bdc5e6734e0e617\\/1\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"directresize"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'a1302afef18110a3c124c94a43ad8990',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '1dbfac9a1b31e9837bdc5e6734e0e617',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"DirectResize"}',
+);

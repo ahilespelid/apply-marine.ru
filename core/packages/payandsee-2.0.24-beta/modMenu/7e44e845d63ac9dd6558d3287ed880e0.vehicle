@@ -1,0 +1,17 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'unique_key' => 'text',
+  'related_objects' => true,
+  'namespace' => 'payandsee',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'ab14334f8cc6d2c7eee2b28ab013f498',
+  'package' => 'modx',
+  'class' => 'modMenu',
+  'signature' => '7e44e845d63ac9dd6558d3287ed880e0',
+  'native_key' => 'payandsee',
+  'object' => '{"text":"payandsee","parent":"components","action":"main","description":"payandsee_desc","icon":"","menuindex":0,"params":"","handler":"","permissions":"","namespace":"payandsee","action_":{"controller":"index"}}',
+);

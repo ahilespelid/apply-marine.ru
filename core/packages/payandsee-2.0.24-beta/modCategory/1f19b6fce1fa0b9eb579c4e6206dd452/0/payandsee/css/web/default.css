@@ -1,0 +1,27 @@
+div.jGrowl > .ui-state-highlight {
+    background: inherit;
+    color: inherit;
+    border: inherit;
+}
+.pas-message-success { background-color: green !important; }
+.pas-message-error { background-color: brown !important; }
+.pas-message-info { background-color: black !important; }
+
+/* Order */
+.pas-order .required-star { display: none; }
+.pas-order .required .required-star { display: inline; }
+.pas-order .error { border: 1px solid brown !important; }
+.pas-order .required-star { color: brown; }
+
+.pas-spinner {
+    display: none;
+    width: 32px;
+    height: 32px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -32px;
+    margin-top: -32px;
+    background: url(../../img/spinner.gif);
+    z-index: 9999;
+}

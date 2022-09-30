@@ -1,0 +1,15 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'payandsee',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '13c9f1b6feb1a51297a328c8900b1e3f',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => 'b3e33e944f8d2575cfc9219d9ac28c9d',
+  'native_key' => 'PasOnContentBeforeSave',
+  'object' => '{"name":"PasOnContentBeforeSave","service":6,"groupname":"PayAndSee"}',
+);

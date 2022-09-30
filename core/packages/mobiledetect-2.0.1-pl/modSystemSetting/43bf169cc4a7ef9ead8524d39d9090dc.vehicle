@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'mobiledetect',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '89e4d4ea8a440131363ee12daa4e8ddb',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '43bf169cc4a7ef9ead8524d39d9090dc',
+  'native_key' => 'md_standard_node',
+  'object' => '{"key":"md_standard_node","value":"standard","xtype":"textfield","namespace":"mobiledetect","area":"md_main","editedon":null}',
+);

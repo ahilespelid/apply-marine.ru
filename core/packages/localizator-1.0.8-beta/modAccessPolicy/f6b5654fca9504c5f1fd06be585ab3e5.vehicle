@@ -1,0 +1,19 @@
+<?php return array (
+  'preserve_keys' => false,
+  'unique_key' => 
+  array (
+    0 => 'name',
+  ),
+  'update_object' => false,
+  'namespace' => 'localizator',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'b62414f1f1849ad8e38e99f580831023',
+  'package' => 'modx',
+  'class' => 'modAccessPolicy',
+  'signature' => 'f6b5654fca9504c5f1fd06be585ab3e5',
+  'native_key' => NULL,
+  'object' => '{"id":null,"name":"LocalizatorManagerPolicy","description":"A policy for create and update LocalizatorContent.","parent":0,"template":0,"class":"","data":"{\\"localizatorcontent_list\\":true}","lexicon":"localizator:permissions"}',
+);

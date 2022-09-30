@@ -1,0 +1,94 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      '49609d222c6969005284d016cd2db943' => 
+      array (
+        'unique_key' => 'name',
+        'preserve_keys' => false,
+        'update_object' => true,
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'a9ead20acbc6e3ae095c8062d75668f5' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnHandleRequest","priority":0,"propertyset":0}',
+              'guid' => '835daed20d202504a2760a0519a0b544',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnHandleRequest',
+              ),
+              'signature' => 'c81235ac43019c28a8c904a34a2bc814',
+            ),
+          ),
+        ),
+        'related_object_attributes' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'preserve_keys' => true,
+            'update_object' => true,
+            'unique_key' => 
+            array (
+              0 => 'pluginid',
+              1 => 'event',
+            ),
+          ),
+        ),
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":1,"property_preprocess":0,"name":"logRotation","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/** @var modX $modx *\\/\\nswitch ($modx->event->name) {\\n    case \'OnHandleRequest\':\\n        $filepath = $modx->getOption(\'error_log_filepath\', null, MODX_CORE_PATH . \'cache\\/logs\\/\', true);\\n        $filename = $modx->getOption(\'error_log_filename\', null, \'error.log\', true);\\n        $max_size = $modx->getOption(\'logrotation_size\',   null, 102400, true);\\n        \\n        $log_file = $filepath . $filename;\\n        \\n        if (filesize($log_file) > $max_size) {\\n            $offset = -1 * $max_size;\\n            \\n            $read = fopen($log_file, \'r\');\\n            if ($read === false) return;\\n            fseek($read, $offset, SEEK_END);\\n            \\n            fgets($read);\\n            $content = \'\';\\n            while(!feof($read)) {\\n                $content .= fgets($read);\\n            }\\n            fclose($read);\\n            \\n            $write = fopen($log_file, \'w\');\\n            fwrite($write, $content);\\n            fclose($write);\\n        }\\n        break;\\n}","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"core\\/components\\/logrotation\\/elements\\/plugins\\/logrotation.php","content":"\\/** @var modX $modx *\\/\\nswitch ($modx->event->name) {\\n    case \'OnHandleRequest\':\\n        $filepath = $modx->getOption(\'error_log_filepath\', null, MODX_CORE_PATH . \'cache\\/logs\\/\', true);\\n        $filename = $modx->getOption(\'error_log_filename\', null, \'error.log\', true);\\n        $max_size = $modx->getOption(\'logrotation_size\',   null, 102400, true);\\n        \\n        $log_file = $filepath . $filename;\\n        \\n        if (filesize($log_file) > $max_size) {\\n            $offset = -1 * $max_size;\\n            \\n            $read = fopen($log_file, \'r\');\\n            if ($read === false) return;\\n            fseek($read, $offset, SEEK_END);\\n            \\n            fgets($read);\\n            $content = \'\';\\n            while(!feof($read)) {\\n                $content .= fgets($read);\\n            }\\n            fclose($read);\\n            \\n            $write = fopen($log_file, \'w\');\\n            fwrite($write, $content);\\n            fclose($write);\\n        }\\n        break;\\n}","file":"logrotation","events":{"OnHandleRequest":[]}}',
+        'guid' => 'c05f9cb22141abe296f7dedcfcd1a9d5',
+        'native_key' => NULL,
+        'signature' => '3a5bf09a7ef89fd5835573ba55ecab67',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Plugins' => 
+    array (
+      'unique_key' => 'name',
+      'preserve_keys' => false,
+      'update_object' => true,
+      'related_objects' => true,
+      'related_object_attributes' => 
+      array (
+        'PluginEvents' => 
+        array (
+          'preserve_keys' => true,
+          'update_object' => true,
+          'unique_key' => 
+          array (
+            0 => 'pluginid',
+            1 => 'event',
+          ),
+        ),
+      ),
+    ),
+  ),
+  'namespace' => 'logrotation',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"logrotation-1.0.0-beta\\/modCategory\\/6bb8e8581cb58093fe113c51e13d0cf9\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"logrotation"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '20267b0f9e5f11eb11d0422b52720a73',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '6bb8e8581cb58093fe113c51e13d0cf9',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"logRotation","rank":0}',
+);

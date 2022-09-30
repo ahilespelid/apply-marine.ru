@@ -1,0 +1,15 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'localizator',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'c6bbd9a28212a8af1f411c212e8f97bf',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => '3cf529cca7012a312d388df8849059ba',
+  'native_key' => 'OnBuildLocalizationTabs',
+  'object' => '{"name":"OnBuildLocalizationTabs","service":6,"groupname":"localizator"}',
+);

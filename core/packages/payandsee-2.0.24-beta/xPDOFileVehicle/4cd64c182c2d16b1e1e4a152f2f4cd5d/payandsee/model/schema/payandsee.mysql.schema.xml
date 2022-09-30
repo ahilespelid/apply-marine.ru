@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="payandsee" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" phpdoc-package="payandsee"
+       version="1.1">
+
+    <object class="PasStatus" table="payandsee_statuses" extends="xPDOObject">
+        <field key="id" dbtype="int" precision="10" phptype="integer" attributes="unsigned" null="false" default="0"
+               index="pk"/>
+        <field key="class" dbtype="varchar" precision="100" phptype="string" null="false" default="" index="pk"/>
+        <field key="name" dbtype="varchar" precision="100" phptype="string" null="false"/>
+        <field key="description" dbtype="text" phptype="string" null="true" default=""/>
+        <field key="color" dbtype="char" precision="6" phptype="string" null="true" default="000000"/>
+        <field key="allowed" dbtype="tinyint" precision="1" phptype="integer" null="true" default="0"/>
+        <field key="active" dbtype="tinyint" precision="1" phptype="integer" null="true" default="1"/>
+        <field key="rank" dbtype="tinyint" precision="1" phptype="integer" attributes="unsigned" null="true"
+               default="0"/>
+        <field key="editable" dbtype="tinyint" precision="1" phptype="integer" null="true" default="1"/>
+
+        <index alias="PRIMARY" name="PRIMARY" primary="true" unique="true">
+            <column key="id" length="" collation="A" null="false"/>
+            <column key="class" length="" collation="A" null="false"/>
+        </index>
+
+        <index alias="allowed" name="allowed" primary="false" unique="false" type="BTREE">
+            <column key="allowed" length="" collation="A" null="false"/>
+        </index>
+        <index alias="active" name="active" primary="false" unique="false" type="BTREE">
+            <column key="active" length="" collation="A" null="false"/>
+        </index>
+
+        <aggregate alias="Alerts" class="PasAlert" local="class" foreign="class" cardinality="many" owner="local">
+        </aggregate>
+
+        <validation>
+            <rule field="id" name="preventBlank" type="xPDOValidationRule" rule="xPDOMinValueValidationRule" value="1" message="payandsee_err_value" />
+        </validation>
+
+        <!--<aggregate alias="Content" class="PasContent" local="id" foreign="status" cardinality="many" owner="local">
+            <criteria target="local"><![CDATA[
+             {"class":"PasContent"}
+             ]]></criteria>
+        </aggregate>-->
+
+
+        <!--<composite alias="ClientAccess" class="PasAccess" local="id" foreign="client" cardinality="many" owner="local" />
+        <composite alias="ContentAccess" class="PasAccess" local="id" foreign="content" cardinality="many" owner="local" />
+        <composite alias="SubscriptionAccess" class="PasAccess" local="id" foreign="subscription" cardinality="many" owner="local" />
+-->
+
+    </object>
+
+
+    <object class="PasContent" table="payandsee_contents" extends="xPDOSimpleObject">
+        <field key="resource" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="true"
+               default="0"/>
+        <field key="name" dbtype="varchar" precision="100" phptype="string" null="false"/>
+        <field key="description" dbtype="text" phptype="string" null="true" default=""/>
+        <field key="status" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="true"
+               default="0"/>
+        <field key="nested" dbtype="tinyint" precision="1" phptype="integer" null="true" default="1"/>
+        <field key="properties" dbtype="text" phptype="array" null="true"/>
+
+        <index alias="resource" name="resource" primary="false" unique="true">
+            <column key="resource" length="" collation="A" null="false"/>
+        </index>
+        <index alias="status" name="status" primary="false" unique="false" type="BTREE">
+            <column key="status" length="" collation="A" null="false"/>
+        </index>
+        <index alias="nested" name="nested" primary="false" unique="false" type="BTREE">
+            <column key="nested" length="" collation="A" null="false"/>
+        </index>
+
+        <aggregate alias="Resource" class="modResource" local="resource" foreign="id" cardinality="one" owner="local"/>
+        <aggregate alias="Status" class="PasStatus" local="status" foreign="id" cardinality="one" owner="local">
+            <criteria target="foreign"><![CDATA[{"class":"PasContent"}]]></criteria>
+        </aggregate>
+        <composite alias="Rates" class="PasRate" local="id" foreign="content" cardinality="many" owner="local" />
+
+        <!-- <aggregate alias="Status" class="PasStatus" local="status" foreign="id" cardinality="one" owner="local">
+             <criteria target="foreign"><![CDATA[
+             {"class":"PasContent"}
+             ]]></criteria>
+         </aggregate>-->
+
+        <!--  <composite alias="Subscriptions" class="PasSubscription" local="id" foreign="content" cardinality="many" owner="local" />
+          <aggregate alias="Subscription" class="PasSubscription" local="resource" foreign="resource" cardinality="one" owner="local" />
+  -->
+    </object>
+
+
+    <object class="PasRate" table="payandsee_rates" extends="xPDOSimpleObject">
+        <field key="content" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" />
+        <field key="cost" dbtype="decimal" precision="12,2" phptype="float" null="false" default="0" />
+        <!--<field key="term" dbtype="varchar" precision="50" phptype="string" null="false" default="" />-->
+
+        <field key="term_value" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" default="0" />
+        <field key="term_unit" dbtype="varchar" precision="10" phptype="string" null="false" default="" />
+
+        <field key="description" dbtype="text" phptype="string" null="true" default=""/>
+        <field key="active" dbtype="tinyint" precision="1" phptype="integer" null="true" default="1"/>
+
+        <index alias="content" name="content" primary="false" unique="false" type="BTREE">
+            <column key="content" length="" collation="A" null="false"/>
+        </index>
+        <index alias="term_unit" name="term_unit" primary="false" unique="false" type="BTREE" >
+            <column key="term_unit" length="" collation="A" null="false" />
+        </index>
+        <index alias="active" name="active" primary="false" unique="false" type="BTREE" >
+            <column key="active" length="" collation="A" null="false" />
+        </index>
+
+        <aggregate alias="Content" class="PasContent" local="content" foreign="id" cardinality="one" owner="foreign"/>
+
+        <validation>
+           <!-- <rule field="content" name="invalid" type="preg_match" rule="/^[1-9]\d*$/" message="payandsee_err_ns" />
+            <rule field="term" name="invalid" type="preg_match" rule="/^[1-9]\d*+[y|m|d|h|i]$/" message="payandsee_err_ns" />
+-->
+            <rule field="content" name="preventBlank" type="xPDOValidationRule" rule="xPDOMinValueValidationRule" value="1" message="payandsee_err_value" />
+            <rule field="term_value" name="preventBlank" type="xPDOValidationRule" rule="xPDOMinValueValidationRule" value="1" message="payandsee_err_value" />
+            <rule field="term_unit" name="invalid" type="preg_match" rule="/^[y|m|d|h|i]$/" message="payandsee_err_value" />
+
+        </validation>
+
+    </object>
+
+
+    <object class="PasClient" table="payandsee_clients" extends="xPDOObject">
+        <field key="id" dbtype="int" precision="10" phptype="integer" attributes="unsigned" null="false" index="pk" />
+        <field key="status" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="true"
+               default="0"/>
+        <!--<field key="context" dbtype="varchar" precision="100" phptype="string" null="true" default="web"/>-->
+        <field key="properties" dbtype="text" phptype="array" null="true"/>
+
+        <index alias="id" name="id" primary="true" unique="true" type="BTREE">
+            <column key="id" length="" collation="A" null="false" />
+        </index>
+        <index alias="status" name="status" primary="false" unique="false" type="BTREE" >
+            <column key="status" length="" collation="A" null="false" />
+        </index>
+        <!--<index alias="context" name="context" primary="false" unique="false" type="BTREE">
+            <column key="context" length="" collation="A" null="false" />
+        </index>-->
+
+        <aggregate alias="User" class="modUser" local="id" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="UserProfile" class="modUserProfile" local="id" foreign="internalKey" owner="foreign" cardinality="one" />
+        <aggregate alias="Status" class="PasStatus" local="status" foreign="id" cardinality="one" owner="local">
+            <criteria target="foreign"><![CDATA[{"class":"PasClient"}]]></criteria>
+        </aggregate>
+
+       <!-- <aggregate alias="Subscriptions" class="PasSubscription" local="id" foreign="user" owner="local" cardinality="many" />
+        <aggregate alias="Status" class="PasStatus" local="status" foreign="id" cardinality="one" owner="local">
+            <criteria target="local"><![CDATA[
+			{"class":"PasClient"}
+			]]></criteria>
+        </aggregate>-->
+
+    </object>
+
+
+    <object class="PasSubscription" table="payandsee_subscriptions" extends="xPDOSimpleObject">
+        <field key="client" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" />
+        <field key="content" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" />
+        <field key="status" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="true"
+               default="0"/>
+        <field key="startdate" dbtype="datetime" phptype="datetime" null="true" />
+        <field key="stopdate" dbtype="datetime" phptype="datetime" null="true" />
+        <field key="properties" dbtype="text" phptype="array" null="true"/>
+
+        <index alias="unique_key" name="unique_key" primary="false" unique="true" type="BTREE">
+            <column key="client" length="" collation="A" null="false" />
+            <column key="content" length="" collation="A" null="false" />
+        </index>
+
+        <index alias="client" name="client" primary="false" unique="false" type="BTREE" >
+            <column key="client" length="" collation="A" null="false" />
+        </index>
+        <index alias="content" name="content" primary="false" unique="false" type="BTREE" >
+            <column key="content" length="" collation="A" null="false" />
+        </index>
+        <index alias="status" name="status" primary="false" unique="false" type="BTREE" >
+            <column key="status" length="" collation="A" null="false" />
+        </index>
+        <index alias="startdate" name="startdate" primary="false" unique="false" type="BTREE">
+            <column key="startdate" length="" collation="A" null="false" />
+        </index>
+        <index alias="stopdate" name="stopdate" primary="false" unique="false" type="BTREE">
+            <column key="stopdate" length="" collation="A" null="false" />
+        </index>
+
+        <aggregate alias="User" class="modUser" local="client" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="UserProfile" class="modUserProfile" local="client" foreign="internalKey" owner="foreign" cardinality="one" />
+        <aggregate alias="Content" class="PasContent" local="content" foreign="id" cardinality="one" owner="foreign"/>
+
+        <aggregate alias="Status" class="PasStatus" local="status" foreign="id" cardinality="one" owner="local">
+            <criteria target="foreign"><![CDATA[{"class":"PasSubscription"}]]></criteria>
+        </aggregate>
+
+        <validation>
+            <rule field="startdate" name="name" type="xPDOValidationRule" rule="payandsee.PasValidator" message="payandsee_err_value" />
+            <rule field="stopdate" name="name" type="xPDOValidationRule" rule="payandsee.PasValidator" message="payandsee_err_value" />
+        </validation>
+
+    </object>
+
+
+    <object class="PasAlert" table="payandsee_alerts" extends="xPDOSimpleObject">
+        <field key="class" dbtype="varchar" precision="100" phptype="string" null="true" default=""/>
+        <field key="status" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="true"
+               default="0"/>
+        <field key="description" dbtype="text" phptype="string" null="true" default=""/>
+        <field key="email" dbtype="varchar" precision="255" phptype="string" null="true" default=""/>
+        <field key="subject" dbtype="varchar" precision="255" phptype="string" null="true" default=""/>
+        <field key="body" dbtype="varchar" precision="255" phptype="string" null="true" default=""/>
+        <field key="active" dbtype="tinyint" precision="1" phptype="integer" null="true" default="1"/>
+        <field key="rank" dbtype="tinyint" precision="1" phptype="integer" attributes="unsigned" null="true"
+               default="0"/>
+
+        <index alias="class" name="class" primary="false" unique="false" type="BTREE">
+            <column key="class" length="" collation="A" null="false"/>
+        </index>
+        <index alias="status" name="status" primary="false" unique="false" type="BTREE">
+            <column key="status" length="" collation="A" null="false"/>
+        </index>
+        <index alias="active" name="active" primary="false" unique="false" type="BTREE">
+            <column key="active" length="" collation="A" null="false"/>
+        </index>
+
+    </object>
+
+<!--
+    <object class="PasAccess" table="payandsee_accesses" extends="xPDOSimpleObject">
+        <field key="client" dbtype="int" precision="10" phptype="integer" attributes="unsigned" null="true" default="0" />
+        <field key="content" dbtype="int" precision="10" phptype="integer" attributes="unsigned" null="true" default="0" />
+        <field key="subscription" dbtype="int" precision="10" phptype="integer" attributes="unsigned" null="true" default="0" />
+        <field key="description" dbtype="text" phptype="string" null="true" default=""/>
+        <field key="active" dbtype="tinyint" precision="1" phptype="integer" null="true" default="1"/>
+
+        <index alias="unique_key" name="unique_key" primary="false" unique="true" type="BTREE">
+            <column key="client" length="" collation="A" null="true" />
+            <column key="content" length="" collation="A" null="true" />
+            <column key="subscription" length="" collation="A" null="true" />
+        </index>
+
+        <index alias="active" name="active" primary="false" unique="false" type="BTREE" >
+            <column key="active" length="" collation="A" null="false" />
+        </index>
+
+    </object>-->
+
+
+</model>

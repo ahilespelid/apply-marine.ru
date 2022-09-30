@@ -1,0 +1,86 @@
+<?php
+
+/** @var $modx modX */
+if (!$modx = $object->xpdo AND !$object->xpdo instanceof modX) {
+    return true;
+}
+
+/** @var $options */
+switch (@$options[xPDOTransport::PACKAGE_ACTION]) {
+    case xPDOTransport::ACTION_INSTALL:
+    case xPDOTransport::ACTION_UPGRADE:
+
+        $modelPath = $modx->getOption('payandsee_core_path', null, $modx->getOption('core_path') . 'components/payandsee/') . 'model/';
+        $modx->addPackage('payandsee', $modelPath);
+        $lang = $modx->getOption('manager_language') == 'en' ? 1 : 0;
+
+        /* PasStatus */
+        $rows = array(
+            'PasSubscription' => array(),
+
+            /*'PasContent' => array(
+                array(
+                    'status'   => '2',
+                    'email'    => '{$manager_email}',//'vovanblya@mail.ru',
+                    'subject'  => 'subject',
+                    'body'     => 'body',
+                    'editable' => 0,
+                ),
+                array(
+                    'status'   => '2',
+                    'email'    => '{$client_email}',//'vovanblya@mail.ru',
+                    'subject'  => 'subject1',
+                    'body'     => 'body2',
+                    'editable' => 0,
+                ),
+            ),*/
+            'PasClient' => array(
+                array(
+                    'status'   => '1',
+                    'email'    => '{$client_email|join}',
+                    'subject'  => "{'payandsee_subject_client_new'|lexicon}",
+                    'body'     => "{'payandsee_body_client_new'|lexicon}",
+                    'active' => 1,
+                ),
+                array(
+                    'status'   => '2',
+                    'email'    => '{$client_email|join}',
+                    'subject'  => "{'payandsee_subject_client_active'|lexicon}",
+                    'body'     => "{'payandsee_body_client_active'|lexicon}",
+                    'active' => 0,
+                ),
+                array(
+                    'status'   => '3',
+                    'email'    => '{$client_email|join}',
+                    'subject'  => "{'payandsee_subject_client_inactive'|lexicon}",
+                    'body'     => "{'payandsee_body_client_inactive'|lexicon}",
+                    'active' => 0,
+                ),
+            ),
+
+        );
+
+        foreach ($rows as $class => $statuses) {
+            foreach ($statuses as $row) {
+
+                /** @var $status PasStatus */
+                if (!$status = $modx->getObject('PasAlert', array('class' => $class, 'status' => $row['status'], 'email' => $row['email']))) {
+                    $status = $modx->newObject('PasAlert');
+                    $status->fromArray(array_merge(array(
+                        'class' => $class,
+                        'rank'  => $modx->getCount('PasAlert'/*, array('class' => $class)*/),
+                    ), $row), '', true, true);
+                }
+               /* $status->fromArray(array_merge(array(
+                    'active' => 1,
+                ), $row), '', true, true);*/
+
+                $status->save();
+            }
+        }
+
+        break;
+    case xPDOTransport::ACTION_UNINSTALL:
+        break;
+}
+return true;

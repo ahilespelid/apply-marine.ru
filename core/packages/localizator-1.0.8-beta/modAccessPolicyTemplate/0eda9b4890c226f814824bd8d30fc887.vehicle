@@ -1,0 +1,53 @@
+<?php return array (
+  'preserve_keys' => false,
+  'unique_key' => 
+  array (
+    0 => 'name',
+  ),
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Permissions' => 
+    array (
+      'e2c0afe7fcbd9c881dc0ac004273db54' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => 'BUILD_PERMISSION_UPDATE',
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"localizatorcontent_list","description":"localizatorcontent_list","value":1}',
+        'guid' => 'cdce9a1da1eccb8057bd090d54a4e5ce',
+        'native_key' => NULL,
+        'signature' => '4398af881d44de530cbabb3d0b6cf3b6',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Permissions' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => 'BUILD_PERMISSION_UPDATE',
+      'unique_key' => 
+      array (
+        0 => 'template',
+        1 => 'name',
+      ),
+    ),
+  ),
+  'namespace' => 'localizator',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'affbd913bc2662efcd6f4619e743a7ae',
+  'package' => 'modx',
+  'class' => 'modAccessPolicyTemplate',
+  'signature' => '0eda9b4890c226f814824bd8d30fc887',
+  'native_key' => NULL,
+  'object' => '{"id":null,"template_group":1,"name":"LocalizatorManagerPolicyTemplate","description":"A policy for Localizator managers.","lexicon":"localizator:permissions","permissions":{"localizatorcontent_list":[]}}',
+);
