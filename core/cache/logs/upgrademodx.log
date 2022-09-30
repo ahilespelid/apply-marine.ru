@@ -1,0 +1,25 @@
+UpgradeMODX Log -- Wednesday August 20, 2022 07:32 PM
+Файлы скачиваются
+Version: modx-2.8.4-pl.zip
+URL: https://modx.s3.amazonaws.com/releases/2.8.4/modx-2.8.4-pl.zip
+Скачано  -> /var/www/apply_marine/ugmtemp/modx-2.8.4-pl.zip
+Файлы распаковываются
+    Source: /var/www/apply_marine/ugmtemp/modx-2.8.4-pl.zip
+    Destination: /var/www/apply_marine/ugmtemp/unzipped
+    Zip File Name modx-2.8.4-pl.zip
+    объекты к извлечению 5447
+    Назначение: /var/www/apply_marine/ugmtemp/unzipped
+    Источник: /var/www/apply_marine/ugmtemp/modx-2.8.4-pl.zip
+Распокованы modx.zip -> /var/www/apply_marine/ugmtemp/unzipped
+Файлы копируются
+    Скопировано setup в /var/www/apply_marine/setup
+    Скопировано core в /var/www/apply_marine/core
+    Скопировано manager в /var/www/apply_marine/manager
+    Скопировано connectors в /var/www/apply_marine/connectors
+
+    Copy Time: 0.7394 s -- Объекты скопированы 5447
+Подготовка к установке
+Установка готова
+Очистка
+Очистка завершена (временные файлы удалены)
+Запуск установки

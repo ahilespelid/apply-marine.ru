@@ -1,0 +1,1055 @@
+[2022-09-04 04:56:27] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 04:56:27] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 04:56:27] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 04:56:40] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 04:56:40] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 04:56:40] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 04:56:40] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 04:56:41] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-04 04:56:41] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-04 04:56:41] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-04 04:56:41] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => resume
+)
+
+[2022-09-04 04:59:08] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 04:59:08] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 04:59:08] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 04:59:08] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 04:59:10] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-04 04:59:10] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-04 04:59:10] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-04 04:59:10] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => resume
+)
+
+[2022-09-04 05:01:25] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 05:01:25] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 05:01:25] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 05:01:25] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 05:01:32] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 05:01:32] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 05:01:32] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 05:01:32] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 05:01:35] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-04 05:01:35] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-04 05:01:35] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-04 05:01:35] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => resume
+)
+
+[2022-09-04 05:01:47] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 05:01:47] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 05:01:47] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 05:01:47] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 05:01:51] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-04 05:01:51] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-04 05:01:51] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-04 05:01:51] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => resume
+)
+
+[2022-09-04 05:04:11] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 05:04:11] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 05:04:11] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 05:04:11] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 05:04:16] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 05:04:16] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 05:04:16] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 05:04:16] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 05:04:23] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-04 05:04:23] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-04 05:04:23] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-04 05:04:23] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => resume
+)
+
+[2022-09-04 05:04:30] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 05:04:30] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 05:04:30] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 05:04:30] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 05:04:31] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-04 05:04:31] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-04 05:04:32] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-04 05:04:32] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => resume
+)
+
+[2022-09-04 05:04:51] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 05:04:51] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 05:04:51] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 05:04:51] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 05:04:56] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 05:04:56] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 05:04:56] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 05:04:56] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 05:04:58] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-04 05:04:58] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-04 05:04:58] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-04 05:04:58] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => resume
+)
+
+[2022-09-04 05:06:48] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 05:06:48] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 05:06:48] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 05:06:48] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 05:06:52] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-04 05:06:52] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-04 05:06:52] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-04 05:06:52] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => resume
+)
+
+[2022-09-04 05:08:50] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 05:08:50] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 05:08:50] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 05:08:50] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 05:09:11] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-04 05:09:11] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-04 05:09:11] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-04 05:09:11] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => resume
+)
+
+[2022-09-04 05:09:46] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 05:09:46] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 05:09:46] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 05:09:46] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 05:09:49] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-04 05:09:49] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-04 05:09:49] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-04 05:09:49] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => resume
+)
+
+[2022-09-04 05:09:56] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 05:09:56] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 05:09:56] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 05:09:56] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 05:10:02] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 05:10:02] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 05:10:02] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 05:10:02] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 05:12:14] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-04 05:12:14] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-04 05:12:14] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-04 05:12:14] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => resume
+)
+
+[2022-09-04 05:12:47] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-04 05:12:47] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-04 05:12:47] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-04 05:12:47] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => resume
+)
+
+[2022-09-04 05:24:30] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 05:24:30] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 05:24:30] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 05:24:30] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 05:29:01] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 05:29:01] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 05:29:01] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 05:29:01] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 05:29:25] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 05:29:25] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 05:29:25] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 05:29:25] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 05:30:03] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 05:30:03] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 05:30:03] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 05:30:03] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 05:32:52] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 05:32:52] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 05:32:52] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 05:32:52] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 05:33:22] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 05:33:22] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 05:33:22] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 05:33:22] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 05:33:30] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 05:33:30] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 05:33:30] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 05:33:30] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 05:34:32] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 05:34:32] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 05:34:32] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 05:34:32] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 05:35:03] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 05:35:03] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 05:35:03] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 05:35:03] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 05:35:25] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 05:35:25] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 05:35:25] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 05:35:25] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 05:36:41] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 05:36:41] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 05:36:41] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 05:36:41] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 05:36:55] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 05:36:55] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 05:36:55] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 05:36:55] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 05:39:59] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 05:39:59] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 05:39:59] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 05:39:59] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 05:40:43] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 05:40:43] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 05:40:43] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 05:40:43] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 05:40:49] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 05:40:49] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 05:40:49] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 05:40:49] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 05:40:51] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 05:40:51] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 05:40:51] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 05:40:51] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-04 05:40:57] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-04 05:40:57] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-04 05:40:57] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-04 05:40:57] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-05 07:00:41] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-05 07:00:41] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-05 07:00:41] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-05 07:00:41] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => company
+)
+
+[2022-09-06 08:38:00] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-06 08:38:00] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-06 08:38:00] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-06 08:38:00] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => company
+)
+
+[2022-09-08 11:49:51] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-08 11:49:51] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-08 11:49:51] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-08 11:49:51] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => company
+)
+
+[2022-09-10 04:51:56] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-10 04:51:56] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-10 04:51:56] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-10 04:51:56] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => company
+)
+
+[2022-09-10 08:51:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-10 08:51:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-10 08:51:45] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-10 08:51:45] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 1
+    [action] => resume
+)
+
+[2022-09-10 08:52:26] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-10 08:52:26] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-10 08:52:26] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-10 08:52:26] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 1
+    [action] => company
+)
+
+[2022-09-10 16:04:14] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-10 16:04:14] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-10 16:04:14] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-10 16:04:14] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => company
+)
+
+[2022-09-11 16:27:14] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-11 16:27:14] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-11 16:27:14] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-11 16:27:14] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => company
+)
+
+[2022-09-12 17:42:11] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-12 17:42:11] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-12 17:42:11] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-12 17:42:11] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => company
+)
+
+[2022-09-15 09:03:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-15 09:03:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-15 09:03:44] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-15 09:03:44] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => company
+)
+
+[2022-09-15 09:39:32] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-15 09:39:32] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-15 09:39:32] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-15 09:39:32] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => company
+)
+
+[2022-09-16 11:20:09] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-16 11:20:09] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-16 11:20:09] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-16 11:20:09] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => company
+)
+
+[2022-09-16 11:30:38] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-16 11:30:38] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-16 11:30:38] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-16 11:30:38] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => company
+)
+
+[2022-09-18 18:51:25] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-18 18:51:25] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-18 18:51:25] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-18 18:51:25] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => company
+)
+
+[2022-09-21 12:13:14] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-21 12:13:14] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-21 12:13:14] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-21 12:13:14] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => company
+)
+
+[2022-09-21 13:45:54] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-21 13:45:54] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-21 13:45:54] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-21 13:45:54] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => company
+)
+
+[2022-09-22 08:35:25] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-22 08:35:25] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-22 08:35:25] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-22 08:35:25] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => company
+)
+
+[2022-09-25 11:10:14] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-25 11:10:14] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-25 11:10:14] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-25 11:10:14] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => company
+)
+
+[2022-09-26 10:10:00] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-26 10:10:00] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-26 10:10:00] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-26 10:10:00] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => company
+)
+
+[2022-09-27 07:31:35] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-27 07:31:35] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-27 07:31:35] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-27 07:31:35] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [user_id] => 0
+    [action] => company
+    [main_data] => Array
+        (
+            [comp_title] => ООО Мор Флот
+            [comp_country] => Россия
+            [comp_city] => Саратов
+            [comp_phone] => 89272286313
+            [comp_email] => olya.nikl.1989@mail.ru
+            [comp_address] => г. Москва, ул. Народная, д. 14
+            [comp_pass] => 89087654
+        )
+
+    [second_data] => Array
+        (
+            [comp_title] => ООО Мор Флот
+            [comp_country] => Россия
+            [comp_city] => Саратов
+            [comp_phone] => 89272286313
+            [comp_email] => olya.nikl.1989@mail.ru
+            [comp_address] => г. Москва, ул. Народная, д. 14
+            [comp_pass] => 89087654
+        )
+
+)
+
+[2022-09-29 09:47:27] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-29 09:47:27] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-29 09:47:27] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-29 09:47:27] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => company
+)
+
+[2022-09-29 14:04:15] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:15] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:04:15] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:15] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:04:15] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: RobotsBuilderItem from mysql.robotsbuilderitem.
+[2022-09-29 14:04:15] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class RobotsBuilderItem!
+[2022-09-29 14:04:15] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: RobotsBuilderItem from mysql.robotsbuilderitem.
+[2022-09-29 14:04:15] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) RobotsBuilderItem::load() is not a valid static method.
+[2022-09-29 14:04:15] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: RobotsBuilderItem from mysql.robotsbuilderitem.
+[2022-09-29 14:04:15] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class RobotsBuilderItem!
+[2022-09-29 14:04:15] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: RobotsBuilderItem from mysql.robotsbuilderitem.
+[2022-09-29 14:04:15] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) RobotsBuilderItem::load() is not a valid static method.
+[2022-09-29 14:04:15] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: RobotsBuilderItem from mysql.robotsbuilderitem.
+[2022-09-29 14:04:15] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class RobotsBuilderItem!
+[2022-09-29 14:04:15] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: RobotsBuilderItem from mysql.robotsbuilderitem.
+[2022-09-29 14:04:15] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) RobotsBuilderItem::load() is not a valid static method.
+[2022-09-29 14:04:15] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: RobotsBuilderItem from mysql.robotsbuilderitem.
+[2022-09-29 14:04:15] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class RobotsBuilderItem!
+[2022-09-29 14:04:15] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: RobotsBuilderItem from mysql.robotsbuilderitem.
+[2022-09-29 14:04:15] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) RobotsBuilderItem::load() is not a valid static method.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: msResourceFile from mysql.msresourcefile.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class msResourceFile!
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: msResourceFile from mysql.msresourcefile.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) msResourceFile::load() is not a valid static method.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: msResourceFile from mysql.msresourcefile.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class msResourceFile!
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: msResourceFile from mysql.msresourcefile.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) msResourceFile::load() is not a valid static method.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: msResourceFile from mysql.msresourcefile.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class msResourceFile!
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: msResourceFile from mysql.msresourcefile.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) msResourceFile::load() is not a valid static method.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: msResourceFile from mysql.msresourcefile.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class msResourceFile!
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: msResourceFile from mysql.msresourcefile.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) msResourceFile::load() is not a valid static method.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: msResourceFile from mysql.msresourcefile.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class msResourceFile!
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: msResourceFile from mysql.msresourcefile.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) msResourceFile::load() is not a valid static method.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: msResourceFile from mysql.msresourcefile.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class msResourceFile!
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: msResourceFile from mysql.msresourcefile.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) msResourceFile::load() is not a valid static method.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: msResourceFile from mysql.msresourcefile.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class msResourceFile!
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: msResourceFile from mysql.msresourcefile.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) msResourceFile::load() is not a valid static method.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: msResourceFile from mysql.msresourcefile.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class msResourceFile!
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: msResourceFile from mysql.msresourcefile.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) msResourceFile::load() is not a valid static method.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: msResourceFile from mysql.msresourcefile.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class msResourceFile!
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: msResourceFile from mysql.msresourcefile.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) msResourceFile::load() is not a valid static method.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: msResourceFile from mysql.msresourcefile.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class msResourceFile!
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: msResourceFile from mysql.msresourcefile.
+[2022-09-29 14:04:44] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) msResourceFile::load() is not a valid static method.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:04:45] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 344) Instantiated a derived class modWebLink that is not a subclass of the requested class modDocument
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: RobotsBuilderItem from mysql.robotsbuilderitem.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class RobotsBuilderItem!
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: RobotsBuilderItem from mysql.robotsbuilderitem.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) RobotsBuilderItem::load() is not a valid static method.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: RobotsBuilderItem from mysql.robotsbuilderitem.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class RobotsBuilderItem!
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: RobotsBuilderItem from mysql.robotsbuilderitem.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) RobotsBuilderItem::load() is not a valid static method.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:08] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:05:09] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:09] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:05:09] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:09] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:05:09] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:09] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class arRule!
+[2022-09-29 14:05:09] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: arRule from mysql.arrule.
+[2022-09-29 14:05:09] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) arRule::load() is not a valid static method.
+[2022-09-29 14:05:09] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: RobotsBuilderItem from mysql.robotsbuilderitem.
+[2022-09-29 14:05:09] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class RobotsBuilderItem!
+[2022-09-29 14:05:09] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: RobotsBuilderItem from mysql.robotsbuilderitem.
+[2022-09-29 14:05:09] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) RobotsBuilderItem::load() is not a valid static method.
+[2022-09-29 14:05:09] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: RobotsBuilderItem from mysql.robotsbuilderitem.
+[2022-09-29 14:05:09] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class RobotsBuilderItem!
+[2022-09-29 14:05:09] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: RobotsBuilderItem from mysql.robotsbuilderitem.
+[2022-09-29 14:05:09] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) RobotsBuilderItem::load() is not a valid static method.
+[2022-09-29 14:05:09] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: RobotsBuilderItem from mysql.robotsbuilderitem.
+[2022-09-29 14:05:09] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class RobotsBuilderItem!
+[2022-09-29 14:05:09] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: RobotsBuilderItem from mysql.robotsbuilderitem.
+[2022-09-29 14:05:09] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) RobotsBuilderItem::load() is not a valid static method.
+[2022-09-29 14:05:09] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: RobotsBuilderItem from mysql.robotsbuilderitem.
+[2022-09-29 14:05:09] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1656) Could not load class RobotsBuilderItem!
+[2022-09-29 14:05:09] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 644) Could not load class: RobotsBuilderItem from mysql.robotsbuilderitem.
+[2022-09-29 14:05:09] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 762) RobotsBuilderItem::load() is not a valid static method.
+[2022-09-29 14:07:32] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-matrosyi.html already exists for resource id = 62; skipping duplicate resource URI for resource id = 64
+[2022-09-29 14:07:32] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-elektromexanik.html already exists for resource id = 63; skipping duplicate resource URI for resource id = 65
+[2022-09-29 14:07:32] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 72
+[2022-09-29 14:07:32] (ERROR @ /var/www/apply_marine/core/model/modx/modcachemanager.class.php : 105) Resource URI kopiya-vizyi.html already exists for resource id = 71; skipping duplicate resource URI for resource id = 70
+[2022-09-29 14:38:44] (ERROR @ /var/www/apply_marine/core/components/pdotools/model/pdotools/pdotools.class.php : 999) Unexpected token ':' in 7edc20eb5bfece2fb2b276fa0047416c line 51, near '{"clientconfig-page-home":' <- there
+[2022-09-29 14:47:07] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-29 14:47:07] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-29 14:47:07] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-29 14:47:07] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 1
+    [action] => company
+)
+
+[2022-09-29 14:47:22] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-29 14:47:22] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-29 14:47:22] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-29 14:47:22] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 1
+    [action] => company
+)
+
+[2022-09-29 14:48:51] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-29 14:48:51] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-29 14:48:51] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-29 14:48:51] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 1
+    [action] => company
+)
+
+[2022-09-29 14:58:46] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-29 14:58:46] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-29 14:58:46] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-29 14:58:46] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 1
+    [action] => company
+)
+
+[2022-09-29 22:05:50] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1321) Could not get table class for class: localizatorLanguage
+[2022-09-29 22:05:50] (ERROR @ /var/www/apply_marine/core/xpdo/xpdo.class.php : 1290) Could not get table name for class: localizatorLanguage
+[2022-09-29 22:05:50] (ERROR @ /var/www/apply_marine/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS `localizatorLanguage` WHERE  ( `localizatorLanguage`.`http_host` = 'test.a...' at line 1
+)
+
+[2022-09-29 22:05:50] (ERROR @ /var/www/apply_marine/assets/components/addquestionnaire/addquestionnaire.php : 20) Array
+(
+    [id] => 23
+    [action] => company
+)
+
