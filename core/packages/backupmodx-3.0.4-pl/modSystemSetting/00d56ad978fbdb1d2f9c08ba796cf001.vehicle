@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'backupmodx',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '515b918594f182d37e275c832ae890da',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '00d56ad978fbdb1d2f9c08ba796cf001',
+  'native_key' => 'backupmodx.cronNote',
+  'object' => '{"key":"backupmodx.cronNote","value":"","xtype":"textfield","namespace":"backupmodx","area":"cron","editedon":null}',
+);
