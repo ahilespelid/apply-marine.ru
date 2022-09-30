@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'payandsee',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'd34e7445a70238a94c5e2768c8dab3fc',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'b297996983ab36620bd74e0b911a5de3',
+  'native_key' => 'payandsee_order_handler_class',
+  'object' => '{"key":"payandsee_order_handler_class","value":"PasOrderHandler","xtype":"textfield","namespace":"payandsee","area":"payandsee_order","editedon":null}',
+);

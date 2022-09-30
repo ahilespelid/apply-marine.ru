@@ -1,0 +1,123 @@
+<?php
+
+/** @var $modx modX */
+if (!$modx = $object->xpdo AND !$object->xpdo instanceof modX) {
+    return true;
+}
+
+/** @var $options */
+switch (@$options[xPDOTransport::PACKAGE_ACTION]) {
+    case xPDOTransport::ACTION_INSTALL:
+    case xPDOTransport::ACTION_UPGRADE:
+
+        $modelPath = $modx->getOption('payandsee_core_path', null, $modx->getOption('core_path') . 'components/payandsee/') . 'model/';
+        $modx->addPackage('payandsee', $modelPath);
+        $lang = $modx->getOption('manager_language') == 'en' ? 1 : 0;
+
+        /* PasStatus */
+        $rows = array(
+            'PasSubscription' => array(
+                array(
+                    'id'       => '1',
+                    'name'     => !$lang ? 'Новая' : 'New',
+                    'color'    => '000000',
+                    'allowed'  => 0,
+                    'editable' => 0,
+                ),
+                array(
+                    'id'       => '2',
+                    'name'     => !$lang ? 'Активна' : 'Active',
+                    'color'    => '008000',
+                    'allowed'  => 1,
+                    'editable' => 0,
+                ),
+                array(
+                    'id'       => '3',
+                    'name'     => !$lang ? 'Неактивна' : 'Inactive',
+                    'color'    => 'FF0000',
+                    'allowed'  => 0,
+                    'editable' => 0,
+                ),
+            ),
+
+            'PasContent' => array(
+                array(
+                    'id'       => '1',
+                    'name'     => !$lang ? 'Новый' : 'New',
+                    'color'    => '000000',
+                    'allowed'  => 0,
+                    'editable' => 0,
+                ),
+                array(
+                    'id'       => '2',
+                    'name'     => !$lang ? 'Активен' : 'Active',
+                    'color'    => '008000',
+                    'allowed'  => 1,
+                    'editable' => 0,
+                ),
+                array(
+                    'id'       => '3',
+                    'name'     => !$lang ? 'Неактивен' : 'Inactive',
+                    'color'    => 'FF0000',
+                    'allowed'  => 0,
+                    'editable' => 0,
+                ),
+            ),
+
+            'PasClient' => array(
+                array(
+                    'id'       => '1',
+                    'name'     => !$lang ? 'Новый' : 'New',
+                    'color'    => '000000',
+                    'allowed'  => 0,
+                    'editable' => 0,
+                ),
+                array(
+                    'id'       => '2',
+                    'name'     => !$lang ? 'Активен' : 'Active',
+                    'color'    => '008000',
+                    'allowed'  => 1,
+                    'editable' => 0,
+                ),
+                array(
+                    'id'       => '3',
+                    'name'     => !$lang ? 'Неактивен' : 'Inactive',
+                    'color'    => 'FF0000',
+                    'allowed'  => 0,
+                    'editable' => 0,
+                ),
+                /*array(
+                    'id'       => '4',
+                    'name'     => !$lang ? 'Vip' : 'Vip',
+                    'color'    => '800080',
+                    'allowed' => 1,
+                    'editable' => 1,
+                ),*/
+            ),
+
+        );
+
+        foreach ($rows as $class => $statuses) {
+            foreach ($statuses as $row) {
+
+                /** @var $status PasStatus */
+                if (!$status = $modx->getObject('PasStatus', array('class' => $class, 'id' => $row['id']))) {
+                    $status = $modx->newObject('PasStatus');
+                    $status->fromArray(array_merge(array(
+                        'class' => $class,
+                        'rank'  => $modx->getCount('PasStatus'/*, array('class' => $class)*/),
+                    ), $row), '', true, true);
+                }
+                $status->fromArray(array_merge(array(
+                    'editable' => 0,
+                ), $row), '', true, true);
+
+                $status->save();
+            }
+        }
+
+        break;
+    case xPDOTransport::ACTION_UNINSTALL:
+        break;
+}
+return true;

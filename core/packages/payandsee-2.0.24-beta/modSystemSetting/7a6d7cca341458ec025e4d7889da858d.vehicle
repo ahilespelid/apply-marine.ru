@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'payandsee',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '4ec3d9c6791ffb4150ef2a2541dcf01e',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '7a6d7cca341458ec025e4d7889da858d',
+  'native_key' => 'payandsee_email_manager',
+  'object' => '{"key":"payandsee_email_manager","value":"","xtype":"textfield","namespace":"payandsee","area":"payandsee_main","editedon":null}',
+);

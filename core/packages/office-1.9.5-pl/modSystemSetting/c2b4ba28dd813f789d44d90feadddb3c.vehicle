@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'office',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '35797badbbee86dc7c44f2cebbf61cb1',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'c2b4ba28dd813f789d44d90feadddb3c',
+  'native_key' => 'office_extjs_css',
+  'object' => '{"key":"office_extjs_css","value":"","xtype":"textfield","namespace":"office","area":"office_main","editedon":null}',
+);

@@ -1,0 +1,15 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'minishop2',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'ddb0f40249c87cabc02b33d456d0d2b6',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => '97c1ec01508ae89c583625cb0a1da0cf',
+  'native_key' => 'msOnSubmitOrder',
+  'object' => '{"name":"msOnSubmitOrder","service":6,"groupname":"miniShop2"}',
+);

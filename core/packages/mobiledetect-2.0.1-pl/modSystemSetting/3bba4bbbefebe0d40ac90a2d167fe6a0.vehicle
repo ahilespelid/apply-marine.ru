@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'mobiledetect',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '98b1d953d2abda0ff64aea5c8a82ca79',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '3bba4bbbefebe0d40ac90a2d167fe6a0',
+  'native_key' => 'md_force_browser_detect',
+  'object' => '{"key":"md_force_browser_detect","value":"detect","xtype":"textfield","namespace":"mobiledetect","area":"md_main","editedon":null}',
+);

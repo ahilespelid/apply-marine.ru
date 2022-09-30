@@ -1,0 +1,16 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'unique_key' => 'text',
+  'namespace' => 'minishop2',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '97cb0f08652e82031d075da3044fb79c',
+  'package' => 'modx',
+  'class' => 'modMenu',
+  'signature' => '3171ba83b51fe3193f6c71588b2851d3',
+  'native_key' => 'ms2_system_settings',
+  'object' => '{"text":"ms2_system_settings","parent":"minishop2","action":"system\\/settings","description":"ms2_system_settings_desc","icon":"","menuindex":2,"params":"&ns=minishop2","handler":"","permissions":"settings","namespace":"core"}',
+);

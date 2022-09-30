@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'directresize',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'eedd094be9a7b3f2c4e7b190a2aefb3e',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '2e09cfa856228b24807d49039f3fd1fb',
+  'native_key' => 'directresize.lightbox_w',
+  'object' => '{"key":"directresize.lightbox_w","value":"700","xtype":"textfield","namespace":"directresize","area":"directresize","editedon":null}',
+);

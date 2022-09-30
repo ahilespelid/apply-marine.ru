@@ -1,0 +1,19 @@
+<?php return array (
+  'preserve_keys' => false,
+  'unique_key' => 
+  array (
+    0 => 'name',
+  ),
+  'update_object' => true,
+  'namespace' => 'payandsee',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '0fcd95bcc90c1ccce22d9cb4e4340407',
+  'package' => 'modx',
+  'class' => 'modAccessPolicy',
+  'signature' => 'f54903c7abbb6eea5f362943f8473b11',
+  'native_key' => NULL,
+  'object' => '{"id":null,"name":"PayAndSeePolicy","description":"A policy for create \\/ update PayAndSee content.","parent":0,"template":0,"class":"","data":"{\\"payandsee_alert_edit\\":true,\\"payandsee_alert_view\\":true,\\"payandsee_client_edit\\":true,\\"payandsee_client_view\\":true,\\"payandsee_content_edit\\":true,\\"payandsee_content_view\\":true,\\"payandsee_rate_edit\\":true,\\"payandsee_rate_view\\":true,\\"payandsee_status_edit\\":true,\\"payandsee_status_view\\":true,\\"payandsee_subscription_edit\\":true,\\"payandsee_subscription_view\\":true,\\"payandsee_setting_edit\\":true,\\"payandsee_setting_view\\":true}","lexicon":"payandsee:permissions"}',
+);

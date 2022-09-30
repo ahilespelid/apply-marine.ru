@@ -1,0 +1,336 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Snippets' => 
+    array (
+      '9ab127d9633df35b35d2593b7c7ed5e6' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":0,"source":1,"property_preprocess":0,"name":"Localizator","description":"Localizator snippet","editor_type":0,"category":0,"cache_type":0,"snippet":"$localizator = $modx->getService(\'localizator\');\\n\\n$class = $modx->getOption(\'class\', $scriptProperties, \'modResource\', true);\\n$localizator_key = $modx->getOption(\'localizator_key\', $scriptProperties, $modx->getOption(\'localizator_key\', null), true);\\n\\n$elementName = $modx->getOption(\'snippet\', $scriptProperties, \'pdoResources\', true);\\n$elementSet = array();\\nif (strpos($elementName, \'@\') !== false) {\\n    list($elementName, $elementSet) = explode(\'@\', $elementName);\\n}\\nif ($elementName == \'msProducts\'){\\n    $class = $scriptProperties[\'class\'] = \'msProduct\';\\n}\\n\\n\\/\\/ Start build \\"where\\" expression\\n$where = array(\\n    \'localizator.key\' => $localizator_key,\\n);\\n\\n\\/\\/ Join tables\\n$leftJoin = array(\\n    \'localizator\' => array(\'class\' => \'localizatorContent\', \'on\' => \\"`localizator`.`resource_id` = `{$class}`.`id`\\"),\\n);\\n\\n$select = array(\\n    \'localizator\' => \\"`{$class}`.*, `localizator`.*, `{$class}`.`id`\\",\\n);\\n\\n\\/\\/ Add user parameters\\nforeach (array(\'where\', \'leftJoin\', \'select\') as $v) {\\n    if (!empty($scriptProperties[$v])) {\\n        $tmp = $scriptProperties[$v];\\n        if (!is_array($tmp)) {\\n            $tmp = json_decode($tmp, true);\\n        }\\n        if (is_array($tmp)) {\\n            $$v = array_merge($$v, $tmp);\\n        }\\n    }\\n    unset($scriptProperties[$v]);\\n}\\n\\n$localizatorProperties = array(\\n    \'where\' => $where,\\n    \'leftJoin\' => $leftJoin,\\n    \'select\' => $select,\\n    \'localizator_key\' => $localizator_key,\\n);\\n\\n\\nunset($scriptProperties[\'snippet\']);\\n\\/** @var modSnippet $snippet *\\/\\nif (!empty($elementName) && $element = $modx->getObject(\'modSnippet\', array(\'name\' => $elementName))) {\\n    $elementProperties = $element->getProperties();\\n    $elementPropertySet = !empty($elementSet)\\n        ? $element->getPropertySet($elementSet)\\n        : array();\\n    if (!is_array($elementPropertySet)) {$elementPropertySet = array();}\\n    $params = array_merge(\\n        $elementProperties,\\n        $elementPropertySet,\\n        $scriptProperties,\\n        $localizatorProperties\\n    );\\n    $element->setCacheable(false);\\n    return $element->process($params);\\n}\\nelse {\\n    $modx->log(modX::LOG_LEVEL_ERROR, \'[Localizator] Could not find main snippet with name: \\"\'.$elementName.\'\\"\');\\n    return \'\';\\n}","locked":0,"properties":"a:3:{s:7:\\"snippet\\";a:7:{s:4:\\"name\\";s:7:\\"snippet\\";s:4:\\"desc\\";s:24:\\"localizator_prop_snippet\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:12:\\"pdoResources\\";s:7:\\"lexicon\\";s:22:\\"localizator:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:5:\\"class\\";a:7:{s:4:\\"name\\";s:5:\\"class\\";s:4:\\"desc\\";s:22:\\"localizator_prop_class\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:11:\\"modResource\\";s:7:\\"lexicon\\";s:22:\\"localizator:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:15:\\"localizator_key\\";a:7:{s:4:\\"name\\";s:15:\\"localizator_key\\";s:4:\\"desc\\";s:32:\\"localizator_prop_localizator_key\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:22:\\"localizator:properties\\";s:4:\\"area\\";s:0:\\"\\";}}","moduleguid":"","static":0,"static_file":"core\\/components\\/localizator\\/elements\\/snippets\\/snippet.localizator.php","content":"$localizator = $modx->getService(\'localizator\');\\n\\n$class = $modx->getOption(\'class\', $scriptProperties, \'modResource\', true);\\n$localizator_key = $modx->getOption(\'localizator_key\', $scriptProperties, $modx->getOption(\'localizator_key\', null), true);\\n\\n$elementName = $modx->getOption(\'snippet\', $scriptProperties, \'pdoResources\', true);\\n$elementSet = array();\\nif (strpos($elementName, \'@\') !== false) {\\n    list($elementName, $elementSet) = explode(\'@\', $elementName);\\n}\\nif ($elementName == \'msProducts\'){\\n    $class = $scriptProperties[\'class\'] = \'msProduct\';\\n}\\n\\n\\/\\/ Start build \\"where\\" expression\\n$where = array(\\n    \'localizator.key\' => $localizator_key,\\n);\\n\\n\\/\\/ Join tables\\n$leftJoin = array(\\n    \'localizator\' => array(\'class\' => \'localizatorContent\', \'on\' => \\"`localizator`.`resource_id` = `{$class}`.`id`\\"),\\n);\\n\\n$select = array(\\n    \'localizator\' => \\"`{$class}`.*, `localizator`.*, `{$class}`.`id`\\",\\n);\\n\\n\\/\\/ Add user parameters\\nforeach (array(\'where\', \'leftJoin\', \'select\') as $v) {\\n    if (!empty($scriptProperties[$v])) {\\n        $tmp = $scriptProperties[$v];\\n        if (!is_array($tmp)) {\\n            $tmp = json_decode($tmp, true);\\n        }\\n        if (is_array($tmp)) {\\n            $$v = array_merge($$v, $tmp);\\n        }\\n    }\\n    unset($scriptProperties[$v]);\\n}\\n\\n$localizatorProperties = array(\\n    \'where\' => $where,\\n    \'leftJoin\' => $leftJoin,\\n    \'select\' => $select,\\n    \'localizator_key\' => $localizator_key,\\n);\\n\\n\\nunset($scriptProperties[\'snippet\']);\\n\\/** @var modSnippet $snippet *\\/\\nif (!empty($elementName) && $element = $modx->getObject(\'modSnippet\', array(\'name\' => $elementName))) {\\n    $elementProperties = $element->getProperties();\\n    $elementPropertySet = !empty($elementSet)\\n        ? $element->getPropertySet($elementSet)\\n        : array();\\n    if (!is_array($elementPropertySet)) {$elementPropertySet = array();}\\n    $params = array_merge(\\n        $elementProperties,\\n        $elementPropertySet,\\n        $scriptProperties,\\n        $localizatorProperties\\n    );\\n    $element->setCacheable(false);\\n    return $element->process($params);\\n}\\nelse {\\n    $modx->log(modX::LOG_LEVEL_ERROR, \'[Localizator] Could not find main snippet with name: \\"\'.$elementName.\'\\"\');\\n    return \'\';\\n}"}',
+        'guid' => 'd052f8199cc6215403e7ac1306b1d66f',
+        'native_key' => 0,
+        'signature' => 'ae85cf6450e5ac42e1185a39c5f6fc73',
+      ),
+      'e725716c2ab578834a9403b7c5c17b79' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":0,"source":1,"property_preprocess":0,"name":"getLocales","description":"getLocales snippet","editor_type":0,"category":0,"cache_type":0,"snippet":"$pdoFetch = $modx->getService(\'pdoFetch\');\\n$defaultLocale = $modx->getOption(\'defaultLocale\', $scriptProperties, \'ua\');\\n$tpl = $modx->getOption(\'tpl\', $scriptProperties, \'\');\\n$currentTpl = $modx->getOption(\'currentTpl\', $scriptProperties, \'\');\\n$start = $modx->getOption(\'site_start\');\\n$pageId = $modx->getOption(\'pageId\', $scriptProperties, $modx->resource->get(\'id\'));\\n$currentLocale = $modx->config[\'cultureKey\'];\\n$where = $modx->getOption(\'where\', $scriptProperties, [\'active\' => 1]);\\n\\n$protocol = $modx->getOption(\'server_protocol\').\':\\/\\/\';\\n\\n$locales = $pdoFetch->getCollection(\'localizatorLanguage\', $where, $scriptProperties);\\n\\n$output = \'\';\\n\\nif($locales) {\\n    \\n    foreach($locales as $data) {\\n        $data[\'current\'] = false;\\n        $url = $data[\'http_host\'];\\n        $chunk = $tpl;\\n        \\n        if($pageId != $start) {\\n            $url = $data[\'http_host\'].$modx->makeUrl($pageId);\\n        }\\n        \\n        if($data[\'key\'] == $currentLocale || $data[\'cultureKey\'] == $currentLocale) {\\n            $data[\'current\'] = true;\\n            \\n            if(!empty($currentTpl)) {\\n                $chunk = $currentTpl;\\n            }\\n        }\\n        \\n        $data[\'url\'] = $protocol.$url;\\n        \\n        $output .= $pdoFetch->getChunk($chunk, $data);\\n    }\\n}\\n\\nreturn $output;","locked":0,"properties":null,"moduleguid":"","static":0,"static_file":"core\\/components\\/localizator\\/elements\\/snippets\\/snippet.getlocales.php","content":"$pdoFetch = $modx->getService(\'pdoFetch\');\\n$defaultLocale = $modx->getOption(\'defaultLocale\', $scriptProperties, \'ua\');\\n$tpl = $modx->getOption(\'tpl\', $scriptProperties, \'\');\\n$currentTpl = $modx->getOption(\'currentTpl\', $scriptProperties, \'\');\\n$start = $modx->getOption(\'site_start\');\\n$pageId = $modx->getOption(\'pageId\', $scriptProperties, $modx->resource->get(\'id\'));\\n$currentLocale = $modx->config[\'cultureKey\'];\\n$where = $modx->getOption(\'where\', $scriptProperties, [\'active\' => 1]);\\n\\n$protocol = $modx->getOption(\'server_protocol\').\':\\/\\/\';\\n\\n$locales = $pdoFetch->getCollection(\'localizatorLanguage\', $where, $scriptProperties);\\n\\n$output = \'\';\\n\\nif($locales) {\\n    \\n    foreach($locales as $data) {\\n        $data[\'current\'] = false;\\n        $url = $data[\'http_host\'];\\n        $chunk = $tpl;\\n        \\n        if($pageId != $start) {\\n            $url = $data[\'http_host\'].$modx->makeUrl($pageId);\\n        }\\n        \\n        if($data[\'key\'] == $currentLocale || $data[\'cultureKey\'] == $currentLocale) {\\n            $data[\'current\'] = true;\\n            \\n            if(!empty($currentTpl)) {\\n                $chunk = $currentTpl;\\n            }\\n        }\\n        \\n        $data[\'url\'] = $protocol.$url;\\n        \\n        $output .= $pdoFetch->getChunk($chunk, $data);\\n    }\\n}\\n\\nreturn $output;"}',
+        'guid' => '71cd745b207cb3004606daf1b1ea39e9',
+        'native_key' => 0,
+        'signature' => '770808c32ae66c4958da29fcd82bce5e',
+      ),
+    ),
+    'Plugins' => 
+    array (
+      '0b3d4ae578cbf787d3f563003b5c2b06' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":1,"property_preprocess":0,"name":"localizator","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/* @var modX $modx *\\/\\n\\/* @var localizator $localizator *\\/\\n$localizator = $modx->getService(\'localizator\');\\nswitch($modx->event->name) {\\n    case \'OnTVFormPrerender\':\\n        $modx->controller->addLexiconTopic(\'localizator:default\');\\n        $modx->controller->addHtml(\'\\n            <script type=\\"text\\/javascript\\">\\n                Ext.ComponentMgr.onAvailable(\\"modx-panel-tv\\", function(config) {\\n                    Ext.ComponentMgr.onAvailable(\\"modx-tv-form\\", function() {\\n                        this.items[1].items[1].items.push({\\n                            xtype: \\"xcheckbox\\"\\n                            ,boxLabel: _(\\"tv_localizator_enabled\\")\\n                            ,description: _(\\"tv_localizator_enabled_msg\\")\\n                            ,name: \\"localizator_enabled\\"\\n                            ,id: \\"modx-tv-localizator_enabled\\"\\n                            ,inputValue: 1\\n                            ,checked: config.record.localizator_enabled || false\\n                        });\\n                    });\\n                });\\n            <\\/script>\\n            \');\\n        break;\\n    case \'OnDocFormPrerender\':\\n        if ($mode == \'upd\' && $resource instanceof modResource){\\n            $modx->controller->addLexiconTopic(\'localizator:default\');\\n            $modx->controller->addCss($localizator->config[\'cssUrl\'] . \'mgr\\/main.css\');\\n            $modx->controller->addCss($localizator->config[\'cssUrl\'] . \'mgr\\/bootstrap.buttons.css\');\\n            $modx->controller->addJavascript($localizator->config[\'jsUrl\'] . \'mgr\\/localizator.js\');\\n            $modx->controller->addJavascript($localizator->config[\'jsUrl\'] . \'mgr\\/misc\\/utils.js\');\\n            $modx->controller->addJavascript($localizator->config[\'jsUrl\'] . \'mgr\\/misc\\/combo.js\');\\n            $modx->controller->addJavascript($localizator->config[\'jsUrl\'] . \'mgr\\/widgets\\/content.grid.js\');\\n            $modx->controller->addHtml(\'\\n            <script type=\\"text\\/javascript\\">\\n                localizator.config = \' . json_encode($localizator->config) . \';\\n                localizator.config.connector_url = \\"\' . $localizator->config[\'connectorUrl\'] . \'\\";\\n                localizator.config.resource_template = \\"\' . $resource->get(\'template\') . \'\\";\\n                Ext.ComponentMgr.onAvailable(\\"modx-resource-tabs\\", function() {\\n                    this.on(\\"beforerender\\", function() {\\n                        this.add({\\n                            title: _(\\"localizator_tab\\"),\\n                            id: \\"localizator-resource-tab\\",\\n                            items: [{\\n                                xtype: \\"localizator-grid-content\\",\\n                                cls: \\"main-wrapper\\",\\n                                resource_id: \' . $id . \',\\n                            }]\\n                        });\\n                    });\\n                });\\n            <\\/script>\\n            \');\\n        }\\n        break;\\n\\n    case \'OnMODXInit\':\\n        $include = include_once($localizator->config[\'modelPath\'] . \'localizator\\/plugin.mysql.inc.php\');\\n        if (is_array($include)) {\\n            foreach ($include as $class => $map){\\n                if (!isset($modx->map[$class])) {\\n                    $modx->loadClass($class);\\n                }\\n                if (isset($modx->map[$class])) {\\n                    foreach ($map as $key => $values) {\\n                        $modx->map[$class][$key] = array_merge($modx->map[$class][$key], $values);\\n                    }\\n                }\\n            }\\n        }\\n\\n        $isAjax = !empty($_SERVER[\'HTTP_X_REQUESTED_WITH\']) && $_SERVER[\'HTTP_X_REQUESTED_WITH\'] == \'XMLHttpRequest\';\\n        if ($modx->getOption(\'friendly_urls\') && $isAjax && isset($_SERVER[\'HTTP_REFERER\'])){\\n            $referer = parse_url($_SERVER[\'HTTP_REFERER\']);\\n            if (stripos($referer[\'path\'], MODX_MANAGER_URL) === 0) return;\\n            $localizator->findLocalization($referer[\'host\'], ltrim($referer[\'path\'], \'\\/\'));\\n        }\\n        break;\\n\\n    case \'OnHandleRequest\':\\n        if($modx->context->key == \'mgr\' || !$modx->getOption(\'friendly_urls\')) return;\\n        $q_var = $modx->getOption(\'request_param_alias\', null, \'q\');\\n        $localizator->findLocalization($_SERVER[\'HTTP_HOST\'], $_REQUEST[$q_var]);\\n        break;\\n\\n    case \'OnPageNotFound\':\\n        $localizator_key = $modx->localizator_key;\\n        $q_var = $modx->getOption(\'request_param_alias\', null, \'q\');\\n        $request = &$_REQUEST[$q_var];\\n        if($request == $localizator_key) {\\n            $modx->sendRedirect($request . \'\\/\', array(\'responseCode\' => \'HTTP\\/1.1 301 Moved Permanently\'));\\n        } else if (preg_match(\'\\/^(\'.$localizator_key.\')\\\\\\/\\/i\', $request)) {\\n            $request = preg_replace(\'\\/^\'.$localizator_key.\'\\\\\\/\\/\', \'\', $request);\\n        }\\n        $resource_id = (!$request) ? $modx->getOption(\'site_start\', null, 1) : $localizator->findResource($request);\\n        if($modx->getObject(\'modResource\',[\'id\' => $resource_id, \'deleted\' => 0, \'published\' => 1])){\\n            $modx->sendForward($resource_id);\\n        }\\n        break;\\n\\n    case \'OnLoadWebDocument\':\\n        $q = $modx->newQuery(\'localizatorContent\');\\n        $q->leftJoin(\'localizatorLanguage\',\'localizatorLanguage\', \'localizatorLanguage.key = localizatorContent.key\');\\n        $q->where(array(\\n            \'localizatorContent.resource_id\' => $modx->resource->id,\\n        ));\\n        $q->where(array(\\n            \'localizatorLanguage.key\' => $modx->localizator_key,\\n            \'OR:localizatorLanguage.cultureKey:=\' => $modx->localizator_key,\\n        ));\\n        $content = $modx->getObject(\'localizatorContent\', $q);\\n        if($content) {\\n            $placeholders = array();\\n            $fields = explode(\',\', $modx->getOption(\'localizator_translate_fields\'));\\n            foreach($fields as $field) {\\n                $value = $content->get($field);\\n                if($field == \'content\') {\\n                    $placeholders[\'localizator_content\'] = $value;\\n                    $modx->resource->set(\'localizator_content\', $value);\\n                } else {\\n                    $placeholders[$field] = $value;\\n                    $modx->resource->set($field, $value);\\n                }\\n            }\\n            foreach ($content->getTVKeys() as $field){\\n                $value = $content->get($field);\\n                if (!empty($value)){\\n                    $value = localizatorContent::renderTVOutput($modx, $field, $value, $modx->resource->id);\\n                    $modx->resource->_fieldMeta[$field] = [\\n                        \'dbtype\' => \'mediumtext\',\\n                        \'phptype\' => \'string\',\\n                    ];\\n                    \\n                    $placeholders[$field] = $value;\\n                    $modx->resource->set($field, $value);\\n                }\\n            }\\n            $modx->setPlaceholders($placeholders, \'*\');\\n        }\\n        \\/\\/$modx->resource->cacheable = false;\\n        break;\\n        \\n    case \'OnDocFormSave\':\\n        if ($mode == \'new\'){\\n            if ($key = $modx->getOption(\'localizator_default_language\', null, false, true)){\\n                if ($fields = $modx->getOption(\'localizator_translate_fields\', null, false, true)){\\n                    \\/\\/if (!$content = $modx->getObject(\'localizatorContent\', [\'resource_id\' => $resource->get(\'id\'), \'key\' => $key])){\\n                        $content = $modx->newObject(\'localizatorContent\');\\n                        $content->set(\'resource_id\', $resource->get(\'id\'));\\n                        $content->set(\'key\', $key);\\n                    \\/\\/}\\n                    $fields = array_map(\'trim\', explode(\',\', $fields));\\n                    foreach ($fields as $field) {\\n                        if (isset($resource->_fieldMeta[$field])){\\n                            $v = $resource->get($field);\\n                            if ($v){\\n                                $content->set($field, $v);\\n                            }\\n                        }\\n                    }\\n                    foreach ($content->getTVKeys() as $field){\\n                        \\/\\/if (!in_array($field, $fields)) continue;\\n                        $v = $resource->getTVValue($field);\\n                        if ($v){\\n                            $content->set($field, $v);\\n                        }\\n                    }\\n                    $content->save();\\n                }\\n            }\\n        }\\n        elseif (in_array($resource->get(\'class_key\'), array(\'modStaticResource\', \'modSymLink\', \'modWebLink\'))){\\n            $upd = $modx->prepare(\\"UPDATE \\".$modx->getTableName(\'localizatorContent\').\\" SET `content` = ? WHERE `resource_id` = ?\\");\\n            $upd->execute(array($resource->get(\'content\'), $resource->get(\'id\')));\\n        }\\n        break;\\n\\n    case \'OnEmptyTrash\':\\n        if (!empty($ids)){\\n            $modx->removeCollection(\'localizatorContent\', array(\'resource_id:IN\' => $ids));\\n            $modx->removeCollection(\'locTemplateVarResource\', array(\'contentid:IN\' => $ids));\\n        }\\n        break;\\n\\n    case \'mse2OnBeforeSearchIndex\':\\n        $keys = $mSearch2->fields;\\n        unset($keys[\'comment\']);\\n\\n        if ($contents = $modx->getCollection(\'localizatorContent\', array(\'resource_id\' => $resource->id))) {\\n            foreach ($contents as $content) {\\n                foreach ($keys as $k => $v) {\\n                    $field = $k;\\n                    if (strpos($field, \'tv_\') !== false) {\\n                        $field = substr($field, 3);\\n                    }\\n                    $value = $content->get($field);\\n                    \\/\\/ \\u0415\\u0441\\u043b\\u0438 \\u043f\\u043e\\u043b\\u0435 \\u0437\\u0430\\u043f\\u043e\\u043b\\u043d\\u0435\\u043d\\u043e\\n                    if (!empty($value)) {\\n                        $field_key = $content->key . \'-\' . $k;\\n                        $mSearch2->fields[$field_key] = $v;\\n                        $resource->set($field_key, $value);\\n                    }\\n                }\\n            }\\n        }\\n        break;\\n\\n    case \'pdoToolsOnFenomInit\':\\n        \\/** @var Fenom $fenom *\\/\\n        $pdo = $modx->getService(\'pdoTools\');\\n\\n        $fenom->addModifier(\'locfield\', function ($id, $field = null) use ($pdo, $modx) {\\n            \\/** @var modResource $resource *\\/\\n            if (empty($id)) {\\n                $resource = $modx->resource;\\n            } elseif (!is_numeric($id)) {\\n                $field = $id;\\n                $resource = $modx->resource;\\n            } elseif (!$resource = $pdo->getStore($id, \'resource\')) {\\n                $resource = $modx->getObject(\'modResource\', $id);\\n                $pdo->setStore($id, $resource, \'resource\');\\n            }\\n\\n            if (!$resource)\\n                return \'\';\\n\\n            $id = $resource->get(\'id\');\\n            $key = $modx->localizator_key;\\n            $output = \'\';\\n\\n            if (in_array($field, array_diff(array_keys($modx->getFields(\'localizatorContent\')), array(\'id\', \'resource_id\')))){\\n                $q = $modx->newQuery(\\"localizatorContent\\")\\n                    ->where(array(\\n                        \\"resource_id\\" => $id,\\n                        \\"key\\" => $key,\\n                    ))\\n                    ->select($field);\\n                if ($q->prepare() && $q->stmt->execute()){\\n                    $output = $q->stmt->fetchColumn();\\n                }\\n            }\\n            elseif (in_array($field, array_keys($modx->getFields(\'modResource\')))){\\n                $output = $resource->get($field);\\n            }\\n            elseif ($tv = $modx->getObject(\'modTemplateVar\', array(\'name\' => $field))){\\n                if ($tv->get(\'localizator_enabled\')){\\n                    $q = $modx->newQuery(\\"locTemplateVarResource\\")\\n                        ->where(array(\\n                            \\"contentid\\" => $id,\\n                            \\"key\\" => $key,\\n                            \\"tmplvarid\\" => $tv->get(\'id\'),\\n                        ))\\n                        ->select(\'value\');\\n                    if ($q->prepare() && $q->stmt->execute()){\\n                        if ($output = $q->stmt->fetchColumn()){\\n                            $output = localizatorContent::renderTVOutput($modx, $tv, $output, $id);\\n                        }\\n                    }\\n                }\\n                else{\\n                    $output = $resource->getTVValue($field);\\n                }\\n            }\\n            return $output;\\n        });\\n        break;\\n}","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"core\\/components\\/localizator\\/elements\\/plugins\\/plugin.localizator.php","content":"\\/* @var modX $modx *\\/\\n\\/* @var localizator $localizator *\\/\\n$localizator = $modx->getService(\'localizator\');\\nswitch($modx->event->name) {\\n    case \'OnTVFormPrerender\':\\n        $modx->controller->addLexiconTopic(\'localizator:default\');\\n        $modx->controller->addHtml(\'\\n            <script type=\\"text\\/javascript\\">\\n                Ext.ComponentMgr.onAvailable(\\"modx-panel-tv\\", function(config) {\\n                    Ext.ComponentMgr.onAvailable(\\"modx-tv-form\\", function() {\\n                        this.items[1].items[1].items.push({\\n                            xtype: \\"xcheckbox\\"\\n                            ,boxLabel: _(\\"tv_localizator_enabled\\")\\n                            ,description: _(\\"tv_localizator_enabled_msg\\")\\n                            ,name: \\"localizator_enabled\\"\\n                            ,id: \\"modx-tv-localizator_enabled\\"\\n                            ,inputValue: 1\\n                            ,checked: config.record.localizator_enabled || false\\n                        });\\n                    });\\n                });\\n            <\\/script>\\n            \');\\n        break;\\n    case \'OnDocFormPrerender\':\\n        if ($mode == \'upd\' && $resource instanceof modResource){\\n            $modx->controller->addLexiconTopic(\'localizator:default\');\\n            $modx->controller->addCss($localizator->config[\'cssUrl\'] . \'mgr\\/main.css\');\\n            $modx->controller->addCss($localizator->config[\'cssUrl\'] . \'mgr\\/bootstrap.buttons.css\');\\n            $modx->controller->addJavascript($localizator->config[\'jsUrl\'] . \'mgr\\/localizator.js\');\\n            $modx->controller->addJavascript($localizator->config[\'jsUrl\'] . \'mgr\\/misc\\/utils.js\');\\n            $modx->controller->addJavascript($localizator->config[\'jsUrl\'] . \'mgr\\/misc\\/combo.js\');\\n            $modx->controller->addJavascript($localizator->config[\'jsUrl\'] . \'mgr\\/widgets\\/content.grid.js\');\\n            $modx->controller->addHtml(\'\\n            <script type=\\"text\\/javascript\\">\\n                localizator.config = \' . json_encode($localizator->config) . \';\\n                localizator.config.connector_url = \\"\' . $localizator->config[\'connectorUrl\'] . \'\\";\\n                localizator.config.resource_template = \\"\' . $resource->get(\'template\') . \'\\";\\n                Ext.ComponentMgr.onAvailable(\\"modx-resource-tabs\\", function() {\\n                    this.on(\\"beforerender\\", function() {\\n                        this.add({\\n                            title: _(\\"localizator_tab\\"),\\n                            id: \\"localizator-resource-tab\\",\\n                            items: [{\\n                                xtype: \\"localizator-grid-content\\",\\n                                cls: \\"main-wrapper\\",\\n                                resource_id: \' . $id . \',\\n                            }]\\n                        });\\n                    });\\n                });\\n            <\\/script>\\n            \');\\n        }\\n        break;\\n\\n    case \'OnMODXInit\':\\n        $include = include_once($localizator->config[\'modelPath\'] . \'localizator\\/plugin.mysql.inc.php\');\\n        if (is_array($include)) {\\n            foreach ($include as $class => $map){\\n                if (!isset($modx->map[$class])) {\\n                    $modx->loadClass($class);\\n                }\\n                if (isset($modx->map[$class])) {\\n                    foreach ($map as $key => $values) {\\n                        $modx->map[$class][$key] = array_merge($modx->map[$class][$key], $values);\\n                    }\\n                }\\n            }\\n        }\\n\\n        $isAjax = !empty($_SERVER[\'HTTP_X_REQUESTED_WITH\']) && $_SERVER[\'HTTP_X_REQUESTED_WITH\'] == \'XMLHttpRequest\';\\n        if ($modx->getOption(\'friendly_urls\') && $isAjax && isset($_SERVER[\'HTTP_REFERER\'])){\\n            $referer = parse_url($_SERVER[\'HTTP_REFERER\']);\\n            if (stripos($referer[\'path\'], MODX_MANAGER_URL) === 0) return;\\n            $localizator->findLocalization($referer[\'host\'], ltrim($referer[\'path\'], \'\\/\'));\\n        }\\n        break;\\n\\n    case \'OnHandleRequest\':\\n        if($modx->context->key == \'mgr\' || !$modx->getOption(\'friendly_urls\')) return;\\n        $q_var = $modx->getOption(\'request_param_alias\', null, \'q\');\\n        $localizator->findLocalization($_SERVER[\'HTTP_HOST\'], $_REQUEST[$q_var]);\\n        break;\\n\\n    case \'OnPageNotFound\':\\n        $localizator_key = $modx->localizator_key;\\n        $q_var = $modx->getOption(\'request_param_alias\', null, \'q\');\\n        $request = &$_REQUEST[$q_var];\\n        if($request == $localizator_key) {\\n            $modx->sendRedirect($request . \'\\/\', array(\'responseCode\' => \'HTTP\\/1.1 301 Moved Permanently\'));\\n        } else if (preg_match(\'\\/^(\'.$localizator_key.\')\\\\\\/\\/i\', $request)) {\\n            $request = preg_replace(\'\\/^\'.$localizator_key.\'\\\\\\/\\/\', \'\', $request);\\n        }\\n        $resource_id = (!$request) ? $modx->getOption(\'site_start\', null, 1) : $localizator->findResource($request);\\n        if($modx->getObject(\'modResource\',[\'id\' => $resource_id, \'deleted\' => 0, \'published\' => 1])){\\n            $modx->sendForward($resource_id);\\n        }\\n        break;\\n\\n    case \'OnLoadWebDocument\':\\n        $q = $modx->newQuery(\'localizatorContent\');\\n        $q->leftJoin(\'localizatorLanguage\',\'localizatorLanguage\', \'localizatorLanguage.key = localizatorContent.key\');\\n        $q->where(array(\\n            \'localizatorContent.resource_id\' => $modx->resource->id,\\n        ));\\n        $q->where(array(\\n            \'localizatorLanguage.key\' => $modx->localizator_key,\\n            \'OR:localizatorLanguage.cultureKey:=\' => $modx->localizator_key,\\n        ));\\n        $content = $modx->getObject(\'localizatorContent\', $q);\\n        if($content) {\\n            $placeholders = array();\\n            $fields = explode(\',\', $modx->getOption(\'localizator_translate_fields\'));\\n            foreach($fields as $field) {\\n                $value = $content->get($field);\\n                if($field == \'content\') {\\n                    $placeholders[\'localizator_content\'] = $value;\\n                    $modx->resource->set(\'localizator_content\', $value);\\n                } else {\\n                    $placeholders[$field] = $value;\\n                    $modx->resource->set($field, $value);\\n                }\\n            }\\n            foreach ($content->getTVKeys() as $field){\\n                $value = $content->get($field);\\n                if (!empty($value)){\\n                    $value = localizatorContent::renderTVOutput($modx, $field, $value, $modx->resource->id);\\n                    $modx->resource->_fieldMeta[$field] = [\\n                        \'dbtype\' => \'mediumtext\',\\n                        \'phptype\' => \'string\',\\n                    ];\\n                    \\n                    $placeholders[$field] = $value;\\n                    $modx->resource->set($field, $value);\\n                }\\n            }\\n            $modx->setPlaceholders($placeholders, \'*\');\\n        }\\n        \\/\\/$modx->resource->cacheable = false;\\n        break;\\n        \\n    case \'OnDocFormSave\':\\n        if ($mode == \'new\'){\\n            if ($key = $modx->getOption(\'localizator_default_language\', null, false, true)){\\n                if ($fields = $modx->getOption(\'localizator_translate_fields\', null, false, true)){\\n                    \\/\\/if (!$content = $modx->getObject(\'localizatorContent\', [\'resource_id\' => $resource->get(\'id\'), \'key\' => $key])){\\n                        $content = $modx->newObject(\'localizatorContent\');\\n                        $content->set(\'resource_id\', $resource->get(\'id\'));\\n                        $content->set(\'key\', $key);\\n                    \\/\\/}\\n                    $fields = array_map(\'trim\', explode(\',\', $fields));\\n                    foreach ($fields as $field) {\\n                        if (isset($resource->_fieldMeta[$field])){\\n                            $v = $resource->get($field);\\n                            if ($v){\\n                                $content->set($field, $v);\\n                            }\\n                        }\\n                    }\\n                    foreach ($content->getTVKeys() as $field){\\n                        \\/\\/if (!in_array($field, $fields)) continue;\\n                        $v = $resource->getTVValue($field);\\n                        if ($v){\\n                            $content->set($field, $v);\\n                        }\\n                    }\\n                    $content->save();\\n                }\\n            }\\n        }\\n        elseif (in_array($resource->get(\'class_key\'), array(\'modStaticResource\', \'modSymLink\', \'modWebLink\'))){\\n            $upd = $modx->prepare(\\"UPDATE \\".$modx->getTableName(\'localizatorContent\').\\" SET `content` = ? WHERE `resource_id` = ?\\");\\n            $upd->execute(array($resource->get(\'content\'), $resource->get(\'id\')));\\n        }\\n        break;\\n\\n    case \'OnEmptyTrash\':\\n        if (!empty($ids)){\\n            $modx->removeCollection(\'localizatorContent\', array(\'resource_id:IN\' => $ids));\\n            $modx->removeCollection(\'locTemplateVarResource\', array(\'contentid:IN\' => $ids));\\n        }\\n        break;\\n\\n    case \'mse2OnBeforeSearchIndex\':\\n        $keys = $mSearch2->fields;\\n        unset($keys[\'comment\']);\\n\\n        if ($contents = $modx->getCollection(\'localizatorContent\', array(\'resource_id\' => $resource->id))) {\\n            foreach ($contents as $content) {\\n                foreach ($keys as $k => $v) {\\n                    $field = $k;\\n                    if (strpos($field, \'tv_\') !== false) {\\n                        $field = substr($field, 3);\\n                    }\\n                    $value = $content->get($field);\\n                    \\/\\/ \\u0415\\u0441\\u043b\\u0438 \\u043f\\u043e\\u043b\\u0435 \\u0437\\u0430\\u043f\\u043e\\u043b\\u043d\\u0435\\u043d\\u043e\\n                    if (!empty($value)) {\\n                        $field_key = $content->key . \'-\' . $k;\\n                        $mSearch2->fields[$field_key] = $v;\\n                        $resource->set($field_key, $value);\\n                    }\\n                }\\n            }\\n        }\\n        break;\\n\\n    case \'pdoToolsOnFenomInit\':\\n        \\/** @var Fenom $fenom *\\/\\n        $pdo = $modx->getService(\'pdoTools\');\\n\\n        $fenom->addModifier(\'locfield\', function ($id, $field = null) use ($pdo, $modx) {\\n            \\/** @var modResource $resource *\\/\\n            if (empty($id)) {\\n                $resource = $modx->resource;\\n            } elseif (!is_numeric($id)) {\\n                $field = $id;\\n                $resource = $modx->resource;\\n            } elseif (!$resource = $pdo->getStore($id, \'resource\')) {\\n                $resource = $modx->getObject(\'modResource\', $id);\\n                $pdo->setStore($id, $resource, \'resource\');\\n            }\\n\\n            if (!$resource)\\n                return \'\';\\n\\n            $id = $resource->get(\'id\');\\n            $key = $modx->localizator_key;\\n            $output = \'\';\\n\\n            if (in_array($field, array_diff(array_keys($modx->getFields(\'localizatorContent\')), array(\'id\', \'resource_id\')))){\\n                $q = $modx->newQuery(\\"localizatorContent\\")\\n                    ->where(array(\\n                        \\"resource_id\\" => $id,\\n                        \\"key\\" => $key,\\n                    ))\\n                    ->select($field);\\n                if ($q->prepare() && $q->stmt->execute()){\\n                    $output = $q->stmt->fetchColumn();\\n                }\\n            }\\n            elseif (in_array($field, array_keys($modx->getFields(\'modResource\')))){\\n                $output = $resource->get($field);\\n            }\\n            elseif ($tv = $modx->getObject(\'modTemplateVar\', array(\'name\' => $field))){\\n                if ($tv->get(\'localizator_enabled\')){\\n                    $q = $modx->newQuery(\\"locTemplateVarResource\\")\\n                        ->where(array(\\n                            \\"contentid\\" => $id,\\n                            \\"key\\" => $key,\\n                            \\"tmplvarid\\" => $tv->get(\'id\'),\\n                        ))\\n                        ->select(\'value\');\\n                    if ($q->prepare() && $q->stmt->execute()){\\n                        if ($output = $q->stmt->fetchColumn()){\\n                            $output = localizatorContent::renderTVOutput($modx, $tv, $output, $id);\\n                        }\\n                    }\\n                }\\n                else{\\n                    $output = $resource->getTVValue($field);\\n                }\\n            }\\n            return $output;\\n        });\\n        break;\\n}"}',
+        'guid' => '9e991d8f629114186db89ad4d9aeed4b',
+        'native_key' => NULL,
+        'signature' => '1c8db9ab9c5ae029f362701200e5a88c',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            '210b41d0e8de6bd8a9ca6c52a47a0766' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnTVFormPrerender","priority":0,"propertyset":0}',
+              'guid' => 'a29f078eb0ac92a74d35d146d18fdbe0',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnTVFormPrerender',
+              ),
+              'signature' => '9899c88bf9713bb0f9d205f54f2e2e05',
+            ),
+            '6d1b582ef4d4c40024045db0b3742e0d' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnDocFormPrerender","priority":0,"propertyset":0}',
+              'guid' => 'f787d9103f1bda45898306574ca65ff1',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnDocFormPrerender',
+              ),
+              'signature' => '78927aef6ba60a8220a91388efa4e647',
+            ),
+            '78f34ca8aa063b50346104e04eb65886' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnMODXInit","priority":0,"propertyset":0}',
+              'guid' => 'b10d932e8715ca09c6aaf13142906fb7',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnMODXInit',
+              ),
+              'signature' => '0de30bc05f279ea24a332606ae24546c',
+            ),
+            '065d614363dd32e9613316ee961a4e9d' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnHandleRequest","priority":0,"propertyset":0}',
+              'guid' => '6c08b60ab154224f482c9324191f0201',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnHandleRequest',
+              ),
+              'signature' => 'c7fb57be8400086c26d70b37ad098cba',
+            ),
+            '95018b78dc6ffdb290f54a24847d7a41' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnPageNotFound","priority":0,"propertyset":0}',
+              'guid' => 'a746658c4d29b975566e17ac15d91fe6',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnPageNotFound',
+              ),
+              'signature' => '38b96346a43192905479626d24ee9769',
+            ),
+            'f004be345b9928165bc1ad68417b1d27' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnLoadWebDocument","priority":10,"propertyset":0}',
+              'guid' => '1717d47024e3be97170c37519236f645',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnLoadWebDocument',
+              ),
+              'signature' => 'a17b8681052425236b98241702b6b17b',
+            ),
+            '25ebf4b84f2c8f57cb38104dfef76290' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnDocFormSave","priority":0,"propertyset":0}',
+              'guid' => '7f3aa21e5c309c36e2ba2de95c693a26',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnDocFormSave',
+              ),
+              'signature' => 'a4b1979af1c92388d3842dbf38bbf9ba',
+            ),
+            '0f7e948b9cee11d8c0dbb4d9272285ea' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnEmptyTrash","priority":0,"propertyset":0}',
+              'guid' => 'fcb5c95a59e83f8307a9c0d05ee47878',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnEmptyTrash',
+              ),
+              'signature' => 'd3d03244962274e9091f449a46268ede',
+            ),
+            '1d00ffc09ebc2252585976dfab1a871b' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"mse2OnBeforeSearchIndex","priority":0,"propertyset":0}',
+              'guid' => 'be975b840311cd56663a8372059c92da',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'mse2OnBeforeSearchIndex',
+              ),
+              'signature' => 'bf6b5ab53c89786fe989e50c47be181e',
+            ),
+            '69246a265ac37d57fe42e6629529058d' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"pdoToolsOnFenomInit","priority":0,"propertyset":0}',
+              'guid' => 'd42821739b9fe8251fe255802e53157f',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'pdoToolsOnFenomInit',
+              ),
+              'signature' => '9541868631279156aa1eb9b7858921ed',
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'localizator',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"localizator-1.0.8-beta\\/modCategory\\/36ee7475ec54514f270fa52fe2b412ca\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"localizator"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"localizator-1.0.8-beta\\/modCategory\\/36ee7475ec54514f270fa52fe2b412ca\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"localizator"}',
+    ),
+    2 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"localizator-1.0.8-beta\\/modCategory\\/36ee7475ec54514f270fa52fe2b412ca\\/2\\/","target":"return MODX_CORE_PATH . \'components\\/pdotools\\/model\\/pdotools\\/\';","name":"pdofetchlocalizator.class.php"}',
+    ),
+    3 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"localizator-1.0.8-beta\\/modCategory\\/36ee7475ec54514f270fa52fe2b412ca\\/3\\/","target":"return MODX_CORE_PATH . \'components\\/msearch2\\/custom\\/filters\\/\';","name":"localizator.class.php"}',
+    ),
+    4 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"localizator-1.0.8-beta\\/modCategory\\/36ee7475ec54514f270fa52fe2b412ca.resolve.extension.resolver","type":"php","name":"resolve.extension"}',
+    ),
+    5 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"localizator-1.0.8-beta\\/modCategory\\/36ee7475ec54514f270fa52fe2b412ca.resolve.setup.modx.com.resolver","type":"php","name":"resolve.setup.modx.com"}',
+    ),
+    6 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"localizator-1.0.8-beta\\/modCategory\\/36ee7475ec54514f270fa52fe2b412ca.resolve.setup.resolver","type":"php","name":"resolve.setup"}',
+    ),
+    7 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"localizator-1.0.8-beta\\/modCategory\\/36ee7475ec54514f270fa52fe2b412ca.resolve.tables.resolver","type":"php","name":"resolve.tables"}',
+    ),
+    8 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"localizator-1.0.8-beta\\/modCategory\\/36ee7475ec54514f270fa52fe2b412ca.resolve.weblink.resolver","type":"php","name":"resolve.weblink"}',
+    ),
+    9 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"localizator-1.0.8-beta\\/modCategory\\/36ee7475ec54514f270fa52fe2b412ca.resolve.policy.resolver","type":"php","name":"resolve.policy"}',
+    ),
+    10 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"localizator-1.0.8-beta\\/modCategory\\/36ee7475ec54514f270fa52fe2b412ca.resolve.upgrade.resolver","type":"php","name":"resolve.upgrade"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '80d3ebd8e38d1b625a434f65a29bcc90',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '36ee7475ec54514f270fa52fe2b412ca',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"localizator","rank":0}',
+);

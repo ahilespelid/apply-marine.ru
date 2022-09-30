@@ -1,0 +1,15 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'minishop2',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'b79391b97ba342cd210f0f4421d2bcff',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => '1f6ef05f39c4a0188eab5677b660e817',
+  'native_key' => 'msOnGetProductPrice',
+  'object' => '{"name":"msOnGetProductPrice","service":6,"groupname":"miniShop2"}',
+);

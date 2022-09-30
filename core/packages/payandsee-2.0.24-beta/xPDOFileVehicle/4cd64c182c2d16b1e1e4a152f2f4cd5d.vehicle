@@ -1,0 +1,23 @@
+<?php return array (
+  'class' => 'xPDOFileVehicle',
+  'object' => 
+  array (
+    'source' => 'payandsee-2.0.24-beta/xPDOFileVehicle/4cd64c182c2d16b1e1e4a152f2f4cd5d/',
+    'target' => 'return MODX_CORE_PATH . \'components/\';',
+    'name' => 'payandsee',
+  ),
+  'vehicle_class' => 'xPDOFileVehicle',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'php',
+      'body' => '{"type":"php","source":"payandsee-2.0.24-beta\\/xPDOFileVehicle\\/4cd64c182c2d16b1e1e4a152f2f4cd5d.resolve.encryption.resolver","name":"resolve.encryption"}',
+    ),
+  ),
+  'vehicle_package' => 'transport',
+  'guid' => '0772db26ea510610e13d35d1aab425a9',
+  'package' => '',
+  'signature' => '4cd64c182c2d16b1e1e4a152f2f4cd5d',
+  'native_key' => '0772db26ea510610e13d35d1aab425a9',
+);

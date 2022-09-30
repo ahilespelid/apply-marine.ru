@@ -1,0 +1,54 @@
+<?php return array (
+  'preserve_keys' => false,
+  'update_object' => true,
+  'unique_key' => 'name',
+  'related_objects' => 
+  array (
+    'PluginEvents' => 
+    array (
+      'a73569cf427f2f2aa1f31ce2bfcd94e5' => 
+      array (
+        'preserve_keys' => true,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'pluginid',
+          1 => 'event',
+        ),
+        'class' => 'modPluginEvent',
+        'object' => '{"pluginid":28,"event":"OnWebPagePrerender","priority":0,"propertyset":0}',
+        'guid' => '2225760b4314a5ec3ca5b6c1e2ef8dda',
+        'native_key' => 
+        array (
+          0 => 28,
+          1 => 'OnWebPagePrerender',
+        ),
+        'signature' => '7b58770d5d1e4653582f1525e841fa58',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => false,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'minifyhtml',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '879a85f3ec7dcc2f768148001b9d3f6b',
+  'package' => 'modx',
+  'class' => 'modPlugin',
+  'signature' => '592e837eec68b127acba85787010007f',
+  'native_key' => 28,
+  'object' => '{"id":28,"source":2,"property_preprocess":0,"name":"MinifyHTML","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"$output = $modx->resource->_output;\\n$output= preg_replace(\'|\\\\s+|\', \' \', $output);\\n$modx->resource->_output = $output;","locked":0,"properties":"a:0:{}","disabled":0,"moduleguid":"","static":0,"static_file":"","content":"$output = $modx->resource->_output;\\n$output= preg_replace(\'|\\\\s+|\', \' \', $output);\\n$modx->resource->_output = $output;"}',
+);

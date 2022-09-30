@@ -1,0 +1,23 @@
+<?php return array (
+  'class' => 'xPDOFileVehicle',
+  'object' => 
+  array (
+    'source' => 'office-1.9.5-pl/xPDOFileVehicle/1846aae1c9e8982164aa316ed88b8f23/',
+    'target' => 'return MODX_CORE_PATH . \'components/\';',
+    'name' => 'office',
+  ),
+  'vehicle_class' => 'xPDOFileVehicle',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'php',
+      'body' => '{"type":"php","source":"office-1.9.5-pl\\/xPDOFileVehicle\\/1846aae1c9e8982164aa316ed88b8f23.resolve.encryption.resolver","name":"resolve.encryption"}',
+    ),
+  ),
+  'vehicle_package' => 'transport',
+  'guid' => 'f9378989af29eae1caeb905ed8379b28',
+  'package' => '',
+  'signature' => '1846aae1c9e8982164aa316ed88b8f23',
+  'native_key' => 'f9378989af29eae1caeb905ed8379b28',
+);

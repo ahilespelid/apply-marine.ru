@@ -1,0 +1,15 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'localizator',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '7bad9523480da713a9533d48b53ed598',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => 'aebc8416f429006d35a9c93c69825fa4',
+  'native_key' => 'OnSaveLocalizatorLanguage',
+  'object' => '{"name":"OnSaveLocalizatorLanguage","service":6,"groupname":"localizator"}',
+);

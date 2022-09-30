@@ -1,0 +1,63 @@
+<?php
+
+/** @var $modx modX */
+if (!$modx = $object->xpdo AND !$object->xpdo instanceof modX) {
+    return true;
+}
+
+/** @var $row */
+switch (@$row[xPDOTransport::PACKAGE_ACTION]) {
+    case xPDOTransport::ACTION_INSTALL:
+    case xPDOTransport::ACTION_UPGRADE:
+
+        $ctxs = array(
+            'pas' => array(
+                'name'        => 'PayAndSee',
+                'description' => 'PayAndSee context',
+                'options'     => array(
+                    //'site_start' => '1',
+                    //'base_url'   => '/',
+                    //'http_host'  => 'global-sec.ru',
+                    //'site_url'   => 'https://global-sec.ru/',
+                    //'error_page' => '4361',
+                    //'cultureKey' => 'ru',
+                    // 'locale'     => 'ru_RU'
+                ),
+            ),
+        );
+
+        foreach ($ctxs as $ctx => $row) {
+            /** @var $tmp modContext */
+            if (!$tmp = $modx->getObject('modContext', array('key' => $ctx))) {
+                $tmp = $modx->newObject('modContext');
+
+                $tmp->fromArray(array(
+                    'key'         => $ctx,
+                    'name'        => $row['name'],
+                    'description' => $row['description'],
+                ), '', true, true);
+                $tmp->save();
+
+                foreach ($row['options'] as $k => $v) {
+                    /** @var modContextSetting $tmp */
+                    if (!$tmp = $modx->getObject('modContextSetting', array('context_key' => $ctx, 'key' => $k))) {
+                        $tmp = $modx->newObject('modContextSetting');
+                    }
+                    $tmp->fromArray(array(
+                        'context_key' => $ctx,
+                        'key'         => $k,
+                        'xtype'       => 'textfield',
+                        'namespace'   => 'core',
+                        'area'        => '',
+                        'value'       => $v,
+                    ), '', true, true);
+                    $tmp->save();
+                }
+            }
+        }
+
+        break;
+    case xPDOTransport::ACTION_UNINSTALL:
+        break;
+}
+return true;

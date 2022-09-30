@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'logrotation',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '2661ac5ee126c7eca748e20013a8b435',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '54890f906c8cd408957404d23fe880bb',
+  'native_key' => 'logrotation_size',
+  'object' => '{"key":"logrotation_size","value":"102400","xtype":"numberfield","namespace":"logrotation","area":"logrotation_main","editedon":null}',
+);

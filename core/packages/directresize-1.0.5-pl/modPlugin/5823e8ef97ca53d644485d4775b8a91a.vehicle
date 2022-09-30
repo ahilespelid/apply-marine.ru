@@ -1,0 +1,54 @@
+<?php return array (
+  'unique_key' => 'name',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'PluginEvents' => 
+    array (
+      'acb6560fea2fa4bb29225d6da2d16ce8' => 
+      array (
+        'preserve_keys' => true,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'pluginid',
+          1 => 'event',
+        ),
+        'class' => 'modPluginEvent',
+        'object' => '{"pluginid":0,"event":"OnWebPagePrerender","priority":0,"propertyset":0}',
+        'guid' => '1ca14e0efe6aa6fc7760fc051b2ec31a',
+        'native_key' => 
+        array (
+          0 => 0,
+          1 => 'OnWebPagePrerender',
+        ),
+        'signature' => '13b87ee1b72aa24dd27eb9d76963140e',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => false,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'directresize',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'be13c0b4feac7d080cd22f3a0cbb489e',
+  'package' => 'modx',
+  'class' => 'modPlugin',
+  'signature' => '5823e8ef97ca53d644485d4775b8a91a',
+  'native_key' => 9,
+  'object' => '{"id":9,"name":"DirectResize","description":"\\u041f\\u043b\\u0430\\u0433\\u0438\\u043d \\u0440\\u0435\\u0441\\u0430\\u0439\\u0437\\u0430 \\u0438\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0439 \\u043d\\u0430 \\u0441\\u0430\\u0439\\u0442\\u0435","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/**\\r\\n * Handles removal of threads if a Resource is deleted.\\r\\n * \\r\\n * @package directresize\\r\\n *\\/\\r\\n$modx->lexicon->load(\'directresize:default\');\\r\\n$path = $modx->getOption(\'directresize.path\',null,true);\\r\\n$prefix = $modx->getOption(\'directresize.prefix\',null,true);\\r\\n$r = $modx->getOption(\'directresize.size_rule\',null,true);\\r\\n$q_jpg = $modx->getOption(\'directresize.q_jpg\',null,true);\\r\\n$q_png = $modx->getOption(\'directresize.q_png\',null,true);\\r\\n$path_base = $modx->getOption(\'directresize.path_base\',null,true);\\r\\n$lightbox = $modx->getOption(\'directresize.lightbox\',null,true);\\r\\n$lightbox_w = $modx->getOption(\'directresize.lightbox_w\',null,true);\\r\\n$lightbox_h = $modx->getOption(\'directresize.lightbox_h\',null,true);\\r\\n\\r\\n\\r\\n\\r\\nif (substr($prefix,-1) != \\"_\\") $prefix .= \\"_\\";\\r\\n\\r\\ninclude \\"core\\/components\\/directresize\\/elements\\/plugins\\/plugin.directresize.php\\";\\r\\n\\r\\n$e = &$modx->event;\\r\\nswitch ($e->name) {\\r\\n    case \\"OnWebPagePrerender\\":\\r\\n        $o = $modx->resource->_output;\\r\\n  \\/\\/print_r(\'1\'.$o.\'2\');\\r\\n        \\r\\n        $reg = \\"\\/<img[^>]*>\\/\\";  \\r\\n        preg_match_all($reg, $o, $imgs, PREG_PATTERN_ORDER);\\r\\n        for($n=0;$n<count($imgs[0]);$n++) {\\r\\n            \\/\\/-----------------------\\r\\n\\r\\n            $path_img = preg_replace(\\"\\/^.+src=(\'|\\\\\\")\\/ui\\",\\"\\",$imgs[0][$n]);                                            \\r\\n            $path_img = preg_replace(\\"\\/(\'|\\\\\\").*$\\/ui\\",\\"\\",$path_img);                                                                           \\r\\n            \\/\\/-----------------------\\r\\n            if (substr($path_img,0,strlen($path_base)) == $path_base) {                                                                     \\r\\n                $img = strtolower($imgs[0][$n]);\\r\\n                $verif_balise = sizeof(explode(\\"width\\",$img)) + sizeof(explode(\\"height\\",$img)) - 2;\\r\\n                if ($verif_balise > 0) {\\r\\n                    #################################\\r\\n                    preg_match(\\"\\/height *(:|=) *[\\\\\\"\']* *\\\\d+ *[\\\\\\"\']*\\/\\",$img,$array);                                      \\r\\n                    sizeof(explode(\\":\\",$array[0])) > 1 ? $style = true : $style = false;\\r\\n                    $heigth = preg_replace(\\"\\/[^0123456789]\\/\\",\\"\\",$array[0]);\\r\\n                    \\/\\/-------------------\\r\\n                    preg_match(\\"\\/width *(:|=) *[\\\\\\"\']* *\\\\d+ *[\\\\\\"\']*\\/\\",$img,$array);\\r\\n                    $width = preg_replace(\\"\\/[^0123456789]\\/\\",\\"\\",$array[0]);\\r\\n                    \\/\\/-------------------\\r\\n                    if ($style) {\\r\\n                        $imgf = preg_replace(\\"\\/(height|HEIGHT|Height) *: *[0123456789]* *(px)* *\\/ui\\",\\"\\",$imgs[0][$n]);\\r\\n                        $imgf = preg_replace(\\"\\/(width|WIDTH|Width) *: *[0123456789]* *(px)* *\\/ui\\",\\"\\",$imgf);\\r\\n                    } else {\\r\\n                        $imgf = preg_replace(\\"\\/(height|HEIGHT|Height) *= *[\\\\\\"\']* *[0123456789]* *(px)* *[\\\\\\"\']*\\/ui\\",\\"\\",$imgs[0][$n]);\\r\\n                        $imgf = preg_replace(\\"\\/(width|WIDTH|Width) *= *[\\\\\\"\']* *[0123456789]* *(px)* *[\\\\\\"\']*\\/ui\\",\\"\\",$imgf);\\r\\n                    }\\r\\n                    \\/\\/-------------------\\r\\n                    preg_match(\\"\\/^.+(src|Src|SRC)=(\'|\\\\\\")\\/\\",$imgf,$path_g);\\r\\n                    $imgf = preg_replace(\\"\\/^.+src=(\'|\\\\\\")\\/ui\\",\\"\\",$imgf);\\r\\n                    preg_match(\\"\\/(\'|\\\\\\").*$\\/\\",$imgf,$path_d);\\r\\n                    \\/\\/-------------------\\r\\n                    $pathRedim = directResize($path_img,$path,$prefix,$width,$heigth,$r,$q_jpg,$q_png);\\r\\n                    \\/\\/-------------------\\r\\n                    $nouvo_lien = $path_g[0].$pathRedim.$path_d[0];\\r\\n                    \\r\\n                    ###############################\\r\\n                    preg_match(\\"\\/highslide\\/\\",strtolower($imgs[0][$n]),$verif_light);\\r\\n                    if (($lightbox == 1 && $verif_light[0] == \\"highslide\\") || ($lightbox == 2 && substr($path_img,0,strlen($path_base)) == $path_base)) {\\r\\n                        \\r\\n                        $size       = getimagesize($path_img);\\r\\n                        $img_src_w  = $size[0];\\r\\n                        $img_src_h  = $size[1];\\r\\n                        $alt        = \\"\\";\\r\\n                        $title  = \\"\\";\\r\\n                        preg_match(\\"\\/(alt|Alt|ALT) *= *[\\\\\\"|\'][^\\\\\\"\']*[\\\\\\"\']\\/\\",$imgs[0][$n],$array);\\r\\n                        if ($array[0] <> \\"\\") {\\r\\n                            $alt = preg_replace(\\"\\/alt *= *[\\\\\\"|\']\\/ui\\",\\"\\",$array[0]);\\r\\n                            $alt = preg_replace(\\"\\/[\\\\\\"\']*\\/ui\\",\\"\\",$alt);\\r\\n                            $alt = trim($alt);\\r\\n                        }\\r\\n                        preg_match(\\"\\/(title|Title|TITLE) *= *[\\\\\\"|\'][^\\\\\\"\']*[\\\\\\"\']\\/\\",$imgs[0][$n],$array);\\r\\n                        if ($array[0] <> \\"\\") {\\r\\n                            $title = preg_replace(\\"\\/title *= *[\\\\\\"|\']\\/ui\\",\\"\\",$array[0]);\\r\\n                            $title = preg_replace(\\"\\/[\\\\\\"\']*\\/ui\\",\\"\\",$title);\\r\\n                            $title = trim($title);\\r\\n                        }\\r\\n                        if ($alt <> \\"\\" || $title <> \\"\\") {\\r\\n                            $legende = \\" title=\\\\\\"$alt\\";\\r\\n                            if ($alt <> \\"\\" && $title <> \\"\\") $legende .= \\"<br \\/>\\";\\r\\n                            if ($title <> \\"\\") $legende .= \\"<span style=\'font-weight:normal; font-size: 9px\'>$title<\\/span>\\";\\r\\n                            $legende .= \\"\\\\\\" \\";\\r\\n                        } else {\\r\\n                            $legende = \\"\\";\\r\\n                        }\\r\\n                        \\r\\n                        if ($img_src_w > $width || $img_src_h > $height) {\\r\\n                            if ($img_src_w > $lightbox_w || $img_src_h > $lightbox_h) {                                     \\r\\n                                $pathRedim = directResize($path_img,$path,$prefix,$lightbox_w,$lightbox_h,3,$q_jpg,$q_png);\\r\\n                                $nouvo_lien = \\"<a class=\\\\\\"highslide\\\\\\" onclick=\\\\\\"return hs.expand(this)\\\\\\" \\".$legende.\\" href=\'\\".$pathRedim.\\"\' >\\".$nouvo_lien.\\"<\\/a>\\";\\r\\n                            } else {\\r\\n                                $nouvo_lien = \\"<a class=\\\\\\"highslide\\\\\\" onclick=\\\\\\"return hs.expand(this)\\\\\\" \\".$legende.\\" href=\'\\".$path_img.\\"\' >\\".$nouvo_lien.\\"<\\/a>\\";\\r\\n                            }\\r\\n                        }\\r\\n                    }\\r\\n                    \\r\\n                    ####################################\\r\\n                    $o = str_replace($imgs[0][$n],$nouvo_lien,$o);\\r\\n                }\\r\\n            }\\r\\n        }\\r\\n        $head = \'<script type=\\"text\\/javascript\\" src=\\"assets\\/components\\/directresize\\/js\\/highslide.packed.js\\"><\\/script><script type=\\"text\\/javascript\\">\\r\\nhs.graphicsDir = \\\\\'assets\\/components\\/directresize\\/js\\/graphics\\/\\\\\';\\r\\n                  hs.lang.creditsText = \\\\\'\\\\\';<\\/script>\';\\r\\n        \\r\\n        \\r\\n        $o = preg_replace(\'~(<\\/head>)~i\', $head . \'\\\\1\', $o);\\r\\n        $modx->resource->_output = $o;\\r\\n         break;\\r\\n    default :\\r\\n        return;\\r\\n        break;\\r\\n}","locked":0,"properties":null,"disabled":0,"moduleguid":""}',
+);

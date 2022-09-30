@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'minishop2',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'afce5281205860e60f979819ed57a5cc',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'dc7b9a0eb602d326e9a95851466b94fb',
+  'native_key' => 'ms2_payment_paypal_checkout_url',
+  'object' => '{"key":"ms2_payment_paypal_checkout_url","value":"https:\\/\\/www.paypal.com\\/webscr?cmd=_express-checkout&token=","xtype":"textfield","namespace":"minishop2","area":"ms2_payment","editedon":"2021-09-27 19:45:58"}',
+);

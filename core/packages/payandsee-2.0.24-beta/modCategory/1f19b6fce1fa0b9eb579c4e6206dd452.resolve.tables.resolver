@@ -1,0 +1,87 @@
+<?php
+
+/** @var $modx modX */
+if (!$modx = $object->xpdo AND !$object->xpdo instanceof modX) {
+    return true;
+}
+
+/** @var $options */
+switch (@$options[xPDOTransport::PACKAGE_ACTION]) {
+    case xPDOTransport::ACTION_INSTALL:
+    case xPDOTransport::ACTION_UPGRADE:
+
+        $modelPath = $modx->getOption('payandsee_core_path', null,
+                $modx->getOption('core_path') . 'components/payandsee/') . 'model/';
+        $modx->addPackage('payandsee', $modelPath);
+
+        $manager = $modx->getManager();
+        $tmp = array(
+            'PasStatus',
+            'PasContent',
+            'PasRate',
+            'PasClient',
+            'PasSubscription',
+            'PasAlert',
+            //'PasAccess',
+        );
+        foreach ($tmp as $v) {
+            $manager->createObjectContainer($v);
+        }
+
+        $level = $modx->getLogLevel();
+        $modx->setLogLevel(xPDO::LOG_LEVEL_FATAL);
+
+      /*  $manager->addField('PasClient', 'context');
+        $manager->addIndex('PasClient', 'context');*/
+
+        $modx->loadClass('msOrderProduct');
+        $modx->map['msOrderProduct']['fields']['content_id'] = '';
+        $modx->map['msOrderProduct']['fieldMeta']['content_id'] = array(
+            'dbtype'     => 'int',
+            'precision'  => '10',
+            'attributes' => 'unsigned',
+            'phptype'    => 'integer',
+            'null'       => true,
+            'default'    => 0,
+        );
+        $modx->map['msOrderProduct']['indexes']['content_id'] = array(
+            'alias'   => 'content_id',
+            'primary' => false,
+            'unique'  => false,
+            'type'    => 'BTREE',
+            'columns' => array(
+                'content_id' => array(
+                    'length'    => '',
+                    'collation' => 'A',
+                    'null'      => false,
+                    'default'   => 0,
+                ),
+            ),
+        );
+        $modx->map['msOrderProduct']['aggregates']['Content'] = array(
+            'class'       => 'PasContent',
+            'local'       => 'content_id',
+            'foreign'     => 'id',
+            'cardinality' => 'one',
+            'owner'       => 'local',
+        );
+        /* */
+
+        $manager->addField('msOrderProduct', 'content_id');
+        $manager->addIndex('msOrderProduct', 'content_id');
+
+        // $manager->removeField('msOrder', 'content_id');
+        //$manager->removeIndex('msOrder', 'content_id');
+
+        //$manager->addField('msOrder', 'content_id');
+        //$manager->addIndex('msOrder', 'content_id');
+
+        $modx->setLogLevel($level);
+
+        break;
+
+    case xPDOTransport::ACTION_UNINSTALL:
+        break;
+}
+
+return true;

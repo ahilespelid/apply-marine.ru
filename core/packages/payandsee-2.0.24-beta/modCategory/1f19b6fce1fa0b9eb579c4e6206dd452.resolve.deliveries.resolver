@@ -1,0 +1,55 @@
+<?php
+
+/** @var $modx modX */
+if (!$modx = $object->xpdo AND !$object->xpdo instanceof modX) {
+    return true;
+}
+
+/** @var $options */
+switch (@$options[xPDOTransport::PACKAGE_ACTION]) {
+    case xPDOTransport::ACTION_INSTALL:
+    case xPDOTransport::ACTION_UPGRADE:
+
+        $modelPath = $modx->getOption('payandsee_core_path', null, $modx->getOption('core_path') . 'components/payandsee/') . 'model/';
+        $modx->addPackage('payandsee', $modelPath);
+        $lang = $modx->getOption('manager_language') == 'en' ? 1 : 0;
+
+        /* msDelivery */
+        $deliveries = array(
+            array(
+                'name'           => !$lang ? 'Без доставки' : 'Without delivery',
+                'price'          => 0,
+                'weight_price'   => 0,
+                'distance_price' => 0,
+                'active'         => 0,
+                'requires'       => 'payment,content,agree,email',
+                'class'          => 'PasDeliveryHandler',
+            ),
+        );
+
+        foreach ($deliveries as $row) {
+            /** @var msDelivery $delivery */
+            if (!$delivery = $modx->getObject('msDelivery', array(
+                'class' => $row['class'],
+            ))
+            ) {
+                $delivery = $modx->newObject('msDelivery');
+                $delivery->fromArray(array_merge($row, array(
+                    'rank' => $modx->getCount('msDelivery'),
+                )));
+                $delivery->save();
+            }
+
+            if ($setting = $modx->getObject('modSystemSetting', array('key' => 'payandsee_order_delivery_id'))) {
+                if (!$setting->get('value')) {
+                    $setting->set('value', $delivery->get('id'));
+                    $setting->save();
+                }
+            }
+        }
+
+        break;
+    case xPDOTransport::ACTION_UNINSTALL:
+        break;
+}
+return true;

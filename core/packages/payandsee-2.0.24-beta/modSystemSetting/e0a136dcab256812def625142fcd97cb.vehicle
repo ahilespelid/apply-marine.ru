@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'payandsee',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '8b7188560c9e9ae4a713dfb25f585826',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'e0a136dcab256812def625142fcd97cb',
+  'native_key' => 'payandsee_client_groups',
+  'object' => '{"key":"payandsee_client_groups","value":"Clients","xtype":"textfield","namespace":"payandsee","area":"payandsee_main","editedon":null}',
+);

@@ -1,0 +1,16 @@
+<?php return array (
+  'class' => 'xPDOScriptVehicle',
+  'object' => 
+  array (
+    'source' => 'payandsee-2.0.24-beta/xPDOScriptVehicle/20412c2a5dc55799f60a0363d9e41caa.resolve.encryption.script',
+  ),
+  'vehicle_class' => 'xPDOScriptVehicle',
+  'namespace' => 'payandsee',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'guid' => '7879a20c00a2483a10971f495ab5e014',
+  'package' => '',
+  'signature' => '20412c2a5dc55799f60a0363d9e41caa',
+  'native_key' => '7879a20c00a2483a10971f495ab5e014',
+);

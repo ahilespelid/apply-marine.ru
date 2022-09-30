@@ -1,0 +1,17 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'unique_key' => 'text',
+  'related_objects' => true,
+  'namespace' => 'robotsbuilder',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'e03fa04779c4e68229329ab2d20bd2e0',
+  'package' => 'modx',
+  'class' => 'modMenu',
+  'signature' => '164e446493e08c9d3cdc727c4ace32f1',
+  'native_key' => 'robotsbuilder',
+  'object' => '{"text":"robotsbuilder","parent":"components","action":"home","description":"robotsbuilder_menu_desc","icon":"","menuindex":0,"params":"","handler":"","permissions":"","namespace":"robotsbuilder"}',
+);

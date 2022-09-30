@@ -1,0 +1,15 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'payandsee',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '7ed0c5b18966f324515226119bd08ec9',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => 'b86173097d4b9e485e2beed5675de0a7',
+  'native_key' => 'PasOnEmptyOrder',
+  'object' => '{"name":"PasOnEmptyOrder","service":6,"groupname":"PayAndSee"}',
+);

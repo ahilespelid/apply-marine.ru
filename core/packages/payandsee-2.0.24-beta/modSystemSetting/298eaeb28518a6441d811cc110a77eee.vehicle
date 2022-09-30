@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'payandsee',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'a4669e38234829ef0aaf5b2e46d88672',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '298eaeb28518a6441d811cc110a77eee',
+  'native_key' => 'payandsee_working_templates',
+  'object' => '{"key":"payandsee_working_templates","value":"2,3,4,5,6,7","xtype":"textfield","namespace":"payandsee","area":"payandsee_main","editedon":null}',
+);

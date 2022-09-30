@@ -1,0 +1,248 @@
+<?php return array (
+  'preserve_keys' => false,
+  'unique_key' => 
+  array (
+    0 => 'name',
+  ),
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Permissions' => 
+    array (
+      '377cd08434b244e2949939972a1e032e' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"payandsee_alert_edit","description":"payandsee_alert_edit","value":1}',
+        'guid' => 'd359cf2675421ba11fb3870cf1adfef3',
+        'native_key' => NULL,
+        'signature' => 'd703914fd0fae34a9734d0e76c2cb8c8',
+      ),
+      'da22a2beadc18ada871df092ef7173f2' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"payandsee_alert_view","description":"payandsee_alert_view","value":1}',
+        'guid' => 'c74f71261ab867edec58d7f6a579d7c8',
+        'native_key' => NULL,
+        'signature' => 'dc100961bf106207a015de35d7496d90',
+      ),
+      '401ef0b7a76d7e7da5fd6501de3e88d9' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"payandsee_client_edit","description":"payandsee_client_edit","value":1}',
+        'guid' => '9996803e9faad42b318b06bfed9dd013',
+        'native_key' => NULL,
+        'signature' => 'cc674e88b9e3823dab8f1a64f2903bc8',
+      ),
+      '03a44949c64311a3b5ae27d11d2ba756' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"payandsee_client_view","description":"payandsee_client_view","value":1}',
+        'guid' => '151c97522e52996304fd620d333b32b9',
+        'native_key' => NULL,
+        'signature' => '2296837e12f99c8d0fb02aa42b8fbb7c',
+      ),
+      'd0682c2422f42c6be387d1e12012dade' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"payandsee_content_edit","description":"payandsee_content_edit","value":1}',
+        'guid' => 'f810f5efacfbc0b44cf96daf6e8e1ebe',
+        'native_key' => NULL,
+        'signature' => '118d914b03280c765c8c92125a1dad41',
+      ),
+      '41646c8161e5335adbb1494311f5a39b' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"payandsee_content_view","description":"payandsee_content_view","value":1}',
+        'guid' => '13aca2e621430d8efde713c00f4c3070',
+        'native_key' => NULL,
+        'signature' => '56931b8b187c019d3aff1b0cdc2e16f7',
+      ),
+      'b53d70f2bf44807a5ba7c5557bac942e' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"payandsee_rate_edit","description":"payandsee_rate_edit","value":1}',
+        'guid' => 'd6e096e6a0204454fe1307b3a57849aa',
+        'native_key' => NULL,
+        'signature' => '2a1c6b775e90d0a7864d29f2acc84327',
+      ),
+      '348c66de92d0be0966a28fb85d47d4df' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"payandsee_rate_view","description":"payandsee_rate_view","value":1}',
+        'guid' => '98e9b3579ac16f9925f38c94cc26ef17',
+        'native_key' => NULL,
+        'signature' => '1fb23b0c5cd2f5d2e505d4ac3bd5c533',
+      ),
+      '0eed6570e29b26a0887c1b4047696653' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"payandsee_status_edit","description":"payandsee_status_edit","value":1}',
+        'guid' => '1403fc3e8bbf35dac6348081cadc95af',
+        'native_key' => NULL,
+        'signature' => 'f65a7eb565eb1d4f25bdb3940ca56958',
+      ),
+      '4ddaa08bba283e8d223309851002c104' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"payandsee_status_view","description":"payandsee_status_view","value":1}',
+        'guid' => 'bc6c53b7b795777b183f11ea753626f7',
+        'native_key' => NULL,
+        'signature' => '8b47c460cb977e4338c92f544a02e3f7',
+      ),
+      '002995701e03d6b55189608ea5330b1e' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"payandsee_subscription_edit","description":"payandsee_subscription_edit","value":1}',
+        'guid' => '8c5955c3ef3b1387c0249835d2261ae2',
+        'native_key' => NULL,
+        'signature' => '7b23eb21fecb206c90b9f950361484ff',
+      ),
+      '943fcebc336532da57555b3bd3513112' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"payandsee_subscription_view","description":"payandsee_subscription_view","value":1}',
+        'guid' => '5357882c6daa63ff9f2f16de8c983d11',
+        'native_key' => NULL,
+        'signature' => '8486b65a7940dd1695bb329207440699',
+      ),
+      '7a5cfe1ddee5c1f2e12e5100980d13b2' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"payandsee_setting_edit","description":"payandsee_setting_edit","value":1}',
+        'guid' => '639b2095ca30f90c28f08d0d85d852b6',
+        'native_key' => NULL,
+        'signature' => 'fc2ac4d01dc6bff31d5e4ea7c2c632a8',
+      ),
+      'ea5f7f6088619b346e92473baa3ab82d' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"payandsee_setting_view","description":"payandsee_setting_view","value":1}',
+        'guid' => '0acc2b5519bee7b2095f2534389e7b3b',
+        'native_key' => NULL,
+        'signature' => '46a11d099108bdf391e20c659aae0960',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Permissions' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'template',
+        1 => 'name',
+      ),
+    ),
+  ),
+  'namespace' => 'payandsee',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'a7b6084ef28d2c137a06825afa4b5126',
+  'package' => 'modx',
+  'class' => 'modAccessPolicyTemplate',
+  'signature' => 'a2232c4e197fafb91ea19501ec5bae8c',
+  'native_key' => NULL,
+  'object' => '{"id":null,"template_group":1,"name":"PayAndSeePolicyTemplate","description":"A policy for PayAndSee managers.","lexicon":"payandsee:permissions","permissions":{"payandsee_alert_edit":[],"payandsee_alert_view":[],"payandsee_client_edit":[],"payandsee_client_view":[],"payandsee_content_edit":[],"payandsee_content_view":[],"payandsee_rate_edit":[],"payandsee_rate_view":[],"payandsee_status_edit":[],"payandsee_status_view":[],"payandsee_subscription_edit":[],"payandsee_subscription_view":[],"payandsee_setting_edit":[],"payandsee_setting_view":[]}}',
+);

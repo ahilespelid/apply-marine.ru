@@ -1,0 +1,111 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      'cc4523084d9007cec78ca1ed90c1458b' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":1,"property_preprocess":0,"name":"RobotsBuilder","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/** @var modX $modx *\\/\\nif ($modx->context->key == \'mgr\') return;\\nswitch ($modx->event->name) {\\n    case \'OnHandleRequest\':\\n        $output = \'\';\\n        $uri = substr($_SERVER[\'REQUEST_URI\'], 1);\\n        switch ($uri) {\\n            case \'robots.txt\':\\n            case \'sitemap.xml\':\\n                $modelPath = $modx->getOption(\'robotsbuilder_core_path\',null,$modx->getOption(\'core_path\').\'components\\/robotsbuilder\\/\').\'model\\/\';\\n                $modx->addPackage(\'robotsbuilder\', $modelPath);\\n                if ($robots = $modx->getObject(\'RobotsBuilderItem\', array(\'context\' => $modx->context->key, \'type\' => $uri, \'active\' => true))) {\\n                    $output = $robots->get(\'content\');\\n                    $maxIterations= (integer) $modx->getOption(\'parser_max_iterations\', null, 10);\\n                    $modx->getParser()->processElementTags(\'\', $output, false, false, \'[[\', \']]\', [], $maxIterations);\\n                    $modx->getParser()->processElementTags(\'\', $output, true, true, \'[[\', \']]\', [], $maxIterations);\\n                }\\n                break;\\n            default:\\n                break;\\n        }\\n        if ($output) {\\n            switch ($uri) {\\n                case \'robots.txt\':\\n                    header(\'Content-Type: text\\/plain\');\\n                    break;\\n                case \'sitemap.xml\':\\n                    header(\'Content-Type: text\\/xml\');\\n                    break;\\n                default:\\n                    return;\\n                    break;\\n            }\\n            print $output;\\n            die();\\n        }\\n        break;\\n    default:\\n        break;\\n}\\nreturn;","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"core\\/components\\/robotsbuilder\\/elements\\/plugins\\/plugin.robotsbuilder.php","content":"\\/** @var modX $modx *\\/\\nif ($modx->context->key == \'mgr\') return;\\nswitch ($modx->event->name) {\\n    case \'OnHandleRequest\':\\n        $output = \'\';\\n        $uri = substr($_SERVER[\'REQUEST_URI\'], 1);\\n        switch ($uri) {\\n            case \'robots.txt\':\\n            case \'sitemap.xml\':\\n                $modelPath = $modx->getOption(\'robotsbuilder_core_path\',null,$modx->getOption(\'core_path\').\'components\\/robotsbuilder\\/\').\'model\\/\';\\n                $modx->addPackage(\'robotsbuilder\', $modelPath);\\n                if ($robots = $modx->getObject(\'RobotsBuilderItem\', array(\'context\' => $modx->context->key, \'type\' => $uri, \'active\' => true))) {\\n                    $output = $robots->get(\'content\');\\n                    $maxIterations= (integer) $modx->getOption(\'parser_max_iterations\', null, 10);\\n                    $modx->getParser()->processElementTags(\'\', $output, false, false, \'[[\', \']]\', [], $maxIterations);\\n                    $modx->getParser()->processElementTags(\'\', $output, true, true, \'[[\', \']]\', [], $maxIterations);\\n                }\\n                break;\\n            default:\\n                break;\\n        }\\n        if ($output) {\\n            switch ($uri) {\\n                case \'robots.txt\':\\n                    header(\'Content-Type: text\\/plain\');\\n                    break;\\n                case \'sitemap.xml\':\\n                    header(\'Content-Type: text\\/xml\');\\n                    break;\\n                default:\\n                    return;\\n                    break;\\n            }\\n            print $output;\\n            die();\\n        }\\n        break;\\n    default:\\n        break;\\n}\\nreturn;"}',
+        'guid' => '9cb79dbee32f9f3e1374e5d3e9c94129',
+        'native_key' => NULL,
+        'signature' => 'cb934d26c4fd597e4751e34d49c3d924',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            '0399aa53d7a625594a1f87e86d2e1572' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnHandleRequest","priority":0,"propertyset":0}',
+              'guid' => '0d5e6be4df1beb3b2e2966b68713f7ba',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnHandleRequest',
+              ),
+              'signature' => '41de6bb85b770d9ced5eb0e5e1a67a85',
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => false,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'robotsbuilder',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"robotsbuilder-1.0.4-beta\\/modCategory\\/7c23105cc75b8252516ca021c0655d01\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"robotsbuilder"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"robotsbuilder-1.0.4-beta\\/modCategory\\/7c23105cc75b8252516ca021c0655d01\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"robotsbuilder"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"robotsbuilder-1.0.4-beta\\/modCategory\\/7c23105cc75b8252516ca021c0655d01.resolve.tables.resolver","type":"php","name":"resolve.tables"}',
+    ),
+    3 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"robotsbuilder-1.0.4-beta\\/modCategory\\/7c23105cc75b8252516ca021c0655d01.resolve.chunks.resolver","type":"php","name":"resolve.chunks"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '749a85eb74c90b530512fd6203ff9638',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '7c23105cc75b8252516ca021c0655d01',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"RobotsBuilder","rank":0}',
+);

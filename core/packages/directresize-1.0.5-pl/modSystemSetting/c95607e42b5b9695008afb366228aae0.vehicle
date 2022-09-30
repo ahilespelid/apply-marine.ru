@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'directresize',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'bfecef4ac614cd30f71064eba2711e86',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'c95607e42b5b9695008afb366228aae0',
+  'native_key' => 'directresize.path',
+  'object' => '{"key":"directresize.path","value":"assets\\/components\\/directresize\\/cache","xtype":"textfield","namespace":"directresize","area":"directresize","editedon":null}',
+);
