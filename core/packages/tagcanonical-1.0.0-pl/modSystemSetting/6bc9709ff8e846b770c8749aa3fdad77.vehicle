@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'related_objects' => false,
+  'namespace' => 'tagcanonical',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '5a4715e793d7f100ed3805c488f87ddd',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '6bc9709ff8e846b770c8749aa3fdad77',
+  'native_key' => 'tagcanonical_tv',
+  'object' => '{"key":"tagcanonical_tv","value":false,"xtype":"textfield","namespace":"tagcanonical","area":"system","editedon":null}',
+);

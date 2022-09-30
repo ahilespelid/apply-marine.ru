@@ -1,0 +1,50 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Snippets' => 
+    array (
+      'dade3e181c511147f47233308ed4850f' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":0,"source":1,"property_preprocess":0,"name":"tagCanonical","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/**\\n * @var array $scriptProperties\\n *\\/\\n\\n$delimiter = (!empty($scriptProperties[\'delimiter\'])) ? $scriptProperties[\'delimiter\'] : \',\';\\n$removeParameters = (!empty($scriptProperties[\'removeParameters\'])) ? true : false;\\n$snippetParameters = (!empty($scriptProperties[\'get\'])) ? explode($delimiter, $scriptProperties[\'get\']) : array();\\n\\n$resourceId = $modx->resource->get(\'id\');\\n$context = $modx->resource->get(\'context_key\');\\n\\n$tvParameters = ($tvId = (int) $modx->getOption(\'tagcanonical_tv\')) ? ($modx->resource->getTVValue($tvId)) ? explode($delimiter, $modx->resource->getTVValue($tvId)) : array() : array();\\n$getParameters = array_unique(array_merge($snippetParameters, $tvParameters));\\n$urlParameters = ($removeParameters || !$getParameters) ? array() : $modx->request->getParameters();\\n\\nif (count($urlParameters) && count($getParameters)) {\\n    foreach ($urlParameters as $parameter => $parameterValue) {\\n        if (!is_int(array_search($parameter, $getParameters)))\\n            unset($urlParameters[$parameter]);\\n    }\\n}\\nksort($urlParameters, SORT_STRING);\\n\\n$urlCorrectMode = htmlspecialchars_decode($modx->makeUrl($resourceId, $context, $urlParameters, \'full\'));\\n\\nreturn \'<link rel=\\"canonical\\" href=\\"\'.$urlCorrectMode.\'\\" \\/>\';","locked":0,"properties":"a:3:{s:9:\\"delimiter\\";a:7:{s:4:\\"name\\";s:9:\\"delimiter\\";s:4:\\"desc\\";s:27:\\"tagcanonical_prop_delimiter\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:1:\\",\\";s:7:\\"lexicon\\";s:23:\\"tagcanonical:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:3:\\"get\\";a:7:{s:4:\\"name\\";s:3:\\"get\\";s:4:\\"desc\\";s:21:\\"tagcanonical_prop_get\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:23:\\"tagcanonical:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:16:\\"removeParameters\\";a:7:{s:4:\\"name\\";s:16:\\"removeParameters\\";s:4:\\"desc\\";s:34:\\"tagcanonical_prop_removeParameters\\";s:4:\\"type\\";s:13:\\"combo-boolean\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";b:0;s:7:\\"lexicon\\";s:23:\\"tagcanonical:properties\\";s:4:\\"area\\";s:0:\\"\\";}}","moduleguid":"","static":0,"static_file":"core\\/components\\/tagcanonical\\/elements\\/snippets\\/tagcanonical.php","content":"\\/**\\n * @var array $scriptProperties\\n *\\/\\n\\n$delimiter = (!empty($scriptProperties[\'delimiter\'])) ? $scriptProperties[\'delimiter\'] : \',\';\\n$removeParameters = (!empty($scriptProperties[\'removeParameters\'])) ? true : false;\\n$snippetParameters = (!empty($scriptProperties[\'get\'])) ? explode($delimiter, $scriptProperties[\'get\']) : array();\\n\\n$resourceId = $modx->resource->get(\'id\');\\n$context = $modx->resource->get(\'context_key\');\\n\\n$tvParameters = ($tvId = (int) $modx->getOption(\'tagcanonical_tv\')) ? ($modx->resource->getTVValue($tvId)) ? explode($delimiter, $modx->resource->getTVValue($tvId)) : array() : array();\\n$getParameters = array_unique(array_merge($snippetParameters, $tvParameters));\\n$urlParameters = ($removeParameters || !$getParameters) ? array() : $modx->request->getParameters();\\n\\nif (count($urlParameters) && count($getParameters)) {\\n    foreach ($urlParameters as $parameter => $parameterValue) {\\n        if (!is_int(array_search($parameter, $getParameters)))\\n            unset($urlParameters[$parameter]);\\n    }\\n}\\nksort($urlParameters, SORT_STRING);\\n\\n$urlCorrectMode = htmlspecialchars_decode($modx->makeUrl($resourceId, $context, $urlParameters, \'full\'));\\n\\nreturn \'<link rel=\\"canonical\\" href=\\"\'.$urlCorrectMode.\'\\" \\/>\';","file":"tagcanonical"}',
+        'guid' => 'a9af1cf64ab013a4a9ed6e6e2d3f7855',
+        'native_key' => 0,
+        'signature' => '48d41c9c496a37bf6b6888bfdc575256',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+  ),
+  'namespace' => 'tagcanonical',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"tagcanonical-1.0.0-pl\\/modCategory\\/c87af0fc485bde009a08b6cbc7bf4428\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"tagcanonical"}',
+    ),
+    1 => NULL,
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'eaf7308c02215f11b030d8b50358904d',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => 'c87af0fc485bde009a08b6cbc7bf4428',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"tagCanonical","rank":0}',
+);
