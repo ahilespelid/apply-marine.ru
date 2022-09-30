@@ -1,0 +1,59 @@
+<?php
+
+//ini_set('display_errors', 1);
+//ini_set('error_reporting', -1);
+
+/*
+ * выборка разрещающих просроченных подписок и перевод их в статус "неактивна"
+ */
+
+define('MODX_API_MODE', true);
+$productionConfig = dirname(dirname(dirname(dirname(dirname(__FILE__))))) . '/index.php';
+$developmentConfig = dirname(dirname(dirname(dirname(dirname(dirname(dirname(__FILE__))))))) . '/index.php';
+if (file_exists($productionConfig)) {
+    /** @noinspection PhpIncludeInspection */
+    require_once $productionConfig;
+} else {
+    /** @noinspection PhpIncludeInspection */
+    require_once $developmentConfig;
+}
+
+// load services
+$modx->setLogTarget(XPDO_CLI_MODE ? 'ECHO' : 'FILE');
+$modx->setLogLevel(modX::LOG_LEVEL_ERROR);
+$modx->getService('error', 'error.modError');
+$modx->error->message = null;
+
+$corePath = $modx->getOption('payandsee_core_path', null,
+    $modx->getOption('core_path', null, MODX_CORE_PATH) . 'components/payandsee/');
+/** @var PayAndSee $PayAndSee */
+$PayAndSee = $modx->getService('payandsee', 'PayAndSee', $corePath . 'model/payandsee/',
+    array('core_path' => $corePath));
+$modx->lexicon->load('payandsee:default');
+
+// time limit
+set_time_limit(600);
+$tmp = 'Trying to set time limit = 600 sec: ';
+$tmp .= ini_get('max_execution_time') == 600 ? 'done' : 'error';
+$modx->log(modX::LOG_LEVEL_INFO, $tmp);
+
+// status "неактивна"
+$status = 3;
+
+// startdate, stopdate
+$stopdate = date('Y-m-d H:i:s', time());
+
+$c = $modx->newQuery('PasSubscription');
+$c->setClassAlias('Subscription');
+$c->leftJoin('PasStatus', 'SubscriptionStatus', 'SubscriptionStatus.id = Subscription.status AND SubscriptionStatus.class = "PasSubscription"');
+$c->sortby('Subscription.id');
+
+$c->where(array(
+    'SubscriptionStatus.allowed' => true,
+    'SubscriptionStatus.id:!='   => $status,
+    'Subscription.stopdate:<='   => $stopdate,
+));
+/** @var PasSubscription $subscription */
+while ($subscription = $modx->getObject('PasSubscription', $c)) {
+    $subscription->changeStatus($status);
+}

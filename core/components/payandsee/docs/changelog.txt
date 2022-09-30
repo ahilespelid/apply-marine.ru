@@ -1,0 +1,96 @@
+Changelog for PayAndSee.
+
+2.0.24-beta (16.09.2019)
+==============
+- Change "getPls" [PasSubscription]
+
+2.0.23-beta (12.08.2019)
+==============
+- Fix "getCost" [PasOrderHandler]
+
+2.0.22-beta (29.03.2019)
+==============
+- Fix "pas.content" snippet
+
+2.0.21-beta (02.03.2019)
+==============
+- Fix "loadCustomClasses" [PayAndSee]
+- Add "getFreshenFields" [UserEventsOrderHandler]
+
+2.0.20-beta (17.01.2019)
+==============
+- Add "PasOnSubscriptionBeforeRemove,PasOnSubscriptionRemove" event
+
+2.0.19-beta (12.12.2018)
+==============
+- Change "payandsee-grid-subscription", "payandsee-grid-client" [js]
+
+2.0.18-beta (06.12.2018)
+==============
+- Improved support of MODX 2.7
+
+2.0.17-beta (21.11.2018)
+==============
+- Fix "modUserGetListProcessor" processor
+- Improved "payandsee-combo-user", "payandsee-combo-client"
+
+2.0.16-beta (03.07.2018)
+==============
+- Add "formatNumber" [PayAndSee]
+
+2.0.14-2.0.15-beta (02.07.2018)
+==============
+- Add "number_format" setting
+- Add "msPromoCode" compatibility [PasOrderHandler]
+- Change "formatPrice" [PayAndSee]
+- Change "pas.order" chunk
+- Change "payandsee.Order.add" [js]
+
+2.0.13-beta (17.04.2018)
+==============
+- Add "msDiscount" compatibility [PasOrderHandler]
+
+2.0.12-beta (23.02.2018)
+==============
+- Add "checkStat" [PayAndSee]
+- Change "Order.submit" [js]
+
+2.0.11-beta (19.12.2017)
+==============
+- Change "getColumns" [payandsee.grid.Client]
+
+2.0.9-beta (02.10.2017)
+==============
+- Remove "templates" transport
+
+2.0.8-beta (21.09.2017)
+==============
+- Change "processEvent,changeSubscription,changeStatus" [PayAndSee]
+
+2.0.7-beta (14.09.2017)
+==============
+- Change "initialize" [PayAndSee]
+
+2.0.6-beta (10.09.2017)
+==============
+- Add "setUserCultureKey,getUserCultureKey" [PasClient]
+- Improved "changeStatus" [PayAndSee]
+
+2.0.5-beta (08.09.2017)
+==============
+- Fix "deliveries" [resolver]
+
+2.0.2-beta - 2.0.4-beta (08.09.2017)
+==============
+- Add "getClientLang" [PasClient]
+- Improved "getUserId" [PayAndSee]
+- Improved "changeStatus" [PayAndSee]
+
+2.0.1-beta (07.09.2017)
+==============
+- Fix model
+- Add "cron" scripts
+
+2.0.0-beta (29.08.2017)
+==============
+- Initial
