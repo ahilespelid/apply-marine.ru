@@ -1232,7 +1232,7 @@ switch ($modx->event->name) {
       'source' => '0',
       'property_preprocess' => '0',
       'name' => 'DirectResize',
-      'description' => 'РџР»Р°РіРёРЅ СЂРµСЃР°Р№Р·Р° РёР·РѕР±СЂР°Р¶РµРЅРёР№ РЅР° СЃР°Р№С‚Рµ',
+      'description' => 'Плагин ресайза изображений на сайте',
       'editor_type' => '0',
       'category' => '0',
       'cache_type' => '0',
@@ -2196,7 +2196,7 @@ This option enables you to specify where the toolbar should be located. This opt
  * Place, Suite 330, Boston, MA 02111-1307 USA
  *
  * @author      Maarten     <@maarten>
- * @copyright   CopyrightВ (c)В 2009,В Magnatron
+ * @copyright   Copyright (c) 2009, Magnatron
  * @license     GPL v2
  *
  * @package     AutoTemplate
@@ -2845,7 +2845,7 @@ elseif (isset($result)) {
       'source' => '0',
       'property_preprocess' => '0',
       'name' => 'YandexCoordsTv',
-      'description' => '!РќРµ Р·Р°Р±С‹С‚СЊ РїРѕРґРєР»СЋС‡РёС‚СЊ РєР»СЋС‡ РґР»СЏ РЇРЅРґРµРєСЃ.API',
+      'description' => '!Не забыть подключить ключ для Яндекс.API',
       'editor_type' => '0',
       'category' => '40',
       'cache_type' => '0',
@@ -3835,7 +3835,7 @@ switch($modx->event->name) {
                         $field = substr($field, 3);
                     }
                     $value = $content->get($field);
-                    // Р•СЃР»Рё РїРѕР»Рµ Р·Р°РїРѕР»РЅРµРЅРѕ
+                    // Если поле заполнено
                     if (!empty($value)) {
                         $field_key = $content->key . \'-\' . $k;
                         $mSearch2->fields[$field_key] = $v;

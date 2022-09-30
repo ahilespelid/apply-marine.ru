@@ -487,9 +487,9 @@ if (in_array($modx->event->name, $resourceEvents)) {
 }
 switch ($modx->event->name) {
     case "OnManagerPageInit":
-	$cssFile = MODX_ASSETS_URL.\'components/autoredirector/css/mgr/main.css\';
-	$modx->regClientCSS($cssFile);
-	break;
+    $cssFile = MODX_ASSETS_URL.\'components/autoredirector/css/mgr/main.css\';
+    $modx->regClientCSS($cssFile);
+    break;
 
     case "OnBeforeDocFormSave":
         $resources = array(
@@ -529,7 +529,7 @@ switch ($modx->event->name) {
             }
         }
         $modelPath = $modx->getOption(\'autoredirector_core_path\',null,$modx->getOption(\'core_path\').\'components/autoredirector/\').\'model/\';
-		$modx->addPackage(\'autoredirector\', $modelPath);
+        $modx->addPackage(\'autoredirector\', $modelPath);
         $processorProps = array(\'processors_path\' => $modx->getOption(\'autoredirector_core_path\',null,$modx->getOption(\'core_path\').\'components/autoredirector/\').\'processors/\');
         foreach ($resources as $res) {
             if (!empty($res)) {
@@ -572,7 +572,7 @@ switch ($modx->event->name) {
             $RuleQ[\'context_key\'] = $modx->context->get(\'key\');
         }
         $modelPath = $modx->getOption(\'autoredirector_core_path\',null,$modx->getOption(\'core_path\').\'components/autoredirector/\').\'model/\';
-    	$modx->addPackage(\'autoredirector\', $modelPath);
+        $modx->addPackage(\'autoredirector\', $modelPath);
         if ($Rule = $modx->getObject(\'arRule\', $RuleQ)) {
             if ($url = $modx->makeUrl($Rule->get(\'res_id\'))) {
                 $modx->sendRedirect($url,array(\'responseCode\' => \'HTTP/1.1 301 Moved Permanently\'));
@@ -598,41 +598,41 @@ switch ($modx->event->name) {
       'category' => '4',
       'cache_type' => '0',
       'plugincode' => 'if ($modx->event->name == \'OnPageNotFound\') {
-	$bannery_click = $modx->getOption(\'bannery_click\', null, \'bannerclick\', true);
-	if (preg_match(\'/\'.$bannery_click.\'\\/([0-9]+)/\', $_SERVER[\'REQUEST_URI\'], $matches)) {
-		$modx->addPackage(\'bannery\', $modx->getOption(\'core_path\') . \'components/bannery/model/\');
+    $bannery_click = $modx->getOption(\'bannery_click\', null, \'bannerclick\', true);
+    if (preg_match(\'/\'.$bannery_click.\'\\/([0-9]+)/\', $_SERVER[\'REQUEST_URI\'], $matches)) {
+        $modx->addPackage(\'bannery\', $modx->getOption(\'core_path\') . \'components/bannery/model/\');
 
-		$id = $matches[1];
-		$c = $modx->newQuery(\'byAd\');
-		$c->select(\'`byAd`.`id`, `Position`.`position`, `byAd`.`url`\');
-		$c->leftJoin(\'byAdPosition\', \'Position\', \'Position.ad = byAd.id\');
-		$c->where(array(\'Position.id\' => $id));
-		if ($ad = $modx->getObject(\'byAd\', $c)) {
-			$key = array(
-				\'ad\' => $ad->get(\'id\'),
-				\'position\' => $ad->get(\'position\'),
-				\'ip\' => $_SERVER[\'REMOTE_ADDR\'],
-				\'clickdate:LIKE\' => date(\'Y-m-d\') . \'%\'
-			);
-			if (!$modx->getCount(\'byClick\', $key)) {
-				$click = $modx->newObject(\'byClick\', array(
-					\'ad\' => $ad->get(\'id\'),
-					\'position\' => $ad->get(\'position\'),
-					\'clickdate\' => date(\'Y-m-d H:i:s\'),
-					\'referrer\' => $_SERVER[\'HTTP_REFERER\'],
-					\'ip\' => $_SERVER[\'REMOTE_ADDR\']
-				));
-				$click->save();
-			}
-			$url = $ad->get(\'url\');
-			$chunk = $modx->newObject(\'modChunk\');
-			$chunk->set(\'name\', \'banneryPosition\' . $id);
-			$chunk->setContent($url);
-			$url = $chunk->process($_GET);
+        $id = $matches[1];
+        $c = $modx->newQuery(\'byAd\');
+        $c->select(\'`byAd`.`id`, `Position`.`position`, `byAd`.`url`\');
+        $c->leftJoin(\'byAdPosition\', \'Position\', \'Position.ad = byAd.id\');
+        $c->where(array(\'Position.id\' => $id));
+        if ($ad = $modx->getObject(\'byAd\', $c)) {
+            $key = array(
+                \'ad\' => $ad->get(\'id\'),
+                \'position\' => $ad->get(\'position\'),
+                \'ip\' => $_SERVER[\'REMOTE_ADDR\'],
+                \'clickdate:LIKE\' => date(\'Y-m-d\') . \'%\'
+            );
+            if (!$modx->getCount(\'byClick\', $key)) {
+                $click = $modx->newObject(\'byClick\', array(
+                    \'ad\' => $ad->get(\'id\'),
+                    \'position\' => $ad->get(\'position\'),
+                    \'clickdate\' => date(\'Y-m-d H:i:s\'),
+                    \'referrer\' => $_SERVER[\'HTTP_REFERER\'],
+                    \'ip\' => $_SERVER[\'REMOTE_ADDR\']
+                ));
+                $click->save();
+            }
+            $url = $ad->get(\'url\');
+            $chunk = $modx->newObject(\'modChunk\');
+            $chunk->set(\'name\', \'banneryPosition\' . $id);
+            $chunk->setContent($url);
+            $url = $chunk->process($_GET);
 
-			$modx->sendRedirect($url);
-		}
-	}
+            $modx->sendRedirect($url);
+        }
+    }
 }',
       'locked' => '0',
       'properties' => NULL,
@@ -964,37 +964,37 @@ return \'\';',
       'category' => '8',
       'cache_type' => '0',
       'plugincode' => 'if (empty($_REQUEST[\'debug\']) || !$modx->user->hasSessionContext(\'mgr\') || $modx->context->key == \'mgr\') {
-	return;
+    return;
 }
 
 switch ($modx->event->name) {
 
-	case \'OnHandleRequest\':
-		if ($modx->parser instanceof pdoParser && $modx->loadClass(\'debugPdoParser\', MODX_CORE_PATH . \'components/debugparser/model/\', false, true)) {
-			$modx->parser = new debugPdoParser($modx);
-		}
-		elseif ($modx->loadClass(\'debugParser\', MODX_CORE_PATH . \'components/debugparser/model/\', false, true)) {
-			$modx->parser = new debugParser($modx);
-		}
-		break;
+    case \'OnHandleRequest\':
+        if ($modx->parser instanceof pdoParser && $modx->loadClass(\'debugPdoParser\', MODX_CORE_PATH . \'components/debugparser/model/\', false, true)) {
+            $modx->parser = new debugPdoParser($modx);
+        }
+        elseif ($modx->loadClass(\'debugParser\', MODX_CORE_PATH . \'components/debugparser/model/\', false, true)) {
+            $modx->parser = new debugParser($modx);
+        }
+        break;
 
-	case \'OnWebPageInit\':
-		if (method_exists($modx->parser, \'clearCache\') && empty($_REQUEST[\'cache\'])) {
-			$modx->parser->clearCache();
-		}
-		break;
+    case \'OnWebPageInit\':
+        if (method_exists($modx->parser, \'clearCache\') && empty($_REQUEST[\'cache\'])) {
+            $modx->parser->clearCache();
+        }
+        break;
 
-	case \'OnLoadWebPageCache\':
-		if (property_exists($modx->parser, \'from_cache\')) {
-			$modx->parser->from_cache = true;
-		}
-		break;
+    case \'OnLoadWebPageCache\':
+        if (property_exists($modx->parser, \'from_cache\')) {
+            $modx->parser->from_cache = true;
+        }
+        break;
 
-	case \'OnWebPagePrerender\':
-		if (method_exists($modx->parser, \'generateReport\')) {
-			$modx->parser->generateReport();
-		}
-		break;
+    case \'OnWebPagePrerender\':
+        if (method_exists($modx->parser, \'generateReport\')) {
+            $modx->parser->generateReport();
+        }
+        break;
 }',
       'locked' => '0',
       'properties' => NULL,
@@ -1009,7 +1009,7 @@ switch ($modx->event->name) {
       'source' => '0',
       'property_preprocess' => '0',
       'name' => 'DirectResize',
-      'description' => 'РџР»Р°РіРёРЅ СЂРµСЃР°Р№Р·Р° РёР·РѕР±СЂР°Р¶РµРЅРёР№ РЅР° СЃР°Р№С‚Рµ',
+      'description' => 'Плагин ресайза изображений на сайте',
       'editor_type' => '0',
       'category' => '0',
       'cache_type' => '0',
@@ -1160,22 +1160,22 @@ hs.graphicsDir = \\\'assets/components/directresize/js/graphics/\\\';
  */
 $currentdoc = $modx->newObject(\'modResource\');
 foreach ($files as &$file) {
-	if ($file[\'error\'] == 0) {
-		$newName = $currentdoc->cleanAlias($file[\'name\']);
+    if ($file[\'error\'] == 0) {
+        $newName = $currentdoc->cleanAlias($file[\'name\']);
 
-		//file rename logic
-		if ($file[\'name\'] !== $newName) {
-			$arDirFiles = $source->getObjectsInContainer($directory);
-			foreach ($arDirFiles as &$dirFile){
-				if($dirFile[\'name\']===$newName){
-					//delete file if there is one with new name
-					$source->removeObject($directory . $newName);
-				}
-			}
-			//transliterate uploaded file
-			$source->renameObject($directory . $file[\'name\'], $newName);
-		}
-	}
+        //file rename logic
+        if ($file[\'name\'] !== $newName) {
+            $arDirFiles = $source->getObjectsInContainer($directory);
+            foreach ($arDirFiles as &$dirFile){
+                if($dirFile[\'name\']===$newName){
+                    //delete file if there is one with new name
+                    $source->removeObject($directory . $newName);
+                }
+            }
+            //transliterate uploaded file
+            $source->renameObject($directory . $file[\'name\'], $newName);
+        }
+    }
 }',
       'locked' => '0',
       'properties' => NULL,
@@ -1294,7 +1294,7 @@ switch ($modx->event->name) {
         </script>\');
         $modx->regClientStartupScript($assetsUrl.\'sources/ColorPicker.js\');
         $modx->regClientStartupScript($assetsUrl.\'sources/ColorMenu.js\');
-        $modx->regClientStartupScript($assetsUrl.\'sources/ColorPickerField.js\');		
+        $modx->regClientStartupScript($assetsUrl.\'sources/ColorPickerField.js\');        
         $modx->regClientCSS($assetsUrl.\'resources/css/colorpicker.css\');
         break;
      */
@@ -1472,245 +1472,245 @@ $modx->resource->_output = $output;',
       'category' => '13',
       'cache_type' => '0',
       'plugincode' => 'switch ($modx->event->name) {
-	case \'OnMODXInit\':
+    case \'OnMODXInit\':
         $file = $modx->getOption(\'minifyx_core_path\', null, MODX_CORE_PATH) . \'components/minifyx/functions/function.php\';
         if (file_exists($file)) {
             include_once $file;
         }
-		break;
-	case \'OnSiteRefresh\':
+        break;
+    case \'OnSiteRefresh\':
         /** @var MinifyX $MinifyX */
-		if ($MinifyX = $modx->getService(\'minifyx\',\'MinifyX\', MODX_CORE_PATH.\'components/minifyx/model/minifyx/\')) {
-			if ($MinifyX->clearCache()) {
-				$modx->log(modX::LOG_LEVEL_INFO, $modx->lexicon(\'refresh_default\').\': MinifyX\');
-			}
-		}
-		break;
-	case \'OnWebPagePrerender\':
-		$time = microtime(true);
-		// Process scripts and styles
-		if ($modx->getOption(\'minifyx_process_registered\', null, false, true)) {
-			$current = array(
-				\'head\' => $modx->sjscripts,
-				\'body\' => $modx->jscripts,
-			);
-			$included = $excluded = $prepared = $raw = array(
-				\'head\' => array(\'css\' => array(), \'js\' => array(), \'html\' => array()),
-				\'body\' => array(\'css\' => array(), \'js\' => array(), \'html\' => array()),
-			);
-			$exclude = $modx->getOption(\'minifyx_exclude_registered\');
+        if ($MinifyX = $modx->getService(\'minifyx\',\'MinifyX\', MODX_CORE_PATH.\'components/minifyx/model/minifyx/\')) {
+            if ($MinifyX->clearCache()) {
+                $modx->log(modX::LOG_LEVEL_INFO, $modx->lexicon(\'refresh_default\').\': MinifyX\');
+            }
+        }
+        break;
+    case \'OnWebPagePrerender\':
+        $time = microtime(true);
+        // Process scripts and styles
+        if ($modx->getOption(\'minifyx_process_registered\', null, false, true)) {
+            $current = array(
+                \'head\' => $modx->sjscripts,
+                \'body\' => $modx->jscripts,
+            );
+            $included = $excluded = $prepared = $raw = array(
+                \'head\' => array(\'css\' => array(), \'js\' => array(), \'html\' => array()),
+                \'body\' => array(\'css\' => array(), \'js\' => array(), \'html\' => array()),
+            );
+            $exclude = $modx->getOption(\'minifyx_exclude_registered\');
 
-			// Split all scripts and styles by type
-			foreach ($current as $key => $value) {
-				foreach ($value as $v) {
-					if (preg_match(\'/<(?:link|script).*?(?:href|src)=[\\\'|"](.*?)[\\\'|"]/\', $v, $tmp)) {
-						if (strpos($tmp[1], \'.css\') !== false) {
-							if (!empty($exclude) && preg_match($exclude, $tmp[1])) {
-								$excluded[$key][\'css\'][] = $tmp[1];
-							}
-							else {
-								$included[$key][\'css\'][] = $tmp[1];
-							}
-						}
-						if (strpos($tmp[1], \'.js\') !== false) {
-							if (!empty($exclude) && preg_match($exclude, $tmp[1])) {
-								$excluded[$key][\'js\'][] = $tmp[1];
-							}
-							else {
-								$included[$key][\'js\'][] = $tmp[1];
-							}
-						}
-					}
-					elseif (strpos($v, \'<script\') !== false) {
-						$raw[$key][\'js\'][] = trim(preg_replace(\'#<!--.*?-->(\\n|)#s\', \'\', $v));
-					}
-					elseif (strpos($v, \'<style\') !== false) {
-						$raw[$key][\'css\'][] = trim(preg_replace(\'#/\\*.*?\\*/(\\n|)#s\', \'\', $v));
-					}
-					else {
-						$excluded[$key][\'html\'][] = $v;
-					}
-				}
-			}
+            // Split all scripts and styles by type
+            foreach ($current as $key => $value) {
+                foreach ($value as $v) {
+                    if (preg_match(\'/<(?:link|script).*?(?:href|src)=[\\\'|"](.*?)[\\\'|"]/\', $v, $tmp)) {
+                        if (strpos($tmp[1], \'.css\') !== false) {
+                            if (!empty($exclude) && preg_match($exclude, $tmp[1])) {
+                                $excluded[$key][\'css\'][] = $tmp[1];
+                            }
+                            else {
+                                $included[$key][\'css\'][] = $tmp[1];
+                            }
+                        }
+                        if (strpos($tmp[1], \'.js\') !== false) {
+                            if (!empty($exclude) && preg_match($exclude, $tmp[1])) {
+                                $excluded[$key][\'js\'][] = $tmp[1];
+                            }
+                            else {
+                                $included[$key][\'js\'][] = $tmp[1];
+                            }
+                        }
+                    }
+                    elseif (strpos($v, \'<script\') !== false) {
+                        $raw[$key][\'js\'][] = trim(preg_replace(\'#<!--.*?-->(\\n|)#s\', \'\', $v));
+                    }
+                    elseif (strpos($v, \'<style\') !== false) {
+                        $raw[$key][\'css\'][] = trim(preg_replace(\'#/\\*.*?\\*/(\\n|)#s\', \'\', $v));
+                    }
+                    else {
+                        $excluded[$key][\'html\'][] = $v;
+                    }
+                }
+            }
 
-			// Main options for MinifyX
-			$scriptProperties = array(
-				\'cacheFolder\' => $modx->getOption(\'minifyx_cacheFolder\', null, \'/assets/components/minifyx/cache/\', true),
-				\'forceUpdate\' => $modx->getOption(\'minifyx_forceUpdate\', null, false, true),
-				\'minifyJs\' => $modx->getOption(\'minifyx_minifyJs\', null, false, true),
-				\'minifyCss\' => $modx->getOption(\'minifyx_minifyCss\', null, false, true),
-				\'jsFilename\' => $modx->getOption(\'minifyx_jsFilename\', null, \'all\', true),
-				\'cssFilename\' => $modx->getOption(\'minifyx_cssFilename\', null, \'all\', true),
-			);
-			/** @var MinifyX $MinifyX */
-			if (isset($modx->minifyx) && $modx->minifyx instanceof MinifyX) {
+            // Main options for MinifyX
+            $scriptProperties = array(
+                \'cacheFolder\' => $modx->getOption(\'minifyx_cacheFolder\', null, \'/assets/components/minifyx/cache/\', true),
+                \'forceUpdate\' => $modx->getOption(\'minifyx_forceUpdate\', null, false, true),
+                \'minifyJs\' => $modx->getOption(\'minifyx_minifyJs\', null, false, true),
+                \'minifyCss\' => $modx->getOption(\'minifyx_minifyCss\', null, false, true),
+                \'jsFilename\' => $modx->getOption(\'minifyx_jsFilename\', null, \'all\', true),
+                \'cssFilename\' => $modx->getOption(\'minifyx_cssFilename\', null, \'all\', true),
+            );
+            /** @var MinifyX $MinifyX */
+            if (isset($modx->minifyx) && $modx->minifyx instanceof MinifyX) {
                 $MinifyX = $modx->minifyx;
                 $MinifyX->reset($scriptProperties);
             } else {
                 $MinifyX = $modx->getService(\'minifyx\', \'MinifyX\', MODX_CORE_PATH . \'components/minifyx/model/minifyx/\', $scriptProperties);
             }
-			if (!$MinifyX->prepareCacheFolder()) {
-				$this->modx->log(modX::LOG_LEVEL_ERROR, \'[MinifyX] Could not create cache dir "\'.$scriptProperties[\'cacheFolderPath\'].\'"\');
-				return;
-			}
-			//$cacheFolderUrl = $MinifyX->config[\'cacheFolder\'];
+            if (!$MinifyX->prepareCacheFolder()) {
+                $this->modx->log(modX::LOG_LEVEL_ERROR, \'[MinifyX] Could not create cache dir "\'.$scriptProperties[\'cacheFolderPath\'].\'"\');
+                return;
+            }
+            //$cacheFolderUrl = $MinifyX->config[\'cacheFolder\'];
 
-			// Process raw scripts and styles
-			$tmp_dir = $MinifyX->getTmpDir() . \'resources/\' . $modx->resource->id . \'/\';
-			foreach ($raw as $key => $value) {
-				foreach ($value as $type => $rows) {
-					$tmp = \'\';
-					if ($type == \'css\' && $modx->getOption(\'minifyx_processRawCss\', null, false, true) ||
-						$type == \'js\' && $modx->getOption(\'minifyx_processRawJs\', null, false, true)) {
+            // Process raw scripts and styles
+            $tmp_dir = $MinifyX->getTmpDir() . \'resources/\' . $modx->resource->id . \'/\';
+            foreach ($raw as $key => $value) {
+                foreach ($value as $type => $rows) {
+                    $tmp = \'\';
+                    if ($type == \'css\' && $modx->getOption(\'minifyx_processRawCss\', null, false, true) ||
+                        $type == \'js\' && $modx->getOption(\'minifyx_processRawJs\', null, false, true)) {
 
-						$text = \'\';
-						foreach ($rows as $text) {
-							$text = preg_replace(\'#^<(script|style).*?>#\', \'\', $text);
-							$text = preg_replace(\'#</(script|style)>$#\', \'\', $text);
-							$tmp .= $text;
-						}
+                        $text = \'\';
+                        foreach ($rows as $text) {
+                            $text = preg_replace(\'#^<(script|style).*?>#\', \'\', $text);
+                            $text = preg_replace(\'#</(script|style)>$#\', \'\', $text);
+                            $tmp .= $text;
+                        }
 
-						if (!empty($tmp)) {
-							$file = sha1($tmp) . \'.\' . $type;
-							if (!file_exists($tmp_dir . $file)) {
-								if (!file_exists($tmp_dir)) {
-									$MinifyX->makeDir($tmp_dir);
-								}
-								file_put_contents($tmp_dir . $file, $tmp);
-							}
-							$included[$key][$type][] = $tmp_dir . $file;
-							$raw[$key][$type] = array();
-						}
-					}
-				}
-			}
+                        if (!empty($tmp)) {
+                            $file = sha1($tmp) . \'.\' . $type;
+                            if (!file_exists($tmp_dir . $file)) {
+                                if (!file_exists($tmp_dir)) {
+                                    $MinifyX->makeDir($tmp_dir);
+                                }
+                                file_put_contents($tmp_dir . $file, $tmp);
+                            }
+                            $included[$key][$type][] = $tmp_dir . $file;
+                            $raw[$key][$type] = array();
+                        }
+                    }
+                }
+            }
 
-			// Combine and minify files
-			foreach ($included as $key => $value) {
-				foreach ($value as $type => $files) {
-					if (empty($files)) {continue;}
-//					$filename = $MinifyX->config[$type.\'Filename\'] . \'_\';
-//					$extension = $MinifyX->config[$type.\'Ext\'];
-					$files = $MinifyX->prepareFiles($files, $type);
-					$properties = array(
-						\'minify\' => $MinifyX->config[\'minify\'.ucfirst($type)]
-								? \'true\'
-								: \'false\',
-					);
+            // Combine and minify files
+            foreach ($included as $key => $value) {
+                foreach ($value as $type => $files) {
+                    if (empty($files)) {continue;}
+//                    $filename = $MinifyX->config[$type.\'Filename\'] . \'_\';
+//                    $extension = $MinifyX->config[$type.\'Ext\'];
+                    $files = $MinifyX->prepareFiles($files, $type);
+                    $properties = array(
+                        \'minify\' => $MinifyX->config[\'minify\'.ucfirst($type)]
+                                ? \'true\'
+                                : \'false\',
+                    );
 
-					$result = $MinifyX->Munee($files, $properties);
-					if ($MinifyX->saveFile($result)) {
+                    $result = $MinifyX->Munee($files, $properties);
+                    if ($MinifyX->saveFile($result)) {
                         $prepared[$key][$type][] = $MinifyX->getFileUrl();
                     }
-				}
-			}
+                }
+            }
 
-			// Combine files by type
-			$final = array(
-				\'head\' => array_merge(
-					$excluded[\'head\'][\'css\'], $prepared[\'head\'][\'css\'], $raw[\'head\'][\'css\'],
-					$excluded[\'head\'][\'js\'], $prepared[\'head\'][\'js\'], $raw[\'head\'][\'js\']
-				),
-				\'body\' => array_merge(
-					$excluded[\'body\'][\'css\'], $prepared[\'body\'][\'css\'], $raw[\'body\'][\'css\'],
-					$excluded[\'body\'][\'js\'], $prepared[\'body\'][\'js\'], $raw[\'body\'][\'js\']
-				),
-			);
+            // Combine files by type
+            $final = array(
+                \'head\' => array_merge(
+                    $excluded[\'head\'][\'css\'], $prepared[\'head\'][\'css\'], $raw[\'head\'][\'css\'],
+                    $excluded[\'head\'][\'js\'], $prepared[\'head\'][\'js\'], $raw[\'head\'][\'js\']
+                ),
+                \'body\' => array_merge(
+                    $excluded[\'body\'][\'css\'], $prepared[\'body\'][\'css\'], $raw[\'body\'][\'css\'],
+                    $excluded[\'body\'][\'js\'], $prepared[\'body\'][\'js\'], $raw[\'body\'][\'js\']
+                ),
+            );
 
-			// Push files to tags
-			foreach ($final as $type => &$value) {
-				foreach ($value as &$file) {
-					if (strpos($file, \'<script\') === false && strpos($file, \'<style\') === false) {
-						$file = preg_match(\'/\\.css$/iu\', $file)
-							? \'<link rel="stylesheet" href="\' . $file . \'" type="text/css" />\'
-							: \'<script type="text/javascript" src="\' . $file . \'"></script>\';
-					}
-				}
-				if (!empty($excluded[$type][\'html\'])) {
-					$value[] = implode("\\n", $excluded[$type][\'html\']);
-				}
-			}
-			unset($value);
+            // Push files to tags
+            foreach ($final as $type => &$value) {
+                foreach ($value as &$file) {
+                    if (strpos($file, \'<script\') === false && strpos($file, \'<style\') === false) {
+                        $file = preg_match(\'/\\.css$/iu\', $file)
+                            ? \'<link rel="stylesheet" href="\' . $file . \'" type="text/css" />\'
+                            : \'<script type="text/javascript" src="\' . $file . \'"></script>\';
+                    }
+                }
+                if (!empty($excluded[$type][\'html\'])) {
+                    $value[] = implode("\\n", $excluded[$type][\'html\']);
+                }
+            }
+            unset($value);
 
-			// Replace tags in web page
-			$modx->resource->_output = str_replace(
-				array($modx->getRegisteredClientStartupScripts() . "\\n</head>", $modx->getRegisteredClientScripts() . "\\n</body>"),
-				array(implode("\\n", $final[\'head\']) . "\\n</head>", implode("\\n", $final[\'body\']) . "\\n</body>"),
-				$modx->resource->_output
-			);
-		}
-		// Process images
-		if ($modx->getOption(\'minifyx_process_images\', null, false, true)) {
-			if (!$modx->getService(\'minifyx\',\'MinifyX\', MODX_CORE_PATH.\'components/minifyx/model/minifyx/\')) {return false;}
+            // Replace tags in web page
+            $modx->resource->_output = str_replace(
+                array($modx->getRegisteredClientStartupScripts() . "\\n</head>", $modx->getRegisteredClientScripts() . "\\n</body>"),
+                array(implode("\\n", $final[\'head\']) . "\\n</head>", implode("\\n", $final[\'body\']) . "\\n</body>"),
+                $modx->resource->_output
+            );
+        }
+        // Process images
+        if ($modx->getOption(\'minifyx_process_images\', null, false, true)) {
+            if (!$modx->getService(\'minifyx\',\'MinifyX\', MODX_CORE_PATH.\'components/minifyx/model/minifyx/\')) {return false;}
 
-			$connector = $modx->getOption(\'minifyx_connector\', null, \'/assets/components/minifyx/munee.php\', true);
-			$exclude = $modx->getOption(\'minifyx_exclude_images\');
-			$replace = array(\'from\' => array(), \'to\' => array());
-			$site_url = $modx->getOption(\'site_url\');
-			$default = $modx->getOption(\'minifyx_images_filters\', null, \'\', true);
+            $connector = $modx->getOption(\'minifyx_connector\', null, \'/assets/components/minifyx/munee.php\', true);
+            $exclude = $modx->getOption(\'minifyx_exclude_images\');
+            $replace = array(\'from\' => array(), \'to\' => array());
+            $site_url = $modx->getOption(\'site_url\');
+            $default = $modx->getOption(\'minifyx_images_filters\', null, \'\', true);
 
-			preg_match_all(\'/<img.*?>/i\', $modx->resource->_output, $tags);
-			foreach ($tags[0] as $tag) {
-				if (preg_match($exclude, $tag)) {
-					continue;
-				}
-				elseif (preg_match_all(\'/(src|height|width|filters)=[\\\'|"](.*?)[\\\'|"]/i\', $tag, $properties)) {
-					if (count($properties[0]) >= 2) {
-						$file = $connector . \'?files=\';
-						$resize = \'\';
-						$filters = \'\';
-						$tmp = array(\'from\' => array(), \'to\' => array());
+            preg_match_all(\'/<img.*?>/i\', $modx->resource->_output, $tags);
+            foreach ($tags[0] as $tag) {
+                if (preg_match($exclude, $tag)) {
+                    continue;
+                }
+                elseif (preg_match_all(\'/(src|height|width|filters)=[\\\'|"](.*?)[\\\'|"]/i\', $tag, $properties)) {
+                    if (count($properties[0]) >= 2) {
+                        $file = $connector . \'?files=\';
+                        $resize = \'\';
+                        $filters = \'\';
+                        $tmp = array(\'from\' => array(), \'to\' => array());
 
-						foreach ($properties[1] as $k => $v) {
-							if ($v == \'src\') {
-								$src = $properties[2][$k];
-								if (strpos($src, \'://\') !== false) {
-									if (strpos($src, $site_url) !== false) {
-										$src = str_replace($site_url, \'\', $src);
-									}
-									else {
-										// Image from 3rd party domain
-										continue;
-									}
-								}
-								$file .= $src;
-								$tmp[\'from\'][\'src\'] = $properties[2][$k];
-							}
-							elseif ($v == \'height\' || $v == \'width\') {
-								$resize .=  $v[0] . \'[\'.$properties[2][$k].\']\';
-							}
-							elseif ($v == \'filters\') {
-								$filters .= $properties[2][$k];
-								$tmp[\'from\'][\'filters\'] = $properties[0][$k];
-								$tmp[\'to\'][\'filters\'] = \'\';
-							}
-						}
+                        foreach ($properties[1] as $k => $v) {
+                            if ($v == \'src\') {
+                                $src = $properties[2][$k];
+                                if (strpos($src, \'://\') !== false) {
+                                    if (strpos($src, $site_url) !== false) {
+                                        $src = str_replace($site_url, \'\', $src);
+                                    }
+                                    else {
+                                        // Image from 3rd party domain
+                                        continue;
+                                    }
+                                }
+                                $file .= $src;
+                                $tmp[\'from\'][\'src\'] = $properties[2][$k];
+                            }
+                            elseif ($v == \'height\' || $v == \'width\') {
+                                $resize .=  $v[0] . \'[\'.$properties[2][$k].\']\';
+                            }
+                            elseif ($v == \'filters\') {
+                                $filters .= $properties[2][$k];
+                                $tmp[\'from\'][\'filters\'] = $properties[0][$k];
+                                $tmp[\'to\'][\'filters\'] = \'\';
+                            }
+                        }
 
-						if (!empty($tmp[\'from\'][\'src\'])) {
-							$resize .= isset($tmp[\'from\'][\'filters\'])
-								? $filters
-								: $default;
-							$tmp[\'to\'][\'src\'] = $file . \'?resize=\' . $resize;
+                        if (!empty($tmp[\'from\'][\'src\'])) {
+                            $resize .= isset($tmp[\'from\'][\'filters\'])
+                                ? $filters
+                                : $default;
+                            $tmp[\'to\'][\'src\'] = $file . \'?resize=\' . $resize;
 
-							ksort($tmp[\'from\']);
-							ksort($tmp[\'to\']);
+                            ksort($tmp[\'from\']);
+                            ksort($tmp[\'to\']);
 
-							$replace[\'from\'][] = $tag;
-							$replace[\'to\'][] = str_replace($tmp[\'from\'], $tmp[\'to\'], $tag);
-						}
-					}
-				}
-			}
+                            $replace[\'from\'][] = $tag;
+                            $replace[\'to\'][] = str_replace($tmp[\'from\'], $tmp[\'to\'], $tag);
+                        }
+                    }
+                }
+            }
 
-			if (!empty($replace)) {
-				$modx->resource->_output = str_replace(
-					$replace[\'from\'],
-					$replace[\'to\'],
-					$modx->resource->_output
-				);
-			}
-		}
-		// Minify the page content
+            if (!empty($replace)) {
+                $modx->resource->_output = str_replace(
+                    $replace[\'from\'],
+                    $replace[\'to\'],
+                    $modx->resource->_output
+                );
+            }
+        }
+        // Minify the page content
         if ($modx->getOption(\'minifyx_minifyHtml\', null, false)) {
             $output = $modx->resource->_output;
             $replace = [
@@ -1732,8 +1732,8 @@ $modx->resource->_output = $output;',
             $modx->resource->_output = $output;
         }
 
-		$modx->log(modX::LOG_LEVEL_INFO, \'[MinifyX] Total time for page "\'.$modx->resource->id.\'" = \'.(microtime(true) - $time));
-		break;
+        $modx->log(modX::LOG_LEVEL_INFO, \'[MinifyX] Total time for page "\'.$modx->resource->id.\'" = \'.(microtime(true) - $time));
+        break;
 }',
       'locked' => '0',
       'properties' => NULL,
@@ -1953,7 +1953,7 @@ if (!empty($field)) {
         field : \'{$field}\',
         parent : [],
         keys : {
-        	quickEditor: {$modx->getOption(\'tagelementplugin_quick_editor_keys\', null, \'\')},
+            quickEditor: {$modx->getOption(\'tagelementplugin_quick_editor_keys\', null, \'\')},
             elementEditor: {$modx->getOption(\'tagelementplugin_element_editor_keys\', null, \'\')},
             chunkEditor: {$modx->getOption(\'tagelementplugin_chunk_editor_keys\', null, \'\')},
             quickChunkEditor: {$modx->getOption(\'tagelementplugin_quick_chunk_editor_keys\', null,\' \')},
@@ -2091,7 +2091,7 @@ This option enables you to specify where the toolbar should be located. This opt
  * Place, Suite 330, Boston, MA 02111-1307 USA
  *
  * @author      Maarten     <@maarten>
- * @copyright   CopyrightВ (c)В 2009,В Magnatron
+ * @copyright   Copyright (c) 2009, Magnatron
  * @license     GPL v2
  *
  * @package     AutoTemplate
@@ -2100,25 +2100,25 @@ This option enables you to specify where the toolbar should be located. This opt
 
 
 if ($modx->event->name === \'OnDocFormRender\') {
-	
-	// Only when new
-	if (empty($scriptProperties[\'mode\']) || $scriptProperties[\'mode\'] !== \'new\') return;
-	
-	// Siblings
-	$c = $modx->newQuery(\'modResource\', array(\'parent\'=>$_REQUEST[\'parent\']));
-	$c->sortby(\'id\', \'desc\'); // Reference last added sibling
-	$siblings = $modx->getCollection(\'modResource\', $c);
-	if(count($siblings)>0){
-		$bro = array_shift($siblings);
-		$modx->controller->setProperty(\'template\', $bro->get(\'template\'));
-		return;
-	}
-	// No siblings, use parent
-	if((int)$_REQUEST[\'parent\']!=0){
-		$dad = $modx->getObject(\'modResource\', $_REQUEST[\'parent\']);
-		$modx->controller->setProperty(\'template\', $dad->get(\'template\'));
-		return;
-	}
+    
+    // Only when new
+    if (empty($scriptProperties[\'mode\']) || $scriptProperties[\'mode\'] !== \'new\') return;
+    
+    // Siblings
+    $c = $modx->newQuery(\'modResource\', array(\'parent\'=>$_REQUEST[\'parent\']));
+    $c->sortby(\'id\', \'desc\'); // Reference last added sibling
+    $siblings = $modx->getCollection(\'modResource\', $c);
+    if(count($siblings)>0){
+        $bro = array_shift($siblings);
+        $modx->controller->setProperty(\'template\', $bro->get(\'template\'));
+        return;
+    }
+    // No siblings, use parent
+    if((int)$_REQUEST[\'parent\']!=0){
+        $dad = $modx->getObject(\'modResource\', $_REQUEST[\'parent\']);
+        $modx->controller->setProperty(\'template\', $dad->get(\'template\'));
+        return;
+    }
 }
 
 return;',
@@ -2191,131 +2191,131 @@ return;',
       'plugincode' => '/** @var array $scriptProperties */
 switch ($modx->event->name) {
 
-	case \'OnDocFormRender\':
-		/** @var modResource $resource */
-		if ($mode == \'new\' || ($resource->class_key == \'msProduct\' && $modx->getOption(\'ms2gallery_disable_for_ms2\', null, true))) {
-			return;
-		}
-		$template = $resource->get(\'template\');
-		$templates = array_map(\'trim\', explode(\',\', $modx->getOption(\'ms2gallery_disable_for_templates\')));
-		if ($templates[0] != \'\' && in_array($template, $templates)) {
-			return;
-		}
+    case \'OnDocFormRender\':
+        /** @var modResource $resource */
+        if ($mode == \'new\' || ($resource->class_key == \'msProduct\' && $modx->getOption(\'ms2gallery_disable_for_ms2\', null, true))) {
+            return;
+        }
+        $template = $resource->get(\'template\');
+        $templates = array_map(\'trim\', explode(\',\', $modx->getOption(\'ms2gallery_disable_for_templates\')));
+        if ($templates[0] != \'\' && in_array($template, $templates)) {
+            return;
+        }
 
-		/** @var ms2Gallery $ms2Gallery */
-		if ($ms2Gallery = $modx->getService(\'ms2gallery\', \'ms2Gallery\', MODX_CORE_PATH . \'components/ms2gallery/model/ms2gallery/\')) {
-			$ms2Gallery->loadManagerFiles($modx->controller, $resource);
-		}
-		break;
-
-
-	case \'OnBeforeDocFormSave\':
-		if ($source_id = $resource->get(\'media_source\')) {
-			$resource->setProperties(array(\'media_source\' => $source_id), \'ms2gallery\');
-		}
-		break;
+        /** @var ms2Gallery $ms2Gallery */
+        if ($ms2Gallery = $modx->getService(\'ms2gallery\', \'ms2Gallery\', MODX_CORE_PATH . \'components/ms2gallery/model/ms2gallery/\')) {
+            $ms2Gallery->loadManagerFiles($modx->controller, $resource);
+        }
+        break;
 
 
-	case \'OnLoadWebDocument\':
-		$tstart = microtime(true);
-		/** @var pdoFetch $pdoFetch */
-		if (!$modx->getOption(\'ms2gallery_set_placeholders\', null, false, true) || !$pdoFetch = $modx->getService(\'pdoFetch\')) {
-			return;
-		}
-		$plTemplates = array_map(\'trim\', explode(\',\', $modx->getOption(\'ms2gallery_placeholders_for_templates\')));
-		if (!empty($plTemplates[0]) && !in_array($modx->resource->get(\'template\'), $plTemplates)) {
-			return;
-		}
-		$plPrefix = $modx->getOption(\'ms2gallery_placeholders_prefix\', null, \'ms2g.\', true);
-		$plThumbs = array_map(\'trim\', explode(\',\', $modx->getOption(\'ms2gallery_placeholders_thumbs\')));
-		$tplName = $modx->getOption(\'ms2gallery_placeholders_tpl\');
-
-		// Check for assigned TV
-		$q = $modx->newQuery(\'modTemplateVarTemplate\');
-		$q->innerJoin(\'modTemplateVar\', \'TemplateVar\');
-		$q->innerJoin(\'modTemplate\', \'Template\');
-		$q->where(array(
-			\'TemplateVar.name\' => $tplName,
-			\'Template.id\' => $modx->resource->get(\'template\')
-		));
-		$q->select(\'TemplateVar.id\');
-
-		$tpl = \'\';
-		if ($modx->getCount(\'modTemplateVarTemplate\', $q)) {
-			$tpl = $modx->resource->getTVValue($tplName);
-		}
-		/** @var modChunk $chunk */
-		if (empty($tpl) && $chunk = $modx->getObject(\'modChunk\', array(\'name\' => $tplName))) {
-			$tpl = $chunk->getContent();
-		}
-
-		$options = array(\'loadModels\' => \'ms2gallery\');
-		$where = array(\'resource_id\' => $modx->resource->id, \'parent\' => 0);
-
-		$parents = $pdoFetch->getCollection(\'msResourceFile\', $where, $options);
-		$options[\'select\'] = \'url\';
-		foreach ($parents as &$parent) {
-			$where = array(\'parent\' => $parent[\'id\']);
-			if (!empty($plThumbs[0])) {
-				$where[\'path:IN\'] = array();
-				foreach ($plThumbs as $thumb) {
-					$where[\'path:IN\'][] = $parent[\'path\'] . $thumb . \'/\';
-				}
-			}
-			if ($children = $pdoFetch->getCollection(\'msResourceFile\', $where, $options)) {
-				foreach ($children as $child) {
-					if (preg_match(\'/((?:\\d{1,4}|)x(?:\\d{1,4}|))/\', $child[\'url\'], $size)) {
-						$parent[$size[0]] = $child[\'url\'];
-					}
-				}
-			}
-			$pls = $pdoFetch->makePlaceholders($parent, $plPrefix . $parent[\'rank\'] . \'.\', \'[[+\', \']]\', false);
-			$pls[\'vl\'][$plPrefix . $parent[\'rank\']] = !empty($tpl)
-				? $pdoFetch->getChunk(\'@INLINE \' . $tpl, $parent)
-				: htmlentities(print_r($parent, 1), ENT_QUOTES, \'UTF-8\');
-			$modx->setPlaceholders($pls[\'vl\']);
-		}
-
-		$modx->log(modX::LOG_LEVEL_INFO, \'[ms2Gallery] Set image placeholders for page id = \' . $modx->resource->id . \' in \' . number_format(microtime(true) - $tstart, 7) . \' sec.\');
-		break;
+    case \'OnBeforeDocFormSave\':
+        if ($source_id = $resource->get(\'media_source\')) {
+            $resource->setProperties(array(\'media_source\' => $source_id), \'ms2gallery\');
+        }
+        break;
 
 
-	case \'OnBeforeEmptyTrash\':
-		if (empty($scriptProperties[\'ids\']) || !is_array($scriptProperties[\'ids\'])) {
-			return;
-		}
-		if (!$modx->addPackage(\'ms2gallery\', MODX_CORE_PATH . \'components/ms2gallery/model/\')) {
-			return;
-		}
-		$resources = $modx->getIterator(\'modResource\', array(\'id:IN\' => $scriptProperties[\'ids\']));
-		/** @var modResource $resource */
-		foreach ($resources as $resource) {
-			$properties = $resource->getProperties(\'ms2gallery\');
-			if (!empty($properties[\'media_source\'])) {
-				/** @var modMediaSource $source */
-				$source = $modx->getObject(\'modMediaSource\', $properties[\'media_source\']);
-				$resource_id = $resource->get(\'id\');
-				if ($source) {
-					$source->set(\'ctx\', $resource->get(\'context_key\'));
-					$source->initialize();
-				}
-				$images = $modx->getIterator(\'msResourceFile\', array(\'resource_id\' => $resource_id, \'parent\' => 0));
-				/** @var msResourceFile $image */
-				foreach ($images as $image) {
-					$prepare = $image->prepareSource($source);
-					if ($prepare === true) {
-						$image->remove();
-					}
-					else {
-						$modx->log(modX::LOG_LEVEL_ERROR, "[ms2Gallery] {$prepare}.");
-					}
-				}
-				if ($source) {
-					$source->removeContainer($source->getBasePath() . $resource_id);
-				}
-			}
-		}
-		break;
+    case \'OnLoadWebDocument\':
+        $tstart = microtime(true);
+        /** @var pdoFetch $pdoFetch */
+        if (!$modx->getOption(\'ms2gallery_set_placeholders\', null, false, true) || !$pdoFetch = $modx->getService(\'pdoFetch\')) {
+            return;
+        }
+        $plTemplates = array_map(\'trim\', explode(\',\', $modx->getOption(\'ms2gallery_placeholders_for_templates\')));
+        if (!empty($plTemplates[0]) && !in_array($modx->resource->get(\'template\'), $plTemplates)) {
+            return;
+        }
+        $plPrefix = $modx->getOption(\'ms2gallery_placeholders_prefix\', null, \'ms2g.\', true);
+        $plThumbs = array_map(\'trim\', explode(\',\', $modx->getOption(\'ms2gallery_placeholders_thumbs\')));
+        $tplName = $modx->getOption(\'ms2gallery_placeholders_tpl\');
+
+        // Check for assigned TV
+        $q = $modx->newQuery(\'modTemplateVarTemplate\');
+        $q->innerJoin(\'modTemplateVar\', \'TemplateVar\');
+        $q->innerJoin(\'modTemplate\', \'Template\');
+        $q->where(array(
+            \'TemplateVar.name\' => $tplName,
+            \'Template.id\' => $modx->resource->get(\'template\')
+        ));
+        $q->select(\'TemplateVar.id\');
+
+        $tpl = \'\';
+        if ($modx->getCount(\'modTemplateVarTemplate\', $q)) {
+            $tpl = $modx->resource->getTVValue($tplName);
+        }
+        /** @var modChunk $chunk */
+        if (empty($tpl) && $chunk = $modx->getObject(\'modChunk\', array(\'name\' => $tplName))) {
+            $tpl = $chunk->getContent();
+        }
+
+        $options = array(\'loadModels\' => \'ms2gallery\');
+        $where = array(\'resource_id\' => $modx->resource->id, \'parent\' => 0);
+
+        $parents = $pdoFetch->getCollection(\'msResourceFile\', $where, $options);
+        $options[\'select\'] = \'url\';
+        foreach ($parents as &$parent) {
+            $where = array(\'parent\' => $parent[\'id\']);
+            if (!empty($plThumbs[0])) {
+                $where[\'path:IN\'] = array();
+                foreach ($plThumbs as $thumb) {
+                    $where[\'path:IN\'][] = $parent[\'path\'] . $thumb . \'/\';
+                }
+            }
+            if ($children = $pdoFetch->getCollection(\'msResourceFile\', $where, $options)) {
+                foreach ($children as $child) {
+                    if (preg_match(\'/((?:\\d{1,4}|)x(?:\\d{1,4}|))/\', $child[\'url\'], $size)) {
+                        $parent[$size[0]] = $child[\'url\'];
+                    }
+                }
+            }
+            $pls = $pdoFetch->makePlaceholders($parent, $plPrefix . $parent[\'rank\'] . \'.\', \'[[+\', \']]\', false);
+            $pls[\'vl\'][$plPrefix . $parent[\'rank\']] = !empty($tpl)
+                ? $pdoFetch->getChunk(\'@INLINE \' . $tpl, $parent)
+                : htmlentities(print_r($parent, 1), ENT_QUOTES, \'UTF-8\');
+            $modx->setPlaceholders($pls[\'vl\']);
+        }
+
+        $modx->log(modX::LOG_LEVEL_INFO, \'[ms2Gallery] Set image placeholders for page id = \' . $modx->resource->id . \' in \' . number_format(microtime(true) - $tstart, 7) . \' sec.\');
+        break;
+
+
+    case \'OnBeforeEmptyTrash\':
+        if (empty($scriptProperties[\'ids\']) || !is_array($scriptProperties[\'ids\'])) {
+            return;
+        }
+        if (!$modx->addPackage(\'ms2gallery\', MODX_CORE_PATH . \'components/ms2gallery/model/\')) {
+            return;
+        }
+        $resources = $modx->getIterator(\'modResource\', array(\'id:IN\' => $scriptProperties[\'ids\']));
+        /** @var modResource $resource */
+        foreach ($resources as $resource) {
+            $properties = $resource->getProperties(\'ms2gallery\');
+            if (!empty($properties[\'media_source\'])) {
+                /** @var modMediaSource $source */
+                $source = $modx->getObject(\'modMediaSource\', $properties[\'media_source\']);
+                $resource_id = $resource->get(\'id\');
+                if ($source) {
+                    $source->set(\'ctx\', $resource->get(\'context_key\'));
+                    $source->initialize();
+                }
+                $images = $modx->getIterator(\'msResourceFile\', array(\'resource_id\' => $resource_id, \'parent\' => 0));
+                /** @var msResourceFile $image */
+                foreach ($images as $image) {
+                    $prepare = $image->prepareSource($source);
+                    if ($prepare === true) {
+                        $image->remove();
+                    }
+                    else {
+                        $modx->log(modX::LOG_LEVEL_ERROR, "[ms2Gallery] {$prepare}.");
+                    }
+                }
+                if ($source) {
+                    $source->removeContainer($source->getBasePath() . $resource_id);
+                }
+            }
+        }
+        break;
 
 }',
       'locked' => '0',
@@ -2704,10 +2704,10 @@ elseif (isset($result)) {
       'cache_type' => '0',
       'plugincode' => 'switch ($modx->event->name) {
 
-	case \'OnManagerPageInit\':
-		$cssFile = MODX_ASSETS_URL.\'components/modlastmodified/css/mgr/main.css\';
-		$modx->regClientCSS($cssFile);
-		break;
+    case \'OnManagerPageInit\':
+        $cssFile = MODX_ASSETS_URL.\'components/modlastmodified/css/mgr/main.css\';
+        $modx->regClientCSS($cssFile);
+        break;
         
     case \'OnWebPagePrerender\':
         $modified = date("r", strtotime($modx->resource->get(\'editedon\')));
@@ -2740,7 +2740,7 @@ elseif (isset($result)) {
       'source' => '0',
       'property_preprocess' => '0',
       'name' => 'YandexCoordsTv',
-      'description' => '!РќРµ Р·Р°Р±С‹С‚СЊ РїРѕРґРєР»СЋС‡РёС‚СЊ РєР»СЋС‡ РґР»СЏ РЇРЅРґРµРєСЃ.API',
+      'description' => '!Не забыть подключить ключ для Яндекс.API',
       'editor_type' => '0',
       'category' => '40',
       'cache_type' => '0',
@@ -3730,7 +3730,7 @@ switch($modx->event->name) {
                         $field = substr($field, 3);
                     }
                     $value = $content->get($field);
-                    // Р•СЃР»Рё РїРѕР»Рµ Р·Р°РїРѕР»РЅРµРЅРѕ
+                    // Если поле заполнено
                     if (!empty($value)) {
                         $field_key = $content->key . \'-\' . $k;
                         $mSearch2->fields[$field_key] = $v;
@@ -3831,7 +3831,7 @@ switch ($modx->event->name) {
             $path = $modx->getOption(\'controlerrorlog_core_path\', null, $modx->getOption(\'core_path\') . \'components/controlerrorlog/\') . \'processors/\';
             $response = $modx->runProcessor(\'mgr/get\', [\'includeContent\' => false], [\'processors_path\' => $path]);
             $resObj = $response->getObject();
-            $_html = "<script>	controlErrorLog.config = " . $modx->toJSON($resObj) . ";</script>";
+            $_html = "<script>    controlErrorLog.config = " . $modx->toJSON($resObj) . ";</script>";
             $modx->controller->addHtml($_html);
         }
         break;

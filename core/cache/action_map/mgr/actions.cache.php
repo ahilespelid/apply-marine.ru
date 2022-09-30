@@ -103,4 +103,4 @@
     'namespace_path' => '/var/www/apply_marine/core/components/versionx/',
     'namespace_assets_path' => '{assets_path}components/versionx/',
   ),
-);
+  );
