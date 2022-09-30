@@ -1,0 +1,1000 @@
+  103  clear
+  104  mv phpMyAdmin-5.1.3-all-languages/* /var/www/default/phpmyadmin
+  105  ls /var/www/default/phpmyadmin
+  106  clear
+  107  cd /var/www/default/phpmyadmin
+  108  clear
+  109  ls
+  110  cp config.sample.inc.php config.inc.php
+  111  clear
+  112  ls
+  113  nano config.inc.php
+  114  chown -R www-data:www-data /var/www/default/phpmyadmin
+  115  cd /etc/nginx/sites-available
+  116  clear
+  117  ls
+  118  nano default
+  119  service nginx restart
+  120  service vsftpd
+  121  apt install vsftpd db5.3-util
+  122  mkdir /etc/vsftpd
+  123  touch /etc/vsftpd/vsftpdusers
+  124  chmod 0600 /etc/vsftpd/vsftpdusers
+  125  nano /etc/vsftpd/vsftpdusers
+  126  db5.3_load -T -t hash -f /etc/vsftpd/vsftpdusers /etc/vsftpd/users.db
+  127  chmod 0600 /etc/vsftpd/users.db
+  128  cd /etc/
+  129  ls
+  130  cp vsftpd.conf vsftpd.conf.original
+  131  ls
+  132  nano /etc/vsftpd.conf
+  133  nano /etc/pam.d/vsftpd.virtual
+  134  auth       required     pam_userdb.so db=/etc/vsftpd/users
+  135  account    required     pam_userdb.so db=/etc/vsftpd/users
+  136  /etc/init.d/vsftpd restart
+  137  nano /etc/vsftpd/vsftpdusers
+  138  db5.3_load -T -t hash -f /etc/vsftpd/vsftpdusers /etc/vsftpd/users.db
+  139  chmod 0600 /etc/vsftpd/users.db
+  140  service vsftpd restart
+  141  nano /etc/vsftpd.conf
+  142  service vsftpd restart
+  143  mysql
+  144  cd /nginx
+  145  cd nginx
+  146  cd sites-available
+  147  clear
+  148  nano default
+  149  nano /etc/nginx/nginx.conf
+  150  cd /var/www/test.apply-marine.ru
+  151  clear
+  152  cd /var/www/apply_marine
+  153  clear
+  154  l
+  155  clear
+  156  ls
+  157  mysql -uroot apply_marine < /ekatertz_apmarin.sql
+  158  mysql -uroot apply_marine < ekatertz_apmarin.sql
+  159  unzip apply-marine\ \(1\).zip 
+  160  ls
+  161  rm apply-marine\ \(1\).zip 
+  162  clear
+  163  ls
+  164  rm ekatertz_apmarin.sql 
+  165  clear
+  166  ls
+  167  cd /etc/nginx/sites-available
+  168  clear
+  169  nano test.apply-marine.ru
+  170  service nginx restart
+  171  nano test.apply-marine.ru
+  172  chown -R www-data:www-data /var/www
+  173  nano test.apply-marine.ru
+  174  service nginx restart
+  175  service php7.4-fpm restart
+  176  service php7.4-fpm start
+  177  ls /var/run/
+  178  ls /var/run/php/
+  179  nano test.apply-marine.ru
+  180  service php7.4-fpm start
+  181  service nginx restart
+  182  nano test.apply-marine.ru
+  183  nano default
+  184  service php7.4-fpm restart
+  185  service nginx restart
+  186  nano test.apply-marine.ru
+  187  chown -R www-data:www-data /var/www
+  188  nano test.apply-marine.ru
+  189  ls /var/run
+  190  ls /var/run/php
+  191  cd /var/www
+  192  clear
+  193  ls
+  194  cd apply_marine
+  195  ls
+  196  clear
+  197  rm
+  198  rm -rf *
+  199  clear
+  200  ls
+  201  wget https://wordpress.org/latest.tar.gz
+  202  ls
+  203  unzip latest.tar.gz
+  204  apt install targz
+  205  tar
+  206  tar xzvf latest.tar.gz 
+  207  ls
+  208  cd wordpress
+  209  ls
+  210  mv * /var/www/apply_marine
+  211  ls
+  212  cd ../
+  213  ls
+  214  clear
+  215  rm -rf wordpress/
+  216  ls
+  217  rm latest.tar.gz 
+  218  u9HIFwC3cmLUDu5pOVPPADQifT0R2jBNI6kQq7Y4
+  219  rm -rf *
+  220  ls
+  221  nano v.php
+  222  rm /var/log/nginx/error.log
+  223  touch /var/log/nginx/error.log'
+  224  chown -R www-data:www-data /var/www
+  225  tail -f /var/log/nginx/error.log
+  226  cd /etc/php
+  227  clear
+  228  ls
+  229  cd 7.
+  230  cd 7.4
+  231  clear
+  232  ls
+  233  cd fpm
+  234  clear
+  235  ls
+  236  nano php.ini
+  237  service php7.4-fpm restart
+  238  tail -f /var/log/nginx/error.log
+  239  nano /var/log/nginx/error.log'
+  240  nano /var/log/nginx/error.log
+  241  ls /var/log/nginx
+  242  tail -f /var/log/nginx/error.log
+  243  ls /tmp
+  244  cd /tml
+  245  cd /tmp
+  246  clear
+  247  rm -rf *
+  248  clear
+  249  ls
+  250  cd /var/www
+  251  clear
+  252  ls
+  253  cd apply_marine
+  254  clear
+  255  ls
+  256  unzip apply-marine\ \(1\).zip 
+  257  ls
+  258  clear
+  259  chown -R www-data:www-data /var/www
+  260  tail -f /var/log/nginx/error.log
+  261  clear
+  262  cd /app
+  263  mkdir /app
+  264  clear
+  265  ls
+  266  rm apply-marine\ \(1\).zip 
+  267  clear
+  268  cd /app
+  269  clear
+  270  ls
+  271  clear
+  272  cd /etc/nginx/sites-available
+  273  cleae
+  274  clera
+  275  clear
+  276  ls
+  277  nano lk.apply-marine.ru
+  278  ln /etc/nginx/sites-available/lk.apply-marine.ru /etc/nginx/sites-enabled/lk.apply-marine.ru
+  279  nginx -t
+  280  service nginx restart
+  281  cd /app
+  282  ls
+  283  git clone git@github.com:dimaserg88/apply-marine-vue.git
+  284  ssh-keygen -t rsa
+  285  cat ~/.ssh/id_rsa.pub
+  286  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC+zpFbhRvL6r7hqD/FgVVatomNbeP7amBEcgLd7nn0mO8oB4T02qfBFL81Yg9DRgq0Id2kIIuUA0ItJ4PQRhaK4iKT4S3TRH7c4aOtjk1ipsXoHn/dHMe7elZQXY7S4QVRGNO7PvqSw6dCGWqVJ+wKJGsU2aP2JUlYGQg5gZ/pFTkdI/P+bvd7JphZy7HnMB6ZOJKOnPeUsfZQctuEVObaJLVMr3WjFlhLNar6h9IrgXWWFp8wNnMzmU0JZJQ3Gfx4LlkVOk0XrGHqSK64lA9pWGOB9Ilu+4jCkBKLyMFzYcqcLu5pr5fbKi+G4keks2d+lQzicnpRWBu9sLRaMZ+ytjBleUOgbSMuJUBG3YEulonS1WratLnfGnCTsiCPfj8kQzaoQ8IYshP7ONMOCyY62rUeSEzz2oj2RsvJpi2mu9SS5I7qE7iDYYQzvVAmabeCduYfUaQU51rkRt2h4EvkNX16/6K07XanFakInkenpSC928AHnOO+6zYVBnxZprc= root@mzsmtphzdp
+  287  git clone git@github.com:dimaserg88/apply-marine-vue.git
+  288  ls
+  289  cd apply-marine-vue
+  290  clear
+  291  ls
+  292  npm i
+  293  curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+  294  sudo apt-get install -y nodejs
+  295  ls
+  296  clear
+  297  npm -v
+  298  node -v
+  299  clear
+  300  npm i
+  301  npm install -g npm@8.7.0
+  302  npm run build
+  303  ls
+  304  sudo apt install certbot python3-certbot-nginx
+  305  sudo certbot --nginx -d lk.apply-marine.ru
+  306  ufw status
+  307  ufw enable
+  308  ufw status
+  309  ufw allow 80
+  310  ufw status
+  311  ufw allow 443
+  312  sudo certbot --nginx -d test.apply-marine.ru
+  313  sudo systemctl status certbot.timer
+  314  ufw allow 20
+  315  ufw allow 21
+  316  ufw disable
+  317  ufw enable
+  318  ufw status
+  319  ufw allo ssh
+  320  ufw allow ssh
+  321  ufw status
+  322  sudo ufw allow 20200:20400/tcp
+  323  ufw status
+  324  ufw disable
+  325  ufw enable
+  326  sudo ufw disallow 20200:20400/tcp
+  327  sudo ufw disallow 20200:20400
+  328  sudo ufw disable allow 20200:20400
+  329  sudo ufw disable allow 20200:20400/tcp
+  330  ufw status
+  331  гац ыефегы тгьиукув
+  332  ufw status numbered
+  333  ufw remove 6
+  334  ufw delete 6
+  335  ufw status numbered
+  336  ufw delete 11
+  337  sudo ufw allow 20200:20400
+  338  sudo ufw allow 20200:20400/udp
+  339  ufw remove 22
+  340  ufw status numbered
+  341  ufw remove 5
+  342  ufw delete 5
+  343  ufw status numbered
+  344  sudo ufw allow from any to any proto tcp port 20200:20400
+  345  ufw status numbered
+  346  ufw disable
+  347  ufw enable
+  348  ufw delete 13 14
+  349  ufw status numbered
+  350  ufw delete 13
+  351  ufw status numbered
+  352  ufw delete 6
+  353  ufw status numbered
+  354  ufw delete 6
+  355  ufw status numbered
+  356  ufw disable
+  357  sudo ufw allow 20200:20400/tcp
+  358  ufw enable
+  359  ufw status
+  360  ufw status numbered
+  361  ufw delete 12
+  362  ufw status numbered
+  363  ufw delete 6
+  364  nano /etc/vsftpd.conf
+  365  service vsftpd restart
+  366  nano /etc/vsftpd.conf
+  367  service vsftpd restart
+  368  git pull
+  369  npm run build
+  370  npm i
+  371  npm run build
+  372  ls
+  373  ls -a
+  374  clear
+  375  nano .env
+  376  npm run build
+  377  cd /app
+  378  clear
+  379  ls
+  380  cd apply-marine-vue
+  381  ls
+  382  clear
+  383  git pull
+  384  npm run build
+  385  git pull
+  386  npm i
+  387  ls
+  388  nano .env
+  389  rm -r *
+  390  ls
+  391  nano .env
+  392  ls
+  393  ls a
+  394  ls -a
+  395  rm -rf *
+  396  ls
+  397  ls -a
+  398  cd ../
+  399  rm -r apply-marine-vue/
+  400  ls
+  401  VUE_APP_I18N_LOCALE=ru
+  402  VUE_APP_I18N_FALLBACK_LOCALE=en
+  403  VUE_APP_I18N_SUPPORTED_LOCALE=ru,en,ro
+  404  git clone git@github.com:dimaserg88/apply-marine-vue.git
+  405  cd apply-marine-vue/
+  406  ls
+  407  ls -a
+  408  nano .env
+  409  npm i
+  410  npm run build
+  411  top
+  412  php -v
+  413  history 
+  414  top
+  415  beget-agent restart
+  416  cd /var/www/
+  417  cd apply_marine/
+  418  find -type d -exec chmod 0755 {} \;
+  419  find -type f -exec chmod 0644 {} \;
+  420  php -v
+  421  sudo apt-get install php7.4-xml
+  422  php -v
+  423  service php7.4-fpm restart 
+  424  sudo apt-get install php-zip
+  425  service nginx restart 
+  426  cd /var/www/apply_marine/
+  427  ls -la
+  428  grep -rl fa7dd60bc008b3b6a1b5e05e03cbfda5
+  429  finrd -R fa7dd60bc008b3b6a1b5e05e03cbfda5
+  430  find -R fa7dd60bc008b3b6a1b5e05e03cbfda5
+  431  find fa7dd60bc008b3b6a1b5e05e03cbfda5
+  432  find
+  433  find .
+  434  find . fa7dd60bc008b3b6a1b5e05e03cbfda5
+  435  find . -name "@fa7dd60bc008b3b6a1b5e05e03cbfda5"
+  436  find -mane fa7dd60bc008b3b6a1b5e05e03cbfda5
+  437  find -name fa7dd60bc008b3b6a1b5e05e03cbfda5
+  438  grep -rl '/"publishedon/"'
+  439  grep -rl 'publishedon'
+  440  wget https://github.com/vrana/adminer/releases/download/v4.8.1/adminer-4.8.1.php
+  441  ls -la
+  442  locate php.ini
+  443  apt install mlocate
+  444  locate php.ini
+  445  nano /etc/php/7.4/fpm/php.ini
+  446  service php7.4-fpm restart 
+  447  nanbo /etc/php/7.4/fpm/php.ini
+  448  nano /etc/php/7.4/fpm/php.ini
+  449  service nginx restart 
+  450  history 100
+  451  history 50
+  452  service nginx restart 
+  453  ls -la
+  454  apt-get install curl
+  455  ping https://modstore.pro/extras/
+  456  ping https://ya.ru
+  457  ping modstore.pro
+  458  CD /var/www/
+  459  cd www
+  460  lss -lah
+  461  ls -lah
+  462  grep -RIn '$database_server '
+  463  grep -RIn '$database_server' \ more
+  464  grep -RIn '$database_server' | more
+  465  whereis git
+  466  git -v
+  467  git --version
+  468  git config --list
+  469  cd /var/www/
+  470  ls -lah
+  471  cd apply_marine/
+  472  ls -lah
+  473  git remote add origin git@github.com:ahilespelid/apply-marine.ru.git
+  474  echo "# apply-marine.ru" >> README.md
+  475  git init
+  476  git status
+  477  git config --global user.name "Ahiles"
+  478  git config --global user.email "ahilespelid@yandex.ru"
+  479  git status
+  480  git log
+  481  git remote add origin git@github.com:ahilespelid/apply-marine.ru.git
+  482  cat ~/.ssh/id_rsa.pub 
+  483  git config --list
+  484  git status
+  485  git config --global --add safe.directory '*'
+  486  git status
+  487  git add .
+  488  git commit -m "first commit" -a
+  489  git status
+  490  git log
+  491  git remote add origin git@github.com:ahilespelid/apply-marine.ru.git
+  492  git push
+  493  cat ~/.ssh/id_rsa.pub 
+  494  ssh -T -ai ~/.ssh/id_rsa git@github.com
+  495  ssh-keygen
+  496  cat ~/.ssh/id_rsa.pub 
+  497  git push
+  498  git push --set-upstream origin master
+  499  ssh-keygen
+  500  cat ~/.ssh/id_rsa.pub 
+  501  ssh -T -ai ~/.ssh/id_rsa git@github.com
+  502  git push --set-upstream origin master
+  503  git branch
+  504  git branch -M main
+  505  git branch
+  506  git push --set-upstream origin main
+  507  git config --global pack.windowMemory
+  508  git repack -a -d -f --window=0
+  509  git branch -M master
+  510  git config --global pack.windowMemory "32m"
+  511  git branch
+  512  git repack -a -d -f --window=0
+  513  df -
+  514  df - .
+  515  df -h .
+  516  ds -h .
+  517  du -sh .
+  518  git log
+  519  history
+  520  history > history_server.txt
+  521  git config --global pack.windowMemory "4096m"
+  522  git config --global pack.windowMemory
+  523  git repack -a -d -f --window=0
+  524  git push
+  525  git push -u origin master
+  526  git status
+  527  git reset HEAD~
+  528  git reset --hard HEAD~1
+  529  git log
+  530  git rebase -i –root
+  531  git rebase -i 
+  532  git rebase -i master
+  533  git reeset
+  534  git reset
+  535  git status
+  536  git reset
+  537  git loggit rebase -i –root
+  538  git log
+  539  git reset HEAD~2
+  540  git reset --HEAD~2
+  541  git reset HEAD~1
+  542  git reset first commit
+  543  git reset "first commit"
+  544  git reset -q "first commit"
+  545  git reset -q 4300f3e9ce0acaf03f8bb65a74fe0833e03bc381
+  546  git log
+  547  git reset -q 4300f3e9ce0acaf03f8bb65a74fe0833e03bc381
+  548  git status
+  549  git reset HEAD ^
+  550  git status
+  551  git log
+  552  rm -R .git
+  553  git status
+  554  git init
+  555  git status
+  556  git add upload
+  557  git status
+  558  git commit -m "upload"
+  559  git status
+  560  git push -u origne master
+  561  git push
+  562  git branch 
+  563  git push -u origin master
+  564  git remote add origin git@github.com:ahilespelid/apply-marine.ru.git
+  565  git push -u origin master
+  566  du -sh *
+  567  git status
+  568  git add template
+  569  git commit -m "template"
+  570  git status
+  571  git log
+  572  git push -u origin master
+  573  git add rest
+  574  git commit -m "rest"
+  575  git push -u origin master
+  576  git add manager
+  577  git commit -m "manager"
+  578  git push -u origin master
+  579  git status
+  580  git add connectors
+  581  git commit -m "connectors"
+  582  git push -u origin master
+  583  git add core
+  584  git commit -m "core"
+  585  git status
+  586  git add assets
+  587  git commit -m "assets"
+  588  git push -u origin master
+  589  git lfs install
+  590  cd ~
+  591  apt-get info
+  592  apt-get shearch
+  593  apt-get sh
+  594  man apt-get
+  595  apt-get install git-lfs
+  596  whereis git-lfs
+  597  sudo du -a /var/www/apply_marine/assets/ | sort -n -r | head -n 20
+  598  sudo du -ash /var/www/apply_marine/assets/ | sort -n -r | head -n 20
+  599  sudo du -sh /var/www/apply_marine/assets/ | sort -n -r | head -n 20
+  600  sudo du  /var/www/apply_marine/assets/ | sort -n -r | head -n 20
+  601  sudo du -ah /var/www/apply_marine/assets/ | sort -n -r | head -n 20
+  602  sudo du -a /var/www/apply_marine/assets/ | sort -n -r 
+  603  cd /var/www/
+  604  git log
+  605  cd apply_marine/
+  606  git log
+  607  git reset HEAD ^
+  608  git log
+  609  git status
+  610  git push
+  611  git push -f
+  612  git reset
+  613  git status
+  614  git log
+  615  rm -R .git
+  616  git init
+  617  git remote add origin git@github.com:ahilespelid/apply-marine.ru.git
+  618  git status
+  619  git add assets
+  620  git commit -m "assets"
+  621  git push -u origin master
+  622  git push -f -u origin master
+  623  git log 
+  624  git status
+  625  git add zibHBAnK
+  626  git add ziLAxURD
+  627  git add index.php
+  628  git add history_server.txt
+  629  git add favicon.ico
+  630  git add adminer-4.8.1.php
+  631  git add _.htaccess_old
+  632  git add README.md
+  633  git add .htaccess
+  634  gi status
+  635  git status
+  636  git commit -m"all files"
+  637  git push -u origin master
+  638  gi status
+  639  git status
+  640  git add upload
+  641  git commit -m "upload"
+  642  git push -u origin master
+  643  git status
+  644  git add template
+  645  git commit -m "template"
+  646  git push -u origin master
+  647  git status
+  648  git add rest
+  649  git commit -m "rest"
+  650  git push -u origin master
+  651  git status
+  652  git add manager
+  653  git commit -m "manager"
+  654  git push -u origin master
+  655  git status
+  656  git add connectors
+  657  git commit -m "connectors"
+  658  git push -u origin master
+  659  git add config.core.php
+  660  git commit -m "config.core.php"
+  661  git push -u origin master
+  662  git status
+  663  clear
+  664  cd /var/www/apply_marine/core/
+  665  git status
+  666  cd cache/
+  667  git status
+  668  cd action_map/
+  669  git status
+  670  cd ../../../
+  671  git status
+  672  git add core\cache\default
+  673  git add core/cache/default
+  674  git status
+  675  git commit -m "core\cache\default"
+  676  git push
+  677  git checkout core
+  678  git braanch
+  679  git branch
+  680  git checkout -b core
+  681  git branch
+  682  git push
+  683  git push -u origin core
+  684  git status
+  685  du -h core/
+  686  clear
+  687  git status
+  688  alias g=git
+  689  g add core/.htaccess
+  690  g status
+  691  alias s=git status
+  692  alias s="git status"
+  693  s
+  694  alias a="git add "
+  695  du -sh core/cache/action_map/
+  696  du -sh core/cache/auto_publish/
+  697  du -sh core/cache/context_settings/
+  698  du -sh core/cache/includes/
+  699  du -sh core/components/
+  700  a core/cache/action_map/
+  701  a core/cache/auto_publish/
+  702  a core/cache/context_settings/
+  703  s
+  704  alias m="git commit -m "
+  705  m "core/.htaccess"
+  706  s
+  707  git push -u origin core
+  708  du -sh core/cache/
+  709  a core/cache
+  710  m "core/cache/"
+  711  s
+  712  git push -u origin core
+  713  du -sh core/xpdo/
+  714  du -sh core/packages/
+  715  du -sh core/*
+  716  a core/xpdo
+  717  a core/model
+  718  a core/lexicon
+  719  m "xpdo model lexicon"
+  720  s
+  721  git push -u origin core
+  722  s
+  723  clear
+  724  du -sh core/*
+  725  s
+  726  a core/config/
+  727  a core/docs/
+  728  a core/error/
+  729  a core/ht.access
+  730  s
+  731  m "config docs error"
+  732  g checkout -b core2
+  733  g push origin core2
+  734  du -sh core/packages/*
+  735  a core/packages/yasmtp-1.0.1-beta.transport.zip
+  736  a core/packages/yasmtp-1.0.1-beta
+  737  a core/packages/yandexcoordstv-1.0.2-beta.transport.zip
+  738  a core/packages/yandexcoordstv-1.0.2-beta
+  739  a core/packages/versionx-2.3.2-pl.transport.zip
+  740  d
+  741  s
+  742  a core/packages/versionx-2.3.2-pl/
+  743  acore/packages/versionx-2.2.2-pl/
+  744  a core/packages/versionx-2.2.2-pl/
+  745  a core/packages/versionx-2.2.2-pl.transport.zip
+  746  a core/packages/upgrademodx-2.3.3-pl/
+  747  a core/packages/upgrademodx-2.3.3-pl.transport.zip
+  748  s
+  749  a core/packages/translit-1.0.0-beta/
+  750  a core/packages/translit-1.0.0-beta.transport.zip
+  751  a core/packages/tinymce-4.3.4-pl/
+  752  a core/packages/tinymce-4.3.4-pl.transport.zip
+  753  a core/packages/tagelementplugin-1.3.1-pl/
+  754  a core/packages/tagelementplugin-1.3.1-pl.transport.zip
+  755  a core/packages/tagcanonical-1.0.0-pl/
+  756  a core/packages/tagcanonical-1.0.0-pl.transport.zip
+  757  a core/packages/simpleupdater-2.2.1-rc2/
+  758  a core/packages/simpleupdater-2.2.1-rc2.transport.zip
+  759  s
+  760  a core/packages/seopro-1.3.1-pl/
+  761  a core/packages/seopro-1.3.1-pl.transport.zip
+  762  a core/packages/sdstore-1.0.1-pl/
+  763  a core/packages/sdstore-1.0.1-pl.transport.zip
+  764  a core/packages/robotsbuilder-1.0.4-beta/
+  765  a core/packages/robotsbuilder-1.0.4-beta.transport.zip
+  766  a core/packages/recaptchav3-1.0.6-beta/
+  767  a core/packages/recaptchav3-1.0.6-beta.transport.zip
+  768  a core/packages/recaptchav3-1.0.5-beta/
+  769  a core/packages/recaptchav3-1.0.5-beta.transport.zip
+  770  a core/packages/recaptchav2-3.2.1-beta1/
+  771  a core/packages/recaptchav2-3.2.1-beta1.transport.zip
+  772  a core/packages/quickemail-1.1.2-pl/
+  773  a core/packages/quickemail-1.1.2-pl.transport.zip
+  774  a core/packages/phpthumbon-1.3.1-pl/
+  775  a core/packages/phpthumbon-1.3.1-pl.transport.zip
+  776  a core/packages/pdotools-2.13.2-pl/
+  777  a core/packages/pdotools-2.13.2-pl.transport.zip
+  778  a core/packages/pdotools-2.12.9-pl/
+  779  a core/packages/pdotools-2.12.9-pl.transport.zip
+  780  s
+  781  m "core/packages"
+  782  g checkout -b packages
+  783  g push origin packages
+  784  s
+  785  a core/packages/payandsee-2.0.24-beta/
+  786  a core/packages/payandsee-2.0.24-beta.transport.zip
+  787  a core/packages/office-1.9.5-pl/
+  788  a core/packages/office-1.9.5-pl.transport.zip
+  789  a core/packages/ms2gallery-1.4.8-pl1/
+  790  a core/packages/ms2gallery-1.4.8-pl1.transport.zip
+  791  a core/packages/modlastmodified-0.0.4-beta/
+  792  a core/packages/modlastmodified-0.0.4-beta.transport.zip
+  793  a core/packages/moddevtools-1.2.1-pl/
+  794  a core/packages/moddevtools-1.2.1-pl.transport.zip
+  795  a core/packages/mobiledetect-2.0.1-pl/
+  796  a core/packages/mobiledetect-2.0.1-pl.transport.zip
+  797  a core/packages/minishop2-2.9.2-pl/
+  798  a core/packages/minishop2-2.9.2-pl.transport.zip
+  799  a core/packages/minifyx-1.7.1-pl/
+  800  a core/packages/minifyx-1.7.1-pl.transport.zip
+  801  a core/packages/minifyhtml-1.0-pl1/
+  802  a core/packages/minifyhtml-1.0-pl1.transport.zip
+  803  a core/packages/migx-2.13.0-pl/
+  804  a core/packages/migx-2.13.0-pl.transport.zip
+  805  a core/packages/migx-2.12.0-pl/
+  806  a core/packages/migx-2.12.0-pl.transport.zip
+  807  a core/packages/logrotation-1.0.0-beta/
+  808  s
+  809  a core/packages/logrotation-1.0.0-beta.transport.zip
+  810  a core/packages/localizator-1.0.8-beta/
+  811  a core/packages/localizator-1.0.8-beta.transport.zip
+  812  a core/packages/formit-4.2.6-pl/
+  813  a core/packages/formit-4.2.6-pl.transport.zip
+  814  a core/packages/formit-4.2.5-pl/
+  815  a core/packages/formit-4.2.5-pl.transport.zip
+  816  a core/packages/filetranslit-0.1.2-pl2/
+  817  a core/packages/filetranslit-0.1.2-pl2.transport.zip
+  818  a core/packages/directresize-1.0.5-pl/
+  819  a core/packages/directresize-1.0.5-pl.transport.zip
+  820  a core/packages/debugparser-1.1.0-pl/
+  821  a core/packages/debugparser-1.1.0-pl.transport.zip
+  822  s
+  823  m "core/packages2"
+  824  g push origin packages
+  825  s
+  826  du -sh core/packages/*
+  827  s
+  828  a core/packages/__MACOSX/
+  829  a core/packages/ace-1.9.1-pl.transport.zip
+  830  a core/packages/ace-1.9.1-pl/
+  831  a core/packages/ace-1.9.2-pl.transport.zip
+  832  a core/packages/ace-1.9.2-pl/
+  833  a core/packages/ajaxform-1.1.9-pl.transport.zip
+  834  a core/packages/ajaxform-1.1.9-pl/
+  835  a core/packages/autotemplate-1.0.0-rc-1.transport.zip
+  836  a core/packages/autotemplate-1.0.0-rc-1/
+  837  a core/packages/backupmodx-3.0.1-pl.transport.zip
+  838  a core/packages/backupmodx-3.0.1-pl/
+  839  a core/packages/backupmodx-3.0.4-pl.transport.zip
+  840  a core/packages/backupmodx-3.0.4-pl/
+  841  a core/packages/bannery-1.4.1-pl.transport.zip
+  842  a core/packages/bannery-1.4.1-pl/
+  843  a core/packages/batcher-2.0.0-pl.transport.zip
+  844  a core/packages/batcher-2.0.0-pl/
+  845  a core/packages/breadcrumbs-1.1.0-pl.transport.zip
+  846  a core/packages/breadcrumbs-1.1.0-pl/
+  847  a core/packages/cachemaster-1.2.4-pl.transport.zip
+  848  a core/packages/cachemaster-1.2.4-pl/
+  849  a core/packages/clientconfig-2.3.0-pl.transport.zip
+  850  a core/packages/clientconfig-2.3.0-pl/
+  851  a core/packages/collections-3.7.1-pl.transport.zip
+  852  a core/packages/collections-3.7.1-pl/
+  853  a core/packages/console-2.2.2-pl.transport.zip
+  854  a core/packages/console-2.2.2-pl/
+  855  a core/packages/controlerrorlog-1.4.6-pl.transport.zip
+  856  a core/packages/controlerrorlog-1.4.6-pl/
+  857  a core/packages/core.transport.zip
+  858  s
+  859  m "core/packages3"
+  860  g checkout -b packages2
+  861  g push -u origin packages2
+  862  clear
+  863  s
+  864  du -sh core/packages/core/*
+  865  a core/packages/core/xPDOFileVehicle
+  866  a core/packages/core/modWorkspace
+  867  a core/packages/core/modUserGroupRole
+  868  a core/packages/core/modUserGroup
+  869  a core/packages/core/modTransportProvider
+  870  a core/packages/core/modSystemSetting
+  871  a core/packages/core/modNamespace
+  872  a core/packages/core/modMenu
+  873  a core/packages/core/modMediaSource
+  874  a core/packages/core/modEvent
+  875  a core/packages/core/modDashboardWidget
+  876  a core/packages/core/modDashboard
+  877  a core/packages/core/modContextSetting
+  878  s
+  879  m "core/packages/core"
+  880  g checkout -b packages3
+  881  g push origin packages3
+  882  s
+  883  du -sh core/cache/includes/*
+  884  du -sh  core/cache/lexicon_topics/*
+  885  a core/packages/core/modContentType/
+  886  a core/packages/core/modClassMap/
+  887  a core/packages/core/modAccessPolicyTemplateGroup/
+  888  a core/packages/core/modAccessPolicyTemplate/
+  889  a core/packages/core/modAccessPolicy/
+  890  a core/packages/core/manifest.php
+  891  a core/cache/scripts/elements/
+  892  s
+  893  a core/cache/default/
+  894  a core/cache/includes/
+  895  s
+  896  a  core/cache/lexicon_topics/
+  897  s
+  898  a core/cache/resource/
+  899  s
+  900  g branch
+  901  m "packages3"
+  902  g push 
+  903  git push --set-upstream origin packages3
+  904  s
+  905  du -sh core/packages/core/modContext/*
+  906  a core/packages/core/modContext/e7e42e36a951f29199e89180cff0f185.vehicle
+  907  a core/packages/core/modContext/e7e42e36a951f29199e89180cff0f185.resolve.core.resolver
+  908  a core/packages/core/modContext/e7e42e36a951f29199e89180cff0f185
+  909  a core/packages/core/modContext/e6d8cd72440164067d67b4aadd5abf5b.vehicle
+  910  a core/packages/core/modContext/e6d8cd72440164067d67b4aadd5abf5b.resolve.core.resolver
+  911  a core/packages/core/modContext/e6d8cd72440164067d67b4aadd5abf5b
+  912  a core/packages/core/modContext/dc8e4f6646dcc1be0c29e45337773426.vehicle
+  913  a core/packages/core/modContext/dc8e4f6646dcc1be0c29e45337773426.resolve.core.resolver
+  914  a core/packages/core/modContext/dc8e4f6646dcc1be0c29e45337773426
+  915  a core/packages/core/modContext/dbd60cfc2e61d378db1e8391698bb1e3.vehicle
+  916  a core/packages/core/modContext/dbd60cfc2e61d378db1e8391698bb1e3.resolve.core.resolver
+  917  a core/packages/core/modContext/dbd60cfc2e61d378db1e8391698bb1e3
+  918  a core/packages/core/modContext/da9ebb7c9eaba1a42648ec5933d13afb.vehicle
+  919  a core/packages/core/modContext/da9ebb7c9eaba1a42648ec5933d13afb.resolve.core.resolver
+  920  a core/packages/core/modContext/da9ebb7c9eaba1a42648ec5933d13afb
+  921  a core/packages/core/modContext/d07e3c1e5466a7f2e82f3ab87a4ac758.vehicle
+  922  a core/packages/core/modContext/d07e3c1e5466a7f2e82f3ab87a4ac758.resolve.core.resolver
+  923  a core/packages/core/modContext/d07e3c1e5466a7f2e82f3ab87a4ac758
+  924  a core/packages/core/modContext/c8d7691f4f62902521b41c375155963f.vehicle
+  925  a core/packages/core/modContext/c8d7691f4f62902521b41c375155963f.resolve.core.resolver
+  926  a core/packages/core/modContext/c8d7691f4f62902521b41c375155963f
+  927  a core/packages/core/modContext/c67998df2bbb523c9b20e06d02ab14a5.vehicle
+  928  a core/packages/core/modContext/c67998df2bbb523c9b20e06d02ab14a5.resolve.core.resolver
+  929  a core/packages/core/modContext/c269eb236df12615543d7852f5162415.vehicle
+  930  a core/packages/core/modContext/c269eb236df12615543d7852f5162415.resolve.core.resolver
+  931  a core/packages/core/modContext/bd701b62f56ccd7d355aafd1a3424e98.vehicle
+  932  a core/packages/core/modContext/bd701b62f56ccd7d355aafd1a3424e98.resolve.core.resolver
+  933  a core/packages/core/modContext/bd701b62f56ccd7d355aafd1a3424e98
+  934  m "packages 4"
+  935  git push
+  936  s
+  937  a core/packages/core/modContext/ba353fef81d8f4a23311878cb48f65e6/
+  938  a core/packages/core/modContext/ba353fef81d8f4a23311878cb48f65e6.vehicle
+  939  a core/packages/core/modContext/ba353fef81d8f4a23311878cb48f65e6.resolve.core.resolver
+  940  a core/packages/core/modContext/b3a6dfa692e52f0aed490bada1eca6ae/
+  941  a core/packages/core/modContext/b3a6dfa692e52f0aed490bada1eca6ae.vehicle
+  942  a core/packages/core/modContext/b3a6dfa692e52f0aed490bada1eca6ae.resolve.core.resolver
+  943  a core/packages/core/modContext/b120b4fb2a0f33b29e22677ce650c75b.vehicle
+  944  a core/packages/core/modContext/b120b4fb2a0f33b29e22677ce650c75b.resolve.core.resolver
+  945  a core/packages/core/modContext/aeb88f55cae6f7be359c6a4d5e09cf3a.vehicle
+  946  a core/packages/core/modContext/aeb88f55cae6f7be359c6a4d5e09cf3a.resolve.core.resolver
+  947  a core/packages/core/modContext/aabdb146c3eb8abdf5453920a0b40c59/
+  948  a core/packages/core/modContext/aabdb146c3eb8abdf5453920a0b40c59.vehicle
+  949  a core/packages/core/modContext/aabdb146c3eb8abdf5453920a0b40c59.resolve.core.resolver
+  950  a core/packages/core/modContext/a6cffbdaced1141d0a5b8c1fed7c399d.vehicle
+  951  a core/packages/core/modContext/a6cffbdaced1141d0a5b8c1fed7c399d.resolve.core.resolver
+  952  a core/packages/core/modContext/9ab2ee02030c3a306dd0a0b15eef7240/
+  953  a core/packages/core/modContext/9ab2ee02030c3a306dd0a0b15eef7240.vehicle
+  954  a core/packages/core/modContext/9ab2ee02030c3a306dd0a0b15eef7240.resolve.core.resolver
+  955  a core/packages/core/modContext/90355abecf61e2377edb190691e864a7/
+  956  a core/packages/core/modContext/90355abecf61e2377edb190691e864a7.vehicle
+  957  a core/packages/core/modContext/90355abecf61e2377edb190691e864a7.resolve.core.resolver
+  958  a core/packages/core/modContext/8a3bf4e891108c1354198d755ca758b3/
+  959  a core/packages/core/modContext/8a3bf4e891108c1354198d755ca758b3.vehicle
+  960  a core/packages/core/modContext/8a3bf4e891108c1354198d755ca758b3.resolve.core.resolver
+  961  a core/packages/core/modContext/70fd573cc9a4955529d9bc20237e2791/
+  962  s
+  963  a core/packages/core/modContext/70fd573cc9a4955529d9bc20237e2791.vehicle
+  964  a core/packages/core/modContext/70fd573cc9a4955529d9bc20237e2791.resolve.core.resolver
+  965  a core/packages/core/modContext/6b1e3f217de404f3de4a7615ceeca852/
+  966  a core/packages/core/modContext/6b1e3f217de404f3de4a7615ceeca852.vehicle
+  967  m "packages 5"
+  968  g push
+  969  s
+  970  a core/packages/core/modContext/6b1e3f217de404f3de4a7615ceeca852.resolve.core.resolver
+  971  a core/packages/core/modContext/6065ded44761b999b223354c726f3058/
+  972  a core/packages/core/modContext/6065ded44761b999b223354c726f3058.vehicle
+  973  a core/packages/core/modContext/6065ded44761b999b223354c726f3058.resolve.core.resolver
+  974  a core/packages/core/modContext/55899c07a0be09d324666a6a7964aa95/
+  975  a core/packages/core/modContext/55899c07a0be09d324666a6a7964aa95.vehicle
+  976  a core/packages/core/modContext/55899c07a0be09d324666a6a7964aa95.resolve.core.resolver
+  977  a core/packages/core/modContext/4f8c6e47f98e3bac2fde790d47b73660/
+  978  a core/packages/core/modContext/4f8c6e47f98e3bac2fde790d47b73660.vehicle
+  979  a core/packages/core/modContext/4f8c6e47f98e3bac2fde790d47b73660.resolve.core.resolver
+  980  a core/packages/core/modContext/457ca7a0b0eaefc2ca1c7c6e01be469a/
+  981  a core/packages/core/modContext/457ca7a0b0eaefc2ca1c7c6e01be469a.vehicle
+  982  a core/packages/core/modContext/457ca7a0b0eaefc2ca1c7c6e01be469a.resolve.core.resolver
+  983  a core/packages/core/modContext/38e7b8f805af9274a9940c7eb809d527/
+  984  a core/packages/core/modContext/38e7b8f805af9274a9940c7eb809d527.vehicle
+  985  a core/packages/core/modContext/38e7b8f805af9274a9940c7eb809d527.resolve.core.resolver
+  986  a core/packages/core/modContext/3308d2675cbf6976c68e5dcafb87e017/
+  987  a core/packages/core/modContext/3308d2675cbf6976c68e5dcafb87e017.vehicle
+  988  a core/packages/core/modContext/3308d2675cbf6976c68e5dcafb87e017.resolve.core.resolver
+  989  a core/packages/core/modContext/0f9a011eeb56224ca37a9d03118e6955.vehicle
+  990  a core/packages/core/modContext/0f9a011eeb56224ca37a9d03118e6955.resolve.core.resolver
+  991  s
+  992  m "packages 6"
+  993  g push
+  994  clear
+  995  s
+  996  du -sh core/components/*
+  997  a core/components/yandexcoordstv
+  998  a core/components/versionx
+  999  a core/components/upgrademodx
+ 1000  a core/components/translit
+ 1001  a core/components/tinymce
+ 1002  a core/components/tagelementplugin
+ 1003  a core/components/tagcanonical
+ 1004  a core/components/simpleupdater
+ 1005  a core/components/simplesearch
+ 1006  a core/components/seopro
+ 1007  a core/components/robotsbuilder
+ 1008  a core/components/rest
+ 1009  a core/components/recaptchav3
+ 1010  a core/components/recaptchav2
+ 1011  a core/components/quickemail
+ 1012  a core/components/phpthumbon
+ 1013  a core/components/pdotools
+ 1014  a core/components/payandsee
+ 1015  a core/components/office
+ 1016  a core/components/msearch2
+ 1017  a core/components/ms2gallery
+ 1018  a core/components/modlastmodified
+ 1019  a core/components/moddevtools
+ 1020  a core/components/mobiledetect
+ 1021  a core/components/minishop2
+ 1022  a core/components/minifyx
+ 1023  a core/components/migx
+ 1024  a core/components/logrotation
+ 1025  a core/components/localizator
+ 1026  a core/components/formit
+ 1027  a core/components/directresize
+ 1028  a core/components/debugparser
+ 1029  a core/components/controlerrorlog
+ 1030  du -sh core/components/*
+ 1031  a core/components/console
+ 1032  a core/components/collections
+ 1033  a core/components/clientconfig
+ 1034  a core/components/cachemaster
+ 1035  a core/components/breadcrumbs
+ 1036  a core/components/batcher
+ 1037  a core/components/bannery
+ 1038  a core/components/autoredirector
+ 1039  a core/components/ajaxform
+ 1040  a core/components/ace
+ 1041  s
+ 1042  m "components"
+ 1043  g checkout -b components
+ 1044  g push 
+ 1045  git push --set-upstream origin components
+ 1046  clear
+ 1047  du -sh core/components/backupmodx/*
+ 1048  a core/components/backupmodx/vendor
+ 1049  a core/components/backupmodx/templates
+ 1050  a core/components/backupmodx/src
+ 1051  a core/components/backupmodx/processors
+ 1052  a core/components/backupmodx/model
+ 1053  a core/components/backupmodx/lexicon
+ 1054  a core/components/backupmodx/elements
+ 1055  a core/components/backupmodx/docs
+ 1056  a core/components/backupmodx/composer.lock
+ 1057  a core/components/backupmodx/composer.json
+ 1058  s
+ 1059  a core/components/backupmodx/.DS_Store
+ 1060  s
+ 1061  m "components/backupmodx"
+ 1062  g push
+ 1063  s
+ 1064  du -sh core/components/backupmodx/backups/*
+ 1065  a core/components/backupmodx/backups/2022-08-24--183724--a851
+ 1066  a core/components/backupmodx/backups/2022-08-24--183800--6c9b
+ 1067  m "/backups/2022-08-24"
+ 1068  g push
+ 1069  du -sh core/components/backupmodx/backups/*
+ 1070  du -sh core/components/backupmodx/backups/2022-08-24--184106--6539/*
+ 1071  cd core/components/backupmodx/backups/
+ 1072  ls -lah
+ 1073  tar -zcvf 2022-08-24--184106--6539.tar.gz 2022-08-24--184106--6539/
+ 1074  ls -lah
+ 1075  rm 2022-08-24--184106--6539.tar.gz
+ 1076  ls -lah
+ 1077  ls -lah 2022-08-24--184106--6539/
+ 1078  git lfs track "*.zip"
+ 1079  git lfs track "*.sql"
+ 1080  s
+ 1081  rm .gitattributes
+ 1082  s
+ 1083  cd ../../../../
+ 1084  git lfs track "*.zip"
+ 1085  git lfs track "*.sql"
+ 1086  s
+ 1087  a .gitattributes
+ 1088  m ".gitattributes"
+ 1089  g checkout -b gitattributes
+ 1090  g push
+ 1091  git push --set-upstream origin gitattributes
+ 1092  s
+ 1093  a *
+ 1094  s
+ 1095  m "zip and sql all new atribute files gitfls"
+ 1096  g checkout -b zip
+ 1097  g push
+ 1098  git push --set-upstream origin zip
+ 1099  пше дщп
+ 1100  g log
+ 1101  history
+ 1102  history > history_server_30092022.txt 
