@@ -88,7 +88,7 @@ else if(!array_key_exists("id",$_GET))
             
             $photo["key"] = ",photo";
             $photo["value"] = ",'".$FPsitePath."'";
-            $photo["update"] = ",photo = '".$FPsitePath."'";
+            $photo["update"] = ", photo = '".$FPsitePath."'";
             
          } else {
              echo json_encode(array(
@@ -101,7 +101,36 @@ else if(!array_key_exists("id",$_GET))
 	if($table){
     
 		$result = $modx->query("SELECT id FROM $table WHERE user_id = " . $user_id);
-		if (!is_object($result)) {
+        $row = $result->fetch(PDO::FETCH_ASSOC);
+        //
+        /*/
+        @unlink('/var/www/apply_marine/dumpadd.txt')@unlink('/var/www/apply_marine/data.txt');
+        @file_put_contents('/var/www/apply_marine/dumpadd.txt',"\r\n".var_export($row, true )); 
+        @file_put_contents('/var/www/apply_marine/data.txt',"\r\n".var_export($data, true )); //*/
+		if(isset($row['id'])){
+            
+            foreach ($data["main_data"] as $keyAttr => $value) {
+                
+                if(in_array($keyAttr,$defaulValues)) $value = 0;
+                
+                $user_prop .= '`'.$keyAttr.'` = "'.$value.'"';
+                
+                if($nim_attr != $count && $count) {
+                    $user_prop .= ',';
+                    $user_value .= ',';
+                }
+                
+                $nim_attr++;
+            }
+            
+            $sql = "UPDATE $table SET editedon = $editedon".$photo["update"].", data_json = '".json_encode($data["second_data"])."', $user_prop WHERE user_id = $user_id";
+            $update = $modx->query($sql);
+            
+            echo json_encode(array(
+                "action" => "edit",
+                "message" => "Анкета пользователя изменена "
+            ));
+        } else {
 			
 			foreach ($data["main_data"] as $keyAttr => $value) {
 				
@@ -126,30 +155,7 @@ else if(!array_key_exists("id",$_GET))
 				"message" => "Анкета пользователя сохранена"
 			));
 		   
-		} else {
-			
-			foreach ($data["main_data"] as $keyAttr => $value) {
-				
-				if(in_array($keyAttr,$defaulValues)) $value = 0;
-				
-				$user_prop .= '`'.$keyAttr.'` = "'.$value.'"';
-				
-				if($nim_attr != $count && $count) {
-					$user_prop .= ',';
-					$user_value .= ',';
-				}
-				
-				$nim_attr++;
-			}
-			
-			$sql = "UPDATE $table SET editedon = $editedon".$photo["update"].", data_json = '".json_encode($data["second_data"])."', $user_prop WHERE user_id = $user_id";
-			$update = $modx->query($sql);
-			
-			echo json_encode(array(
-				"action" => "edit",
-				"message" => "Анкета пользователя изменена"
-			));
-		}
+		} 
 	} else {
 		echo json_encode(array(
 			"action" => "error",

@@ -1,3 +1,4 @@
+$(document).ready(function(){
 /* Получение данных из БД */
 let id = $("input[name=user_id]").val();
 if(id > 0)
@@ -57,14 +58,10 @@ $(".select-list-block").on("click",".select-list ul li",function(){
 });
 
 /* Функция что бы получить загружаемую картинку */
-function readURL(input) {
-  if (input.files && input.files[0]) {
+function readURL(input){
+  if(input.files && input.files[0]) {
     var reader = new FileReader();
-
-    reader.onload = function(e) {
-      $('.resume-img').attr('src', e.target.result);
-    }
-
+    reader.onload = function(e){$('.resume-img').attr('src', e.target.result);}
     reader.readAsDataURL(input.files[0]);
   }
 }
@@ -98,7 +95,7 @@ $(".summary-form").on("click",".submit-btn",function(){
             break;
             default:
                 let type = $(this).attr("type");
-                //console.log("Проверка - " + key + ": " + type);
+                console.log("Проверка - " + key + ": " + type);
                 if(type == "radio") {
                     if($(this).is(":checked")) 
                     {
@@ -222,4 +219,5 @@ $(".summary-form").on("click",".submit-btn",function(){
           scrollTop: firstError
         }, 800);
     }
+});
 });
