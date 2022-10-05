@@ -1,0 +1,151 @@
+.card-company {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 6px 16px rgba(0, 47, 103, 0.1);
+    margin-bottom: 20px;
+}
+
+.card-company:last-child {
+    margin-bottom: 0;
+}
+
+.card-company__img {
+    padding: 20px 0 20px 20px;
+}
+
+.card-company__content {
+    padding: 0 20px 20px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-company__title {
+    display: inline;
+    font-family: 'Cormorant SC', serif;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 43px;
+    color: #141e30;
+}
+
+.card-company__title::after {
+    content: url("./img/icon-flag.svg");
+    display: inline;
+}
+
+.card-company__subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    color: #001f60;
+}
+
+.card-company__text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #4f4f4f;
+}
+
+.card-company__text_blur {
+    flex: 1 1;
+    position: relative;
+}
+
+.card-company__text_blur::before {
+    content: "";
+    position: absolute;
+    height: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(360deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.card-company__contacts {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background: #f7f7f7;
+}
+
+.card-company__contacts .card-company__text {
+    text-align: center;
+}
+
+.card-company__icon {
+    margin: 20px 0 17px;
+    text-align: center;
+}
+
+.card-company__link {
+    flex: 1 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #001f60;
+}
+
+.address-links__link {
+    margin-top: 20px;
+    gap: 10px;
+    display: inline-flex;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #141e30;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.address-links__link::before {
+    margin-top: 3px;
+    content: url("./img/icon-mail.svg");
+}
+
+.address-links__link:first-child::before {
+    content: url("./img/icon-phone.svg");
+}
+
+.address-links__link:last-child {
+    text-decoration: underline;
+}
+
+.address-links__link:last-child::before {
+    content: url("./img/icon-internet.svg");
+    height: 14px;
+}
+
+@media only screen and (min-width: 400px) {
+
+    .card-company__title::after {
+        margin-left: 10px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .card-company {
+        gap: 20px;
+        flex-direction: row;
+    }
+
+    .card-company__content {
+        padding: 20px 0;
+    }
+
+    .card-company__contacts {
+        max-width: 240px;
+        width: 100%;
+    }
+
+}
