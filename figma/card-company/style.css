@@ -94,6 +94,11 @@
     color: #001f60;
 }
 
+.address-links {
+    display: flex;
+    flex-direction: column;
+}
+
 .address-links__link {
     margin-top: 20px;
     gap: 10px;
