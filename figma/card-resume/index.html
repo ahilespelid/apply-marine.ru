@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;500&display=swap" rel="stylesheet">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="./pagination.css">
+    <link rel="stylesheet" href="./search-filter.css">
+
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+
+    <div class="search-filter">
+        <label class="search-filter__label"><input class="search-filter__input" type="text" placeholder="Должность"></label>
+        <label class="search-filter__label"><input class="search-filter__input" type="text" placeholder="Страна"></label>
+        <label class="search-filter__label"><input class="search-filter__input" type="text" placeholder="Город"></label>
+        <button class="search-filter__button search-filter__button_clear"></button>
+        <button class="search-filter__button search-filter__button_search">поиск</button>
+    </div>
+
+    <nav class="pagination">
+        <div class="pagination__links">
+            <a class="pagination__link" href="#">&lt;</a>
+            <a class="pagination__link pagination-link_active" href="#">1</a>
+            <a class="pagination__link" href="#">2</a>
+            <a class="pagination__link" href="#">3</a>
+            <div class="pagination__link pagination__link_disabled">...</div>
+            <a class="pagination__link" href="#">15</a>
+            <a class="pagination__link" href="#">&gt;</a>
+        </div>
+        <a class="pagination__button" href="#">Далее</a>
+    </nav>
+
+</div>
+</body>
+</html>
