@@ -15,6 +15,7 @@
 
     <!-- styles -->
     <link rel="stylesheet" href="./pagination.css">
+    <link rel="stylesheet" href="./card-company.css">
     <link rel="stylesheet" href="./search-filter.css">
 
     <title>Document</title>
@@ -28,6 +29,70 @@
         <label class="search-filter__label"><input class="search-filter__input" type="text" placeholder="Город"></label>
         <button class="search-filter__button search-filter__button_clear"></button>
         <button class="search-filter__button search-filter__button_search">поиск</button>
+    </div>
+
+    <nav class="pagination">
+        <div class="pagination__links">
+            <a class="pagination__link" href="#">&lt;</a>
+            <a class="pagination__link pagination__link_active" href="#">1</a>
+            <a class="pagination__link" href="#">2</a>
+            <a class="pagination__link" href="#">3</a>
+            <div class="pagination__link pagination__link_disabled">...</div>
+            <a class="pagination__link" href="#">15</a>
+            <a class="pagination__link" href="#">&gt;</a>
+        </div>
+        <a class="pagination__button" href="#">Далее</a>
+    </nav>
+
+    <div class="card-company">
+        <div class="card-company__img">
+            <img src="./img/card-company.jpg" alt="card-company">
+        </div>
+        <div class="card-company__content">
+            <div class="card-company__title-wrapper">
+                <div class="card-company__title">Название компании</div>
+            </div>
+            <div class="card-company__subtitle">Сфера деятельности</div>
+            <div class="card-company__text card-company__text_blur">Не следует, однако забывать, что рамки и место
+                обучения кадров в значительной степени обуславливает создание модели развития. Значимость этих проблем
+                настолько очевидна, что рамки и место обучения кадров представляет собой интересный эксперимент проверки
+                дальнейших направлений развития.
+            </div>
+        </div>
+        <div class="card-company__contacts">
+            <div class="card-company__icon">
+                <img src="./img/icon-eye-invisible.svg" alt="eye-invisible">
+            </div>
+            <div class="card-company__text">Контакты доступны только для зарегистрированных крюинговых агентств или
+                судовладельцев.
+            </div>
+            <a href="" class="card-company__link">Зерегистрироваться</a>
+        </div>
+    </div>
+
+    <div class="card-company">
+        <div class="card-company__img">
+            <img src="./img/card-company.jpg" alt="card-company">
+        </div>
+        <div class="card-company__content">
+            <div class="card-company__title-wrapper">
+                <div class="card-company__title">Название компании</div>
+            </div>
+            <div class="card-company__subtitle">Сфера деятельности</div>
+            <div class="card-company__text card-company__text_blur">Не следует, однако забывать, что рамки и место
+                обучения кадров в значительной степени обуславливает создание модели развития. Значимость этих проблем
+                настолько очевидна, что рамки и место обучения кадров представляет собой интересный эксперимент проверки
+                дальнейших направлений развития.
+            </div>
+        </div>
+        <div class="card-company__contacts">
+            <div class="card-company__subtitle">Контакты</div>
+            <div class="address-links">
+                <a class="address-links__link" href="tel:+70000000000">+7 (000) 000-00-00</a>
+                <a class="address-links__link" href="mailto:name@email.ru">name@email.ru</a>
+                <a class="address-links__link" href="https://www.name_company.com">https://www.name_company.com</a>
+            </div>
+        </div>
     </div>
 
     <nav class="pagination">
