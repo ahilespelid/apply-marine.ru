@@ -1,0 +1,110 @@
+.search-filter {
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-start; 
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.search-filter label {margin:0!important}
+.search-filter__input {
+    width: 100%;
+    padding: 13px 0 13px 20px;
+    background-color: #ffffff;
+    font-size: 14px;
+    line-height: 21px;
+    border: 1px solid #bdbdbd;
+}
+
+.search-filter__label {
+    flex: 1 100%;
+    position: relative;
+}
+
+.search-filter__label::before {
+    content: url("/assets/img/img-search-filter/icon-dropdown.svg");
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.search-filter__label:first-child::before {
+    content: url("/assets/img/img-search-filter/icon-pen.svg");
+    width: 47px;
+    height: calc(100% - 2px);
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #bdbdbd;
+    border-bottom: 1px solid #bdbdbd;
+    background-color: #fafafa;
+}
+
+.search-filter__button {
+    border: transparent;
+}
+
+.search-filter__button_clear {
+    position: relative;
+    width: 48px;
+    padding: 10px 0;
+    line-height: 27px;
+    background: #141e30 url("/assets/img/img-search-filter/icon-clear.svg") no-repeat 17px 17px;
+    border: 1px solid #141e30;
+}
+
+.search-filter__button_search {
+    padding: 10px 25px 12px 25px;
+    display: inline-flex;
+    align-items: baseline;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #ffffff;
+    text-transform: uppercase;
+    background-color: #141e30;
+    border: 1px solid #141e30;
+}
+
+.search-filter__button_search::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    margin-right: 21px;
+    background: url("/assets/img/img-search-filter/icon-search.svg") no-repeat center;
+}
+
+.search-filter__button_search::after {
+    content: "";
+    width: 11px;
+    height: 8px;
+    margin-left: 23px;
+    background: url("/assets/img/img-search-filter/icon-arrow.svg") no-repeat center;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    .search-filter__label {
+        flex: none;
+    }
+
+    .search-filter__input {
+        width: 270px;
+    }
+
+}
+
+@media only screen and (min-width: 1400px) {
+
+    .search-filter {
+        margin-top: 60px;
+        gap: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+}

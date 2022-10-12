@@ -2,21 +2,21 @@
      class Pagination{
      protected $baseURL      = '';
      protected $totalRows    = '';
-     protected $perPage      = 10;
-     protected $numLinks     =  2;
-     protected $currentPage  =  0;
-     protected $firstLink    = 'Первая';
-     protected $nextLink     = 'Следующая &raquo;';
-     protected $prevLink     = '&laquo; Предыдущая';
+     protected $perPage      = 2;
+     protected $numLinks     = 2;
+     protected $currentPage  = 0;
+     protected $firstLink    = '';
+     protected $nextLink     = '&gt; &nbsp;';
+     protected $prevLink     = '&lt;';
      protected $lastLink     = 'Последняя';
-     protected $fullTagOpen  = '<div class="pagination">';
-     protected $fullTagClose = '</div>';
+     protected $fullTagOpen  = '<div class="pagination"><div class="pagination__links">';
+     protected $fullTagClose = '</div></div>';
      protected $firstTagOpen = '';
      protected $firstTagClose= '&nbsp;';
      protected $lastTagOpen  = '&nbsp;';
      protected $lastTagClose = '';
-     protected $curTagOpen   = '&nbsp;<b>';
-     protected $curTagClose  = '</b>';
+     protected $curTagOpen   = '<div class="page-item"><a class="pagination__link pagination__link_active page-link">';
+     protected $curTagClose  = '</a></div>';
      protected $nextTagOpen  = '&nbsp;';
      protected $nextTagClose = '&nbsp;';
      protected $prevTagOpen  = '&nbsp;';
@@ -27,10 +27,12 @@
      protected $currentOffset= 0;
      protected $queryStringSegment = 'p';
      
-     function __construct($params = array()){
+     function __construct($params = array()){ 
          if (count($params) > 0){
              $this->initialize($params);        
          }
+         $this->firstLink .= '<a class="pagination__button" href="'.$this->baseURL.$i.'"> Первая </a>';
+         
      }
      
      function initialize($params = array()){
@@ -56,7 +58,7 @@
          // Если страница только одна, не продолжать
          if ($numPages == 1){
              if ($this->showCount){
-                 $info = 'Showing : ' . $this->totalRows;
+                 $info = 'Всего : ' . $this->totalRows;
                  return $info;
              }else{
                  return '';
@@ -89,7 +91,7 @@
          
             $info .= ' из ' . $this->totalRows . ' | ';
          
-            $output .= $info;
+            ///*/$output .= $info;//*/
          }
          
          $this->numLinks = (int)$this->numLinks;
@@ -108,13 +110,13 @@
          // Выводим ссылку на первую страницу
          if($this->currentPage > $this->numLinks){
              $firstPageURL = str_replace($query_string_sep,'',$this->baseURL);
-             $output .= $this->firstTagOpen.'<a href="'.$firstPageURL.'">'.$this->firstLink.'</a>'.$this->firstTagClose;
+             $output .= $this->firstTagOpen.'<a class="pagination__link page-link" href="'.$firstPageURL.'">'.$this->firstLink.'</a>'.$this->firstTagClose;
          }
          // Выводим ссылку на предыдущую страницу
          if($this->currentPage != 1){
              $i = ($uriPageNum - 1);
              if($i == 0) $i = '';
-             $output .= $this->prevTagOpen.'<a href="'.$this->baseURL.$i.'">'.$this->prevLink.'</a>'.$this->prevTagClose;
+             $output .= $this->prevTagOpen.'<a class="pagination__link page-link" href="'.$this->baseURL.$i.'">'.$this->prevLink.'</a>'.$this->prevTagClose;
          }
          // Выводим цифровые ссылки
          for($loop = $start -1; $loop <= $end; $loop++){
@@ -123,19 +125,20 @@
                  if($this->currentPage == $loop){
                      $output .= $this->curTagOpen.$loop.$this->curTagClose;
                  }else{
-                     $output .= $this->numTagOpen.'<a href="'.$this->baseURL.$i.'">'.$loop.'</a>'.$this->numTagClose;
+                     $output .= $this->numTagOpen.'<a class="pagination__link page-link" href="'.$this->baseURL.$i.'">'.$loop.'</a>'.$this->numTagClose;
                  }
              }
          }
          // Выводим ссылку на следующую страницу
          if($this->currentPage < $numPages){
              $i = ($this->currentPage + 1);
-             $output .= $this->nextTagOpen.'<a href="'.$this->baseURL.$i.'">'.$this->nextLink.'</a>'.$this->nextTagClose;
+             $this->nextLink .= '<a class="pagination__button" href="'.$this->baseURL.$i.'"> Далее </a>';
+             $output .= $this->nextTagOpen.'<a class="pagination__link page-link" href="'.$this->baseURL.$i.'">'.$this->nextLink.'</a>'.$this->nextTagClose;
          }
          // Выводим ссылку на последнюю страницу
          if(($this->currentPage + $this->numLinks) < $numPages){
              $i = $numPages;
-             $output .= $this->lastTagOpen.'<a href="'.$this->baseURL.$i.'">'.$this->lastLink.'</a>'.$this->lastTagClose;
+             $output .= $this->lastTagOpen.'<a class="pagination__link page-link" href="'.$this->baseURL.$i.'">'.$this->lastLink.'</a>'.$this->lastTagClose;
          }
          // Удаляем двойные косые
          $output = preg_replace("#([^:])//+#", "\1/", $output);
